@@ -99,8 +99,7 @@
 }
 
 .equation-link:hover {
-    cursor: pointer;
-    outline: 2px dashed #1E3A8A;
-    border-radius: 4px;
-    background-color: rgba(30, 58, 138, 0.1);
+    background-color: transparent;
+    text-decoration: underline dotted #1E3A8A;
 }
+
