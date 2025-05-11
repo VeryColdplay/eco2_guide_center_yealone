@@ -100,7 +100,6 @@
 
 .equation-link:hover {
     background-color: transparent;
-    text-decoration: underline dotted #1E3A8A;
 }
 
 /* 스타일도 맞춰주면 깔끔함 */
@@ -112,4 +111,8 @@
     color: #1E3A8A;
   }
   
-  
+ /* eq-number도 링크 hover 시 색상 변화 반영 */
+.equation-link:hover .eq-number {
+    color: inherit;
+}
+ 
