@@ -103,3 +103,11 @@
     text-decoration: underline dotted #1E3A8A;
 }
 
+/* 스타일도 맞춰주면 깔끔함 */
+.eq-number {
+    font-family: 'CMU Serif', 'Latin Modern Math', 'STIX', serif;
+    margin-left: 8px;
+    font-size: 0.9em;
+    color: #333;
+  }
+  
