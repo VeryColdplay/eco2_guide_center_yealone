@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>공조시설의 에너지요구량 페이지</title>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  </script>
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+  <style>
+    .highlight {
+      stroke: #e91e63 !important;
+      stroke-width: 3px !important;
+      fill: #ffeef0 !important;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🌤️ 공조시설의 에너지요구량 페이지</h1>
+<p>여기는 공조시설의 에너지요구량에 대한 설명이 들어가는 페이지입니다.</p>
+
+<div class="mermaid">
+    flowchart LR
+        C["존의 에너지요구량<br>난방, 냉방</a>"]
+        D1["공조시설의 에너지요구량<br>난방, 냉방, 가습, 제습</a>"]
+
+        C -->|공급손실| D1:::highlight
+        C -->|분배손실| D1:::highlight
+    
+        classDef highlight fill:#ffeef0,stroke:#e91e63,stroke-width:2px;
+        class A highlight;
+</div>
+
+  <!-- MathJax CDN (수식 렌더링용) -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      padding: 30px;
+      line-height: 1.6;
+    }
+    h4 {
+      margin-top: 40px;
+    }
+    .arithmatex {
+      font-size: 1.2em;
+      margin: 15px 0;
+    }
+  </style>
+</head>
+<body>
+
+<h4 id="_12">난방부하 계산 공식</h4>
+<p>난방부하는 주중, 주말, 휴무일 등을 고려하여 열의 획득·손실을 대차대조하고, 열획득·열손실을 고려하여 월별로 계산한다.</p>
+
+<div class="arithmatex">\[
+Q_{h,b,i} = Q_{sink,i} - \eta_i Q_{source,i} \tag{2-1}
+\]</div>
+
+<h4 id="_13">냉방부하 계산 공식</h4>
+<p>냉방부하는 주중, 주말, 휴무일 등을 고려하여 획득열을 구하고, 열획득·열손실을 고려하여 월별로 계산한다.</p>
+
+<div class="arithmatex">\[
+Q_{h,c} = (1 - \eta) Q_{source} \tag{2-2}
+\]</div>
+
+<h4>1차 부하 산정</h4>
+<ul>
+  <li>냉·난방 시스템에 의해 제어되지 않은 상태로 존에 유입되는 열에너지는 제외합니다.</li>
+  <li>이를 통해 <strong>시스템이 담당해야 할 순수 난방부하</strong>를 산출합니다.</li>
+</ul>
+
+</body>
+</html>
