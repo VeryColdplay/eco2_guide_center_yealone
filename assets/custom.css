@@ -106,8 +106,10 @@
 /* 스타일도 맞춰주면 깔끔함 */
 .eq-number {
     font-family: 'CMU Serif', 'Latin Modern Math', 'STIX', serif;
+    font-style: normal;  /* 숫자니까 기울이지 않음 */
     margin-left: 8px;
     font-size: 0.9em;
-    color: #333;
+    color: #1E3A8A;
   }
+  
   
