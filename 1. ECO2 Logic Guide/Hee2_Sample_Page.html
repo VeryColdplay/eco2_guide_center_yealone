@@ -9,9 +9,9 @@
 <link href="Hee1_Equation_List.html" rel="prev"/>
 <link href="index.html" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.13" name="generator"/>
 <title>데이터 입력 - ECO2 Guide Center</title>
-<link href="../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
@@ -189,24 +189,6 @@
       계산 과정
     </span>
 </a>
-<nav aria-label="계산 과정" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      난방부하 계산 공식
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-<span class="md-ellipsis">
-      냉방부하 계산 공식
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_7">
@@ -633,24 +615,6 @@
       계산 과정
     </span>
 </a>
-<nav aria-label="계산 과정" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      난방부하 계산 공식
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-<span class="md-ellipsis">
-      냉방부하 계산 공식
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_7">
@@ -679,13 +643,13 @@
 <p>보고서+요구량 수식 다이어그램 매칭되는 부분 찾아서 해당 부분 로직 짧게 표현해보기 (2가지 대안으로)</p>
 <p><br/>
 <br/></p>
-<h1 id="sample-ver1">Sample ver.1</h1>
-<h2 id="_1">🔹존의 난방부하 분석 요약</h2>
+<h1 id="sample-ver1">Sample ver.1<a class="headerlink" href="#sample-ver1" title="Permanent link">¶</a></h1>
+<h2 id="_1">🔹존의 난방부하 분석 요약<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>건물 내 특정 공간(Zone)의 난방 에너지 수요를 정밀하게 산정하기 위한 분석 절차와 원칙을 소개합니다.</p>
 </blockquote>
 <hr/>
-<h3 id="_2">분석 구성</h3>
+<h3 id="_2">분석 구성<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>데이터 기준</strong> · 월 평균 일일 데이터를 기본으로 사용  </li>
 <li><strong>운용 조건 분리</strong> · 주말·휴무일 등 특별한 조건의 날은 별도 분석 후 합산  </li>
@@ -694,7 +658,7 @@
 <li><strong>난방 조건 분리</strong> · 냉방과 전제조건(예: 실내온도)이 다르므로 개별 산정</li>
 </ul>
 <hr/>
-<h3 id="_3">분석 흐름</h3>
+<h3 id="_3">분석 흐름<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -722,26 +686,26 @@
 </tbody>
 </table>
 <hr/>
-<h3 id="_4">계산 과정</h3>
-<h4 id="_5">난방부하 계산 공식</h4>
+<h3 id="_4">계산 과정<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<h4 id="_5">난방부하 계산 공식<a class="headerlink" href="#_5" title="Permanent link">¶</a></h4>
 <p>난방부하는 주중, 주말, 휴무일 등을 고려하여 열의 획득·손실을 대차대조하고, 열획득·열손실을 고려하여 월별로 계산한다.</p>
 <div class="arithmatex">\[
 Q_{h,b,i} = Q_{sink,i} - \eta_i Q_{source,i} \tag{2-1}
 \]</div>
-<h4 id="_6">냉방부하 계산 공식</h4>
+<h4 id="_6">냉방부하 계산 공식<a class="headerlink" href="#_6" title="Permanent link">¶</a></h4>
 <p>냉방부하는 주중, 주말, 휴무일 등을 고려하여 획득열을 구하고, 열획득·열손실을 고려하여 월별로 계산한다.</p>
 <div class="arithmatex">\[
 Q_{h,c} = (1 - \eta) Q_{source} \tag{2-1}
 \]</div>
 <hr/>
-<h3 id="_7">활용 방안</h3>
+<h3 id="_7">활용 방안<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
 <ul>
 <li>건물의 난방 수요 예측 및 시뮬레이션  </li>
 <li>난방 시스템 설계 및 용량 계획  </li>
 <li>에너지 절감 및 효율적 운영 전략 수립  </li>
 </ul>
 <hr/>
-<h3 id="_8">분석 특이사항</h3>
+<h3 id="_8">분석 특이사항<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
 <ul>
 <li>난방부하는 <strong>냉방부하와 동일한 방식으로 계산하지 않음</strong> </li>
 <li><strong>제어되지 않은 열원은 부하 계산에서 제외</strong>되어 실제 시스템 수요만 반영  </li>
@@ -754,24 +718,24 @@ Q_{h,c} = (1 - \eta) Q_{source} \tag{2-1}
 <p><br/>
 <br/>
 <br/></p>
-<h1 id="sample-ver2">Sample ver.2</h1>
-<h2 id="_9">🔹존의 난방부하 분석 개요</h2>
-<h3 id="_10">개요</h3>
+<h1 id="sample-ver2">Sample ver.2<a class="headerlink" href="#sample-ver2" title="Permanent link">¶</a></h1>
+<h2 id="_9">🔹존의 난방부하 분석 개요<a class="headerlink" href="#_9" title="Permanent link">¶</a></h2>
+<h3 id="_10">개요<a class="headerlink" href="#_10" title="Permanent link">¶</a></h3>
 <p>존의 난방부하는 건물 내 특정 공간(Zone)에 필요한 난방 에너지 수요를 의미합니다.<br>
 본 분석은 월 평균 일일 데이터를 기반으로 하며, 주말이나 휴무일 등 <strong>운용 조건이 상이한 날은 별도로 분석하여 합산</strong>함으로써 보다 정밀한 부하 산정을 수행합니다.</br></p>
 <hr/>
-<h3 id="_11">분석 절차</h3>
+<h3 id="_11">분석 절차<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
 <ol>
 <li><strong>기초 데이터 분석</strong> </li>
 <li>월별 일 평균 데이터를 활용하여 열획득과 열손실을 산정합니다.  </li>
 <li>
 <p>주말, 휴무일 등은 운용 조건이 상이하므로, 별도로 분리 분석합니다.</p>
-<h4 id="_12">난방부하 계산 공식</h4>
+<h4 id="_12">난방부하 계산 공식<a class="headerlink" href="#_12" title="Permanent link">¶</a></h4>
 <p>난방부하는 주중, 주말, 휴무일 등을 고려하여 열의 획득·손실을 대차대조하고, 열획득·열손실을 고려하여 월별로 계산한다.</p>
 <div class="arithmatex">\[
 Q_{h,b,i} = Q_{sink,i} - \eta_i Q_{source,i} \tag{2-1}
 \]</div>
-<h4 id="_13">냉방부하 계산 공식</h4>
+<h4 id="_13">냉방부하 계산 공식<a class="headerlink" href="#_13" title="Permanent link">¶</a></h4>
 <p>냉방부하는 주중, 주말, 휴무일 등을 고려하여 획득열을 구하고, 열획득·열손실을 고려하여 월별로 계산한다.</p>
 <div class="arithmatex">\[
 Q_{h,c} = (1 - \eta) Q_{source} \tag{2-1}
@@ -790,18 +754,18 @@ Q_{h,c} = (1 - \eta) Q_{source} \tag{2-1}
 <li>이후, 시스템을 통해 실내로 공급되는 열에너지를 추가 고려하여 <strong>최종 난방부하</strong>를 산정합니다.</li>
 </ol>
 <hr/>
-<h3 id="_14">분석 전제조건</h3>
+<h3 id="_14">분석 전제조건<a class="headerlink" href="#_14" title="Permanent link">¶</a></h3>
 <p>난방과 냉방은 <strong>설정 실내온도 등 전제조건이 상이</strong>하므로,<br>
 열획득과 열손실 또한 각각 별도의 기준에 따라 구분하여 산정되어야 합니다.</br></p>
 <hr/>
-<h3 id="_15">활용 방안</h3>
+<h3 id="_15">활용 방안<a class="headerlink" href="#_15" title="Permanent link">¶</a></h3>
 <ul>
 <li>건물의 난방 에너지 수요 산정  </li>
 <li>난방 시스템 설계 및 용량 계획  </li>
 <li>에너지 효율 분석 및 절감 대책 수립  </li>
 </ul>
 <hr/>
-<h3 id="_16">특이사항</h3>
+<h3 id="_16">특이사항<a class="headerlink" href="#_16" title="Permanent link">¶</a></h3>
 <ul>
 <li>본 분석은 <strong>냉방부하와 동일한 방식으로 수행되지 않으며</strong>,  </li>
 <li>제어되지 않은 열원은 부하 산정에서 <strong>제외</strong>됨으로써,<br>
@@ -836,8 +800,8 @@ Q_{h,c} = (1 - \eta) Q_{source} \tag{2-1}
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <div class="md-progress" data-md-component="progress" role="progressbar"></div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.instant.prefetch", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.expand", "navigation.tracking"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}}</script>
-<script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.instant.prefetch", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.expand", "navigation.tracking"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+<script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
 <script src="../assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../assets/mathjax-linker.js"></script>

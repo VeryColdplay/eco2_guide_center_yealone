@@ -9,9 +9,9 @@
 <link href="weather.html" rel="prev"/>
 <link href="Hee2_Sample_Page.html" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.13" name="generator"/>
 <title>시작하기 - ECO2 Guide Center</title>
-<link href="../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
@@ -527,12 +527,12 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="_1">시작하기</h1>
+<h1 id="_1">시작하기<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <p>본 매뉴얼은 ECO2 제로에너지인증 평가프로그램의 기능과 구조를 체계적으로 이해하고 활용할 수 있도록 지원하기 위해 작성되었습니다. 프로그램의 주요 기능을 분석하고, 기능 간 연계 구조와 실행 흐름을 정리하였으며, 주요 로직은 플로우차트 등 시각 자료로 구성하여 이해도를 높였습니다.</p>
 <p>건축, 냉·난방 설비, 조명, 환기, 신재생에너지 등 각 분야별 로직을 설명하고, 실제 적용 사례를 함께 수록함으로써 실무적 활용성을 강화하였습니다. 본 매뉴얼은 발주처와의 협의를 통해 초안을 검토하고 피드백을 반영하여 작성되었으며, 사용자 중심의 명확한 정보 전달을 목표로 합니다.</p>
 <p>ECO2 프로그램의 활용에 본 매뉴얼이 실질적인 도움이 되기를 기대합니다.</p>
-<h1 id="_2">수식 정리</h1>
-<h2 id="_3">🔹존의 난방부하</h2>
+<h1 id="_2">수식 정리<a class="headerlink" href="#_2" title="Permanent link">¶</a></h1>
+<h2 id="_3">🔹존의 난방부하<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
 <div class="arithmatex">\[ 
 Q_{h,b.mth} = d_{op} \left( Q_{sink,op} - \eta_{op} Q_{source,op} \right) + d_{we} \left( Q_{sink,we} - \eta_{we} Q_{source,we} \right) \tag{2-6}
 \]</div>
@@ -611,7 +611,7 @@ C_{wirk} = 130 \, \mathrm{Wh}/(\mathrm{m}^2 \cdot \mathrm{K}) \, A_B \tag{2-128}
 <div class="arithmatex">\[
 H_{V,mech,\vartheta} = H_{V,mech} \cdot \frac{\vartheta_{i,h.soll} - \vartheta_{V,mech}}{6K} \tag{2-130}
 \]</div>
-<h2 id="_4">🔹존의 냉방부하</h2>
+<h2 id="_4">🔹존의 냉방부하<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
 <div class="arithmatex">\[
 Q_{c,b.mth} = d_{op} (1 - \eta_{op}) Q_{source,op} + d_{we} (1 - \eta_{we}) Q_{source,we} \tag{2-7}
 \]</div>
@@ -684,7 +684,7 @@ C_{wirk} = 130 \, \mathrm{Wh}/(\mathrm{m}^2 \cdot \mathrm{K}) \, A_B \tag{2-128}
 <div class="arithmatex">\[
 H_{V,mech,\vartheta} = H_{V,mech} \cdot \frac{\vartheta_{i,h.soll} - \vartheta_{V,mech}}{6K} \tag{2-130}
 \]</div>
-<h2 id="_5">🔹열손실</h2>
+<h2 id="_5">🔹열손실<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
 <div class="arithmatex">\[
 Q_{sink} = Q_T + Q_V + Q_{I,sink} + Q_S \tag{2-11}
 \]</div>
@@ -835,7 +835,7 @@ h_r = 5 \varepsilon \quad \text{(모를 경우 } \varepsilon = 0.9\text{)}
 <div class="arithmatex">\[
 c_{p,a} \, \rho_a = 0.34 \, \mathrm{Wh}/(\mathrm{m}^3 \cdot \mathrm{K})
 \]</div>
-<h2 id="_6">🔹열획득</h2>
+<h2 id="_6">🔹열획득<a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
 <div class="arithmatex">\[
 Q_{source} = Q_S + Q_T + Q_V + Q_{I,source} \tag{2-16}
 \]</div>
@@ -952,7 +952,7 @@ Q_{I,source,h} = Q_{I,w} + Q_{I,h} + Q_{I,vh} + Q_{I,ch} \tag{2-124}
 <li><span class="arithmatex">\( q_{I,fac} \)</span>: 도표 2-A.4 (설비기기에 의한 내부발생열)</li>
 <li><span class="arithmatex">\( Q_{i,L,elektr} \)</span>: 조명에 의한 전기적 소비량</li>
 </ul>
-<h2 id="_7">🔹환기에 의한 열손실계수</h2>
+<h2 id="_7">🔹환기에 의한 열손실계수<a class="headerlink" href="#_7" title="Permanent link">¶</a></h2>
 <div class="arithmatex">\[
 H_{V,inf} = n_{inf} V c_{p,a} \rho_a \tag{2-58}
 \]</div>
@@ -1043,7 +1043,7 @@ n_{z,ABL} = \frac{\dot{V}_z}{V_i} = \left( n_{mech,ABL,j} - n_{mech,ZUL,j} \righ
 <li><span class="arithmatex">\( \dot{V}_{ABL} \)</span>: 계획 값 (부록 E 참고)</li>
 </ul>
 <hr/>
-<h2 id="_8">🔹공조처리</h2>
+<h2 id="_8">🔹공조처리<a class="headerlink" href="#_8" title="Permanent link">¶</a></h2>
 <div class="arithmatex">\[
 Q_{V,i,m} = q_{i,m} \cdot \dot{V}_{mech,m} \quad (3\text{-}36) = Q_{vi,b} \quad \text{(7-2, 7-8, 7-14)} \quad \text{[Wh]}
 \]</div>
@@ -1138,7 +1138,7 @@ Q_{c,b} \tag{2-2}
 <div class="arithmatex">\[
 \vartheta_{V,mech,m} \quad \text{(도표 3-3, 3-4)}
 \]</div>
-<h2 id="_9">🔹공조기 최대 가열성능</h2>
+<h2 id="_9">🔹공조기 최대 가열성능<a class="headerlink" href="#_9" title="Permanent link">¶</a></h2>
 <div class="arithmatex">\[
 Q_H^* = \dot{V}^* \, \rho_L \cdot \left( h_{ZUL,W} - h_{AUL,W} - \Delta h_{WRG} \right) / 3600 \quad \text{[kW]} \tag{3-57} \quad \text{증기가습 있을 경우}
 \]</div>
@@ -1151,7 +1151,7 @@ Q_H^* = \dot{V}^* \, \rho_L \cdot \left( c_{p,L} \left( \vartheta_{ZUL,W} - \var
 <div class="arithmatex">\[
 \dot{V}^* = \dot{V}_{mech.m}
 \]</div>
-<h3 id="h_zulw">습도요구 조건에 따른 <span class="arithmatex">\(h_{ZUL,W}\)</span> 계산식</h3>
+<h3 id="h_zulw">습도요구 조건에 따른 <span class="arithmatex">\(h_{ZUL,W}\)</span> 계산식<a class="headerlink" href="#h_zulw" title="Permanent link">¶</a></h3>
 <ul>
 <li>습도요구 없음 (3-38):</li>
 </ul>
@@ -1178,7 +1178,7 @@ h_{ZUL,W} = 1.01 \, \vartheta_{ZUL,W} + 0.008 \left(2501 + 1.86 \, \vartheta_{ZU
 <div class="arithmatex">\[
 c_{p,L} = 1.006 \, \mathrm{kJ/(kg \cdot K)}
 \]</div>
-<h3 id="delta-h_wrg">열 회수기 열량 <span class="arithmatex">\(\Delta h_{WRG}\)</span> 계산</h3>
+<h3 id="delta-h_wrg">열 회수기 열량 <span class="arithmatex">\(\Delta h_{WRG}\)</span> 계산<a class="headerlink" href="#delta-h_wrg" title="Permanent link">¶</a></h3>
 <ul>
 <li>
 <p>열 회수기 없음 (3-54):
@@ -1209,7 +1209,7 @@ $$</p>
 <li><span class="arithmatex">\(\vartheta_{ABL,W}\)</span>: 도표 3-7</li>
 <li><span class="arithmatex">\(\vartheta_{AUL,W}\)</span>, <span class="arithmatex">\(h_{AUL,W}\)</span>: 도표 3-6</li>
 </ul>
-<h2 id="_10">🔹공조기 최대 냉각성능</h2>
+<h2 id="_10">🔹공조기 최대 냉각성능<a class="headerlink" href="#_10" title="Permanent link">¶</a></h2>
 <ul>
 <li>최대 냉각성능 계산식 (3-52):</li>
 </ul>
@@ -1240,7 +1240,7 @@ $$
 $$</li>
 </ul>
 <hr/>
-<h3 id="_11">공급공기 엔탈피 계산 (조건별 선택)</h3>
+<h3 id="_11">공급공기 엔탈피 계산 (조건별 선택)<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
 <ul>
 <li>
 <p>(3-38) 습도 요구 없음:
@@ -1280,7 +1280,7 @@ $$</p>
 </li>
 </ul>
 <hr/>
-<h3 id="_12">습기함량 계산</h3>
+<h3 id="_12">습기함량 계산<a class="headerlink" href="#_12" title="Permanent link">¶</a></h3>
 <ul>
 <li>
 <p>(3-41):
@@ -1297,18 +1297,18 @@ $$</p>
 </li>
 </ul>
 <hr/>
-<h3 id="_13">공급공기온도 하한</h3>
+<h3 id="_13">공급공기온도 하한<a class="headerlink" href="#_13" title="Permanent link">¶</a></h3>
 <ul>
 <li>(도표 3-3 참조):
 $$
 \vartheta_{ZUL,Z} = \vartheta_{h,mech.min}
 $$</li>
 </ul>
-<h2 id="_14">🔹공조기 최대 가습성능</h2>
+<h2 id="_14">🔹공조기 최대 가습성능<a class="headerlink" href="#_14" title="Permanent link">¶</a></h2>
 <div class="arithmatex">\[
 Q_{St}^* = \dot{V}^* \cdot \rho_L \cdot \left( h_{ZUL,W} - h_{AUL,W} - \Delta h_{WRG} \right) / 3600 \quad [\text{kW}] \tag{3-65}
 \]</div>
-<h3 id="_15">습공급 후 온도별 엔탈피 수식 정리</h3>
+<h3 id="_15">습공급 후 온도별 엔탈피 수식 정리<a class="headerlink" href="#_15" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>습도요구 없음</strong> (3-38):</li>
 </ul>
@@ -1327,7 +1327,7 @@ h_{ZUL,W} = 1.01 \vartheta_{ZUL,W} + 0.006 \left(2501 + 1.86 \vartheta_{ZUL,W} \
 <div class="arithmatex">\[
 h_{ZUL,W} = 1.01 \vartheta_{ZUL,W} + 0.008 \left(2501 + 1.86 \vartheta_{ZUL,W} \right)
 \]</div>
-<h3 id="_16">열 회수기 수식 정리</h3>
+<h3 id="_16">열 회수기 수식 정리<a class="headerlink" href="#_16" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>열 회수기 없음</strong> (3-63):</li>
 </ul>
@@ -1340,7 +1340,7 @@ h_{ZUL,W} = 1.01 \vartheta_{ZUL,W} + 0.008 \left(2501 + 1.86 \vartheta_{ZUL,W} \
 <div class="arithmatex">\[
 \Delta h_{WRG} = 2501 \, \Phi_{WRG} \left( x_{ABL,W} - x_{AUL,W} \right)
 \]</div>
-<h3 id="_17">열 회수식 관련 변수 출처</h3>
+<h3 id="_17">열 회수식 관련 변수 출처<a class="headerlink" href="#_17" title="Permanent link">¶</a></h3>
 <ul>
 <li><span class="arithmatex">\(\Phi_{WRG}\)</span> : 제품 사양에 따라 주어지는 열 회수 효율</li>
 <li><span class="arithmatex">\(x_{ABL,W_i}\)</span> : 공급 공기 절대습도 (표 3-7 참고)</li>
@@ -1374,8 +1374,8 @@ h_{ZUL,W} = 1.01 \vartheta_{ZUL,W} + 0.008 \left(2501 + 1.86 \vartheta_{ZUL,W} \
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <div class="md-progress" data-md-component="progress" role="progressbar"></div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.instant.prefetch", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.expand", "navigation.tracking"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}}</script>
-<script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.instant.prefetch", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.expand", "navigation.tracking"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+<script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
 <script src="../assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../assets/mathjax-linker.js"></script>
