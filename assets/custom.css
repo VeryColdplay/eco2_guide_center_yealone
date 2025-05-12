@@ -1,118 +1,103 @@
+/* 웹폰트 사용 가능 설정 */
+@import url('https://cdn.jsdelivr.net/npm/cmu-serif@1.0.0/index.min.css');
+
 /* 로고 설정 */
 .md-header__button.md-logo img {
-    height: 60px;   /* 원하는 높이 설정 (기본 24px → 48px) */
-    width: auto;    /* 가로 비율 자동 조정 */
+  height: 60px;
+  width: auto;
 }
 
-/* 전체 네비게이션 트리 배경색 */
-
-/* 상위 메뉴 배경 강조 (현재 적용 안함) */
-.md-nav__title {
-    display: none;
-    /*    background-color: transparent; */
-    /*    color: #1E3A8A;  */ /* 진한 파란색 (원하는 색상으로 변경) */
-    /*    font-size: 1.1rem; */
-    /*    font-weight: light; */         /* 글씨 두껍게 */
-}
-
-/* 하위 메뉴 (드롭다운) 배경색 */
+/* 네비게이션 트리 배경색 */
 .md-nav__list {
-    background-color: #f5f7fa;  /* 연한 회색 (원하는 색상으로 변경) */
+  background-color: #f5f7fa;
 }
 
-/* 하위 항목(Hover 시) */
+/* Hover 효과 */
 .md-nav__link:hover {
-    background-color: #3B82F6;  /* 파란색 (원하는 색상으로 변경) */
-    color: #ffffff;             /* 글자색 (흰색) */
+  background-color: #3B82F6;
+  color: #ffffff;
 }
 
-/* 검색창 Pretendard 폰트 적용 */
+/* 검색창 Pretendard 적용 */
 .md-search__input {
-    font-family: 'Pretendard', sans-serif;
+  font-family: 'Pretendard', sans-serif;
 }
 
+/* Mermaid 글꼴 적용 */
 .mermaid text {
-    font-family: 'Pretendard', sans-serif !important;
-    fill: #1E3A8A; /* 파란색 적용 */
-    font-weight: 600; /* 굵은 글씨 */
+  font-family: 'Pretendard', sans-serif !important;
+  fill: #1E3A8A;
+  font-weight: 600;
 }
 
-/* 본문 글자 크기 조정 */
+/* 본문 글자 스타일 */
 .md-content p {
-    font-size: 16px;  /* 원하는 크기로 조정 */
-    line-height: 1.6;  /* 줄 간격 (가독성 향상) */
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-/* 본문 제목 크기 및 구분선 설정 */
+/* 제목 스타일 */
 .md-content h1 {
-    font-size: 30px;     /* 최상위 제목 (기본값 32px) */
-    font-weight: bold;    /* 글자 두껍게 */
-    border-bottom: 2px solid #1E3A8A; /* 파란색 구분선 추가 */
-    padding-bottom: 10px; /* 선과 글자 사이 간격 */
-    margin-bottom: 20px;  /* 구분선과 본문 간격 */
+  font-size: 30px;
+  font-weight: bold;
+  border-bottom: 2px solid #1E3A8A;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
-
-/* 두 번째 수준 제목 (##) - 구분선 제거 */
 .md-content h2 {
-    font-size: 26px;     /* 두 번째 수준 제목 (기본값 28px) */
-    font-weight: bold;
-    border-bottom: none;  /* 구분선 제거 */
-    margin-bottom: 16px;
+  font-size: 26px;
+  font-weight: bold;
+  border-bottom: none;
+  margin-bottom: 16px;
 }
+.md-content h3 { font-size: 22px; }
+.md-content h4 { font-size: 18px; }
+.md-content h5 { font-size: 16px; }
+.md-content h6 { font-size: 14px; }
 
-.md-content h3 {
-    font-size: 22px;  /* 세 번째 수준 제목 (기본값 24px) */
-}
-
-.md-content h4 {
-    font-size: 18px;  /* 네 번째 수준 제목 (기본값 20px) */
-}
-
-.md-content h5 {
-    font-size: 16px;  /* 다섯 번째 수준 제목 (기본값 18px) */
-}
-
-.md-content h6 {
-    font-size: 14px;  /* 여섯 번째 수준 제목 (기본값 16px) */
-}
-
-/* 이미지 삽입 관련 */
+/* 이미지 중앙정렬 및 확대 */
 .mdx-image {
-    display: block;
-    margin: 20px auto;  /* 중앙 정렬 */
-    max-width: 100%;    /* 이미지 크기 자동 조정 */
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
 }
-
 .mdx-image.zoom {
-    cursor: zoom-in;
-    transition: transform 0.2s ease;
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
 }
-
 .mdx-image.zoom:hover {
-    transform: scale(1.1);  /* 호버 시 이미지 확대 */
+  transform: scale(1.1);
 }
 
-/* 수식 링크에 hover 효과 */
+/* 수식 링크 스타일 */
 .equation-link {
-    display: inline-block;
-    text-decoration: none;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin: 1em 0;
 }
-
 .equation-link:hover {
-    background-color: transparent;
+  background-color: transparent;
+}
+.eq-number {
+  font-family: 'CMU Serif', serif;
+  font-style: normal;
+  margin-left: 20px;
+  font-size: 1em;
+  color: #4051B5;
+  font-weight: bold;
+}
+.equation-link:hover .eq-number {
+  color: inherit;
 }
 
-/* 스타일도 맞춰주면 깔끔함 */
-.eq-number {
-    font-family: 'CMU Serif', 'Latin Modern Math', 'STIX', serif;
-    font-style: normal;  /* 숫자니까 기울이지 않음 */
-    margin-left: 8px;
-    font-size: 0.9em;
-    color: #1E3A8A;
-  }
-  
- /* eq-number도 링크 hover 시 색상 변화 반영 */
-.equation-link:hover .eq-number {
-    color: inherit;
+/* 전체 레이아웃 및 그리드 확장 */
+.md-grid {
+  max-width: 100% !important;
 }
- 
+.md-sidebar--primary {
+  margin-left: 16px;
+}
+.md-sidebar--secondary {
+  margin-right: 16px;
+}
