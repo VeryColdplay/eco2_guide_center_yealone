@@ -2,17 +2,15 @@ window.addEventListener("DOMContentLoaded", function () {
   const equationLinks = {
     "Q_{h,b,i} = Q_{sink,i} - \\eta_i Q_{source,i}": "/eco2_logic_guide/ifc_linking.html",
     "Q_{h,b,mth} = d_{op}(Q_{sink,op} - \\eta_{op} Q_{source,op}) + d_{we}(Q_{sink,we} - \\eta_{we} Q_{source,we})": "/eco2_logic_guide/heating_summary.html"
-    // 필요한 식들을 계속 추가
   };
 
-  // 수식 노드에 링크 삽입 함수
   function linkEquations() {
     document.querySelectorAll(".mjx-chtml").forEach(node => {
       const latexText = node.textContent.replace(/\s+/g, "");
       for (const [eq, link] of Object.entries(equationLinks)) {
         const cleanEq = eq.replace(/\s+/g, "");
         if (latexText.includes(cleanEq)) {
-          // 이미 링크로 감싸진 경우 중복 방지
+          // 중복 방지
           if (node.parentNode && node.parentNode.matches("a.equation-link")) return;
 
           const a = document.createElement("a");
@@ -26,15 +24,18 @@ window.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // 초기 링크 적용
-  linkEquations();
+  linkEquations();  // 초기 링크 삽입
 
-  // DOM 변화 감지 후 수식 재렌더링 + 링크 재삽입
+  // MutationObserver는 debounce 또는 timeout 방식으로 제한
   if (window.MathJax && window.MathJax.typesetPromise) {
+    let timeoutId = null;
     const observer = new MutationObserver(() => {
-      MathJax.typesetPromise()
-        .then(() => linkEquations())
-        .catch((err) => console.error("MathJax render failed:", err));
+      if (timeoutId) clearTimeout(timeoutId);  // 이전 타이머 제거
+      timeoutId = setTimeout(() => {
+        MathJax.typesetPromise()
+          .then(() => linkEquations())
+          .catch((err) => console.error("MathJax render failed:", err));
+      }, 200);  // 변경 감지 후 200ms 안에 다시 발생하면 지연
     });
 
     observer.observe(document.body, {
