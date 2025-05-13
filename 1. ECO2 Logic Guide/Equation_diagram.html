@@ -510,7 +510,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#temporarily-cooling-energy-demand-only">
 <span class="md-ellipsis">
-      (Temporarily) Cooling Energy Demand Only
+      🔹 (Temporarily) Cooling Energy Demand Only
     </span>
 </a>
 </li>
@@ -522,24 +522,56 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="equation-diagram">Equation Diagram<a class="headerlink" href="#equation-diagram" title="Permanent link">¶</a></h1>
-<h2 id="temporarily-cooling-energy-demand-only">(Temporarily) Cooling Energy Demand Only<a class="headerlink" href="#temporarily-cooling-energy-demand-only" title="Permanent link">¶</a></h2>
-<p>flowchart LR
+<h2 id="temporarily-cooling-energy-demand-only">🔹 (Temporarily) Cooling Energy Demand Only<a class="headerlink" href="#temporarily-cooling-energy-demand-only" title="Permanent link">¶</a></h2>
+<hr/>
+<p>&lt;!--```mermaid
+flowchart LR
     subgraph Input[""]
-    A["Open in current window ver. </p>
+        A["<div>Open in current window ver. </div></p>
 <p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html">
 <span class="arithmatex">\(Q_{c,b.mth} = d_{op} (1 - \eta_{op}) Q_{source,op} + d_{we} (1 - \eta_{we}) Q_{source,we} \tag{2-7}\)</span>
-</a></p>
+</a></p></article></div>
 <hr/>
-<p>"]</p>
-</article>
-</div>
+<p></p></div>"]
+    end
+<div class="highlight"><pre><span></span><code>```mermaid
+flowchart LR
+    subgraph Input[""]
+        A["&lt;div&gt;$$Open in current window ver. 
+
+&lt;a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link"&gt;
+  \(Q_{c,b.mth} = d_{op} (1 - \eta_{op}) Q_{source,op} + d_{we} (1 - \eta_{we}) Q_{source,we} \tag{2-7}\) 
+&lt;/a&gt;
+---
+
+$$&lt;/div&gt;"]
+    end
+</code></pre></div>
+<pre class="mermaid"><code>flowchart LR
+    subgraph Input[""]
+        A["<div>$$Q_{c,b.mth} = d_{op} (1 - \eta_{op}) Q_{source,op} + d_{we} (1 - \eta_{we}) Q_{source,we} \tag{2-7}$$</div>"] --- 
+        B["<div>$$Q_{c,b.mth} = d_{op} (1 - \eta_{op}) Q_{source,op} + d_{we} (1 - \eta_{we}) Q_{source,we} \tag{2-7}$$</div>"]
+    end
+```--&gt;
+
+```mermaid
+flowchart LR
+    subgraph Input
+        direction TB
+        A[Apple] --&gt; B[Banana]
+    end
+
+    B --&gt; C[Cherry]
+</code></pre>
+
+</main></div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
-</div>
+
 <button class="md-top md-icon" data-md-component="top" hidden="" type="button">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   맨위로
 </button>
-</main>
+
 <footer class="md-footer">
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
@@ -554,7 +586,7 @@
 </div>
 </div>
 </footer>
-</div>
+
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
@@ -570,5 +602,7 @@
 <script src="../assets/mermaid-init.js"></script>
 <script src="../assets/cache-buster.js"></script>
 <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
-</body>
+<script>window.mermaidConfig = {default: {
+    startOnLoad: false
+}};</script></body>
 </html>
