@@ -524,54 +524,26 @@
 <h1 id="equation-diagram">Equation Diagram<a class="headerlink" href="#equation-diagram" title="Permanent link">¶</a></h1>
 <h2 id="temporarily-cooling-energy-demand-only">🔹 (Temporarily) Cooling Energy Demand Only<a class="headerlink" href="#temporarily-cooling-energy-demand-only" title="Permanent link">¶</a></h2>
 <hr/>
-<p>&lt;!--```mermaid
-flowchart LR
-    subgraph Input[""]
-        A["<div>Open in current window ver. </div></p>
-<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html">
-<span class="arithmatex">\(Q_{c,b.mth} = d_{op} (1 - \eta_{op}) Q_{source,op} + d_{we} (1 - \eta_{we}) Q_{source,we} \tag{2-7}\)</span>
-</a></p></article></div>
-<hr/>
-<p></p></div>"]
-    end
-<div class="highlight"><pre><span></span><code>```mermaid
-flowchart LR
-    subgraph Input[""]
-        A["&lt;div&gt;$$Open in current window ver. 
+<pre class="mermaid"><code>graph TD
+    A["Heat Energy Calculation"] --&gt; B["<div>$$Q = mc\Delta T$$</div>"]
+    B --&gt; C["<div>$$Q = (2 \times 1000) \times 4.18 \times (80 - 20)$$</div>"]
+    C --&gt; D["<div>$$Q = 502,000 \text{ J}$$</div>"]
 
-&lt;a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link"&gt;
-  \(Q_{c,b.mth} = d_{op} (1 - \eta_{op}) Q_{source,op} + d_{we} (1 - \eta_{we}) Q_{source,we} \tag{2-7}\) 
-&lt;/a&gt;
----
+    A --&gt; E["<div>$$\frac{a}{b} = c$$</div>"]
+    E --&gt; F["<div>$$\sum_{i=1}^{n} i = \frac{n(n+1)}{2}$$</div>"]
 
-$$&lt;/div&gt;"]
-    end
-</code></pre></div>
-<pre class="mermaid"><code>flowchart LR
-    subgraph Input[""]
-        A["<div>$$Q_{c,b.mth} = d_{op} (1 - \eta_{op}) Q_{source,op} + d_{we} (1 - \eta_{we}) Q_{source,we} \tag{2-7}$$</div>"] --- 
-        B["<div>$$Q_{c,b.mth} = d_{op} (1 - \eta_{op}) Q_{source,op} + d_{we} (1 - \eta_{we}) Q_{source,we} \tag{2-7}$$</div>"]
-    end
-```--&gt;
-
-```mermaid
-flowchart LR
-    subgraph Input
-        direction TB
-        A[Apple] --&gt; B[Banana]
-    end
-
-    B --&gt; C[Cherry]
+    A --&gt; G["<div>$$E = mc^2$$</div>"]
+    G --&gt; H["<div>$$\alpha + \beta = \gamma$$</div>"]
 </code></pre>
-
-</main></div>
+</article>
+</div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
-
+</div>
 <button class="md-top md-icon" data-md-component="top" hidden="" type="button">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   맨위로
 </button>
-
+</main>
 <footer class="md-footer">
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
@@ -586,7 +558,7 @@ flowchart LR
 </div>
 </div>
 </footer>
-
+</div>
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
