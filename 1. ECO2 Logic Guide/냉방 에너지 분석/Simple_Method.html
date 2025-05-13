@@ -9,9 +9,9 @@
 <link href="%EA%B0%9C%EC%9A%94.html" rel="prev"/>
 <link href="%EB%83%89%EB%B0%A9_%EC%8B%9C%EC%8A%A4%ED%85%9C_%EA%B5%AC%EC%84%B1_%EC%9A%94%EC%86%8C.html" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.6.12" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.13" name="generator"/>
 <title>Simple Method - ECO2 Guide Center</title>
-<link href="../../assets/stylesheets/main.2afb09e1.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
@@ -595,9 +595,12 @@
 <p>냉방 부하 계산에는 다양한 접근 방식이 있으며, ECO2에서는 간단하면서도 직관적인 Simple Method를 활용합니다.  </p>
 <hr/>
 <center>
-  ![Energy Flow Diagram](../../images/그림1.jpg){ loading=lazy width=600 }  
-  **Figure 1. Energy Flow Diagram**
+<img alt="Energy Flow Diagram" src="../../images/fig1.jpg" width="600"/>
+<div><strong>Figure 1. Energy Flow Diagram</strong></div>
 </center>
+<!--만일 센터 정렬 안하려면 다음과 같이 간단히 표현 가능
+![Energy Flow Diagram](../../images/fig1.jpg)
+**Figure 1. Energy Flow Diagram** -->
 <h2 id="key-formula">🔹 Key Formula<a class="headerlink" href="#key-formula" title="Permanent link">¶</a></h2>
 <p>The core equation for heat energy calculation is:</p>
 <div class="arithmatex">\[
@@ -644,7 +647,7 @@ Q = (2 \times 1000) \times 4.18 \times (80 - 20) = 502,000 \ \text{J}
 <pre class="mermaid"><code>graph TD
     A[Start] --&gt; B{Who's Awesome?}
     B --&gt;|전성희님| C[전성희님은 최고입니다]
-    C --&gt; D[택시 후원 감사합니다]
+    C --&gt; D["(택시 후원 감사합니다)"]
     B --&gt;|You| E[You're Awesome Too!]
 
 </code></pre>
@@ -662,18 +665,16 @@ Q = (2 \times 1000) \times 4.18 \times (80 - 20) = 502,000 \ \text{J}
 </code></pre>
 <pre class="mermaid"><code>graph TD
     A["Heat Energy Calculation"] --&gt; B["<div>$$Q = mc\Delta T$$</div>"]
-    B --&gt; C["<div>$$Q = (2 \\times 1000) \\times 4.18 \\times (80 - 20)$$</div>"]
-    C --&gt; D["<div>$$Q = 502,000 \\text{ J}$$</div>"]
+    B --&gt; C["<div>$$Q = (2 \times 1000) \times 4.18 \times (80 - 20)$$</div>"]
+    C --&gt; D["<div>$$Q = 502,000 \text{ J}$$</div>"]
 
-    A --&gt; E["<div>$$\\frac{a}{b} = c$$</div>"]
-    E --&gt; F["<div>$$\\sum_{i=1}^{n} i = \\frac{n(n+1)}{2}$$</div>"]
+    A --&gt; E["<div>$$\frac{a}{b} = c$$</div>"]
+    E --&gt; F["<div>$$\sum_{i=1}^{n} i = \frac{n(n+1)}{2}$$</div>"]
 
     A --&gt; G["<div>$$E = mc^2$$</div>"]
-    G --&gt; H["<div>$$\\alpha + \\beta = \\gamma$$</div>"]
-
-    A --&gt; I["<div>$$\\mathbf{A} = \\begin{bmatrix} a &amp; b \\\\ c &amp; d \\end{bmatrix}$$</div>"]
-
+    G --&gt; H["<div>$$\alpha + \beta = \gamma$$</div>"]
 </code></pre>
+<p>왜 안될꼬...?</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
@@ -702,8 +703,8 @@ Q = (2 \times 1000) \times 4.18 \times (80 - 20) = 502,000 \ \text{J}
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <div class="md-progress" data-md-component="progress" role="progressbar"></div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.instant.prefetch", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.expand", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
-<script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.instant.prefetch", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.expand", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+<script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
 <script src="../../assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../assets/mathjax-linker.js"></script>

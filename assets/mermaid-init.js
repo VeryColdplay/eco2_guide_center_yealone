@@ -1,55 +1,47 @@
 document.addEventListener('DOMContentLoaded', function () {
-    if (window.mermaid) {
-        mermaid.initialize({
-            startOnLoad: true,
-            theme: 'default',
-            flowchart: { useMaxWidth: true, htmlLabels: true }
-        });
+  if (window.mermaid) {
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'base',
+      themeVariables: {
+        fontFamily: "'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif"
+      },
+      securityLevel: 'loose',
+      flowchart: { useMaxWidth: true, htmlLabels: true }
+    });
 
-        // ✅ KaTeX 수식 렌더링 설정 추가 (필수)
-        renderMathInElement(document.body, {
-            delimiters: [
-                {left: "$$", right: "$$", display: true},
-                {left: "\\[", right: "\\]", display: true},  // 추가: `\\[`...`\\]` 활성화
-                {left: "\\(", right: "\\)", display: false}
-            ],
-            throwOnError: false,  // ✅ 'Strict Mode' 비활성화 (오류 회피)
-        });
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "\\[", right: "\\]", display: true },
+        { left: "\\(", right: "\\)", display: false }
+      ],
+      throwOnError: false,
+    });
 
-        mermaid.run();
+    mermaid.run();
 
-        // ✅ Mermaid SVG 내부 HTML 수식 강제 렌더링 (핵심)
-        setTimeout(() => {
-            document.querySelectorAll(".mermaid").forEach((el) => {
-                const svg = el.querySelector("svg");
-                if (svg) {
-                    const htmlElements = svg.querySelectorAll("foreignObject div, foreignObject span");
+    setTimeout(() => {
+      document.querySelectorAll(".mermaid").forEach((el) => {
+        const svg = el.querySelector("svg");
+        if (svg) {
+          // 1. 모든 <text> 요소에 Pretendard 폰트 강제 적용
+          svg.querySelectorAll('text').forEach((textElement) => {
+            textElement.setAttribute("font-family", "'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif");
+            textElement.setAttribute("font-weight", "500");
+            textElement.setAttribute("fill", "#1E3A8A");
+          });
 
-                    htmlElements.forEach((htmlElement) => {
-                        if (typeof renderMathInElement === 'function') {
-                            renderMathInElement(htmlElement, {
-                                delimiters: [
-                                    {left: "$$", right: "$$", display: true},
-                                    {left: "\\[", right: "\\]", display: true},  // 추가: `\\[`...`\\]` 활성화
-                                    {left: "\\(", right: "\\)", display: false}
-                                ],
-                                throwOnError: false,  // ✅ 'Strict Mode' 비활성화 (오류 회피)
-                            });
-                        } else {
-                            console.warn("KaTeX is not loaded properly.");
-                        }
-                    });
-
-                    // ✅ Mermaid.js SVG 내부 폰트 강제 적용
-                    svg.querySelectorAll('text').forEach((textElement) => {
-                        textElement.style.fontFamily = "'Pretendard', sans-serif";
-                        textElement.style.fill = '#1E3A8A';  // 파란색
-                        textElement.style.fontWeight = '600';  // 굵은 글씨
-                    });
-                }
-            });
-        }, 500);  // Mermaid.js 렌더링 후 강제 딜레이 추가 (여기서 딜레이를 늘림)
-    } else {
-        console.error('Mermaid.js is not loaded properly.');
-    }
+          // 2. 모든 <tspan>에도 동일하게 적용
+          svg.querySelectorAll('tspan').forEach((tspan) => {
+            tspan.setAttribute("font-family", "'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif");
+            tspan.setAttribute("font-weight", "500");
+            tspan.setAttribute("fill", "#1E3A8A");
+          });
+        }
+      });
+    }, 500);
+  } else {
+    console.error('Mermaid.js is not loaded properly.');
+  }
 });

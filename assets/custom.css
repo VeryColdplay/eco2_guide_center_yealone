@@ -1,5 +1,17 @@
 /* 웹폰트 사용 가능 설정 */
 @import url('https://cdn.jsdelivr.net/npm/cmu-serif@1.0.0/index.min.css');
+@import url('https://cdn.jsdelivr.net/npm/pretendard@1.3.8/dist/web/static/pretendard.css');
+/*@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');*/
+
+/* Pretendard 본문 기본 적용 */
+body {
+  font-family: 'Pretendard', sans-serif;
+}
+
+/* 코드 블록 Pretendard 적용 */
+code {
+  font-family: 'Pretendard', monospace;
+}
 
 /* 로고 설정 */
 .md-header__button.md-logo img {
@@ -14,8 +26,9 @@
 
 /* Hover 효과 */
 .md-nav__link:hover {
-  background-color: #3B82F6;
-  color: #ffffff;
+  background-color: #6e83fe;
+  color: #ffffff !important;
+  padding: 1px 3px; /* ← padding 확대로 시각적 덩어리감 증가 */
 }
 
 /* 검색창 Pretendard 적용 */
@@ -101,3 +114,59 @@
 .md-sidebar--secondary {
   margin-right: 16px;
 }
+
+/*Mermaid 설정*/
+.mermaid text,
+.mermaid div,
+.mermaid foreignObject,
+.mermaid span,
+.mermaid tspan {
+  font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif !important;
+  font-weight: 500;
+}
+
+/* Mermaid 내부 링크 밑줄 제거 */
+.mermaid a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/* Mermaid 노드 텍스트 정렬 및 여백 설정 */
+.mermaid .node text {
+  dominant-baseline: middle !important;
+  alignment-baseline: middle !important;
+  text-anchor: middle !important;
+  font-size: 15px !important;
+  line-height: 1.6;
+}
+
+/* Mermaid HTML 기반 노드 (foreignObject 사용 시) */
+.mermaid .node foreignObject > div {
+  width: auto;
+  height: auto;
+  padding: 12px 16px !important;  /* 여백 추가 */
+  text-align: center;
+  line-height: 1.4;
+  box-sizing: border-box;
+}
+
+/* Mermaid 클러스터 (subgraph) 전체 상자 스타일 조정 */
+.mermaid .cluster > rect {
+  rx: 0;
+  ry: 0;
+  transform: translate(-4px, -8px); /* 전체 박스 살짝 키우기 */
+  width: calc(100% + 8px);
+  height: calc(100% + 16px);
+}
+
+
+/* ❌ Hover 효과 제거: 그림자 및 배경 변화 없음 */
+.mermaid .node:hover rect {
+  /* 효과 없음: 의도적으로 비워둠 */
+}
+
+.mermaid .node:hover text {
+  /* 강조 없음 */
+}
+
+
