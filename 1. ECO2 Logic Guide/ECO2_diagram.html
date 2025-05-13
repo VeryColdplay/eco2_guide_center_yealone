@@ -524,10 +524,10 @@
     subgraph Output["OUTPUT"]
         direction TB
         NoteB["<div>$$Each\ zone's\ energy\ demand$$</div>"] --- D["Heating"]
-        D --- E["Cooling"]
-        E --- F["Hot water"]
-        F --- G["Ventilating"]
-        G --- H["Lighting"]
+        D --- E["Cooling energy demand"]
+        E --- F["Hot water energy demand"]
+        F --- G["Ventilating energy demand"]
+        G --- H["Lighting energy demand"]
     end
 
     C --&gt; Output
