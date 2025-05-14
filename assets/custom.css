@@ -170,3 +170,10 @@ code {
 }
 
 
+<style>
+.equation-link {
+  font-size: 1.4em;   /* 수식 크기 확대 */
+  display: inline-block;
+  line-height: 1.4;
+}
+</style>
