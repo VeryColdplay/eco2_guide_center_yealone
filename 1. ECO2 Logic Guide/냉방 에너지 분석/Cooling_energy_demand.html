@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#cooling-energy-demand">
+<a class="md-skip" href="#q_cb-cooling-energy-demand">
           콘텐츠로 이동
         </a>
 </div>
@@ -322,24 +322,24 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#eco2-memo">
+<a class="md-nav__link" href="#_1">
 <span class="md-ellipsis">
-      ECO2 memo
+      🔹 개요
+    </span>
+</a>
+<nav aria-label="🔹 개요" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q_cb">
+<span class="md-ellipsis">
+      📦 연간 단위면적당 냉방에너지요구량 \(Q_{c,b}\)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#introduction">
+<a class="md-nav__link" href="#q_cb_1">
 <span class="md-ellipsis">
-      🔹 Introduction
-    </span>
-</a>
-<nav aria-label="🔹 Introduction" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#1-1-qc-b">
-<span class="md-ellipsis">
-      1개 존의 1개월 단위면적당 냉방에너지요구량 (Qc, b )
+      📦 월간 단위면적당 냉방에너지요구량 \(Q_{c,b}\)
     </span>
 </a>
 </li>
@@ -347,7 +347,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
+<a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
       🔹 냉방기기 설정 항목 및 계산 로직
     </span>
@@ -403,6 +403,13 @@
 <a class="md-nav__link" href="#example-calculation">
 <span class="md-ellipsis">
       🔹 Example Calculation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#eco2-memo">
+<span class="md-ellipsis">
+      ECO2 memo
     </span>
 </a>
 </li>
@@ -635,24 +642,24 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#eco2-memo">
+<a class="md-nav__link" href="#_1">
 <span class="md-ellipsis">
-      ECO2 memo
+      🔹 개요
+    </span>
+</a>
+<nav aria-label="🔹 개요" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q_cb">
+<span class="md-ellipsis">
+      📦 연간 단위면적당 냉방에너지요구량 \(Q_{c,b}\)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#introduction">
+<a class="md-nav__link" href="#q_cb_1">
 <span class="md-ellipsis">
-      🔹 Introduction
-    </span>
-</a>
-<nav aria-label="🔹 Introduction" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#1-1-qc-b">
-<span class="md-ellipsis">
-      1개 존의 1개월 단위면적당 냉방에너지요구량 (Qc, b )
+      📦 월간 단위면적당 냉방에너지요구량 \(Q_{c,b}\)
     </span>
 </a>
 </li>
@@ -660,7 +667,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
+<a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
       🔹 냉방기기 설정 항목 및 계산 로직
     </span>
@@ -719,6 +726,13 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#eco2-memo">
+<span class="md-ellipsis">
+      ECO2 memo
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </div>
@@ -726,22 +740,10 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="cooling-energy-demand">Cooling Energy Demand (냉방에너지요구량)<a class="headerlink" href="#cooling-energy-demand" title="Permanent link">¶</a></h1>
-<h2 id="eco2-memo">ECO2 memo<a class="headerlink" href="#eco2-memo" title="Permanent link">¶</a></h2>
-<p>절대 온도 구간 기반 부하 판단
-기준 범위(Dead band)가 있다면, 그 범위 내에서는 부하가 존재하지 않음 (사람이 쾌적하게 느끼는 실내 온도 범위)
-부하라는 것은 에너지요구량을 의미하므로 에너지 단위를 가짐 (기본단위는 W, 와트)</p>
-<p>부하의 3종류
-1. 기준 범위보다 온도가 낮을 때: 난방부하(heating demand) 발생 🔥 <span class="arithmatex">\(Q_{h,b} &gt; 0\)</span> <br/>
-2. 기준 범위보다 온도가 높을 떄: 냉방부하(cooling demand) 발생 🧊 <span class="arithmatex">\(Q_{c,b} &gt; 0\)</span> <br/>
-3. 기준 범위 내 온도: 없음   </p>
-<h2 id="introduction">🔹 Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
+<h1 id="q_cb-cooling-energy-demand">냉방에너지요구량 <span class="arithmatex">\(Q_{c,b}\)</span> (Cooling energy demand)<a class="headerlink" href="#q_cb-cooling-energy-demand" title="Permanent link">¶</a></h1>
+<h2 id="_1">🔹 개요<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <p>공간은 1개 존 단위,<br/>
 시간은 1개월 단위로 단위면적당 냉방에너지요구량을 계산 &lt;&lt; 도식화 예정</p>
-<h3 id="1-1-qc-b">1개 존의 1개월 단위면적당 냉방에너지요구량 (<em>Q<sub>c, b</sub></em> )<a class="headerlink" href="#1-1-qc-b" title="Permanent link">¶</a></h3>
-<p>1개월은 주중 및 주말일수로 구성되고,<br/>
-주중 및 주말 여부에 따라 1일 단위면적당 냉방에너지요구량이 달라짐</p>
-<p>🎨 Request to Hee ➡️ 적절히 도식화 요청</p>
 <p>Open in a New Window ver. &amp; Equation No. Automation with span + macro
 <a class="equation-link" href="#" onclick="window.open(
      '/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Equation_diagram.html',
@@ -751,18 +753,29 @@
 <span class="arithmatex">\( Q_{h,b,i} = Q_{sink,i} - \eta_i Q_{source,i} \)</span> <span class="eq-number">(2-1)</span>
 </a></p>
 <hr/>
-<p>주중 1일 단위면적당 냉방에너지요구량 × 주중 일수<br/>
-주말 1일 단위면적당 냉방에너지요구량 × 주말 일수
-▶ 1개월 단위면적당 냉방에너지요구량 
-1일(i?) 기준 1개 존 단위면적당 냉방에너지요구량 (<em>Q<sub>c, b</sub></em> )</p>
+<h3 id="q_cb">📦 <strong>연간</strong> 단위면적당 냉방에너지요구량 <span class="arithmatex">\(Q_{c,b}\)</span><a class="headerlink" href="#q_cb" title="Permanent link">¶</a></h3>
+<center>
+<img alt="Annual &amp; monthly cooling energy demand" src="../../images/adjusted_left_box_width_c.png" style="max-width: 80%;"/>
+<div><strong>Annual cooling energy demand</strong></div>
+</center>
+<p> <br/></p>
+<h3 id="q_cb_1">📦 <strong>월간</strong> 단위면적당 냉방에너지요구량 <span class="arithmatex">\(Q_{c,b}\)</span><a class="headerlink" href="#q_cb_1" title="Permanent link">¶</a></h3>
+<p> <br/></p>
+<center>
+<img alt="Monthly cooling energy demand" src="../../images/Monthly cooling energy demand.png" style="max-width: 80%;"/>
+<div><strong>Monthly cooling energy demand</strong></div>
+</center>
+<p> <br/></p>
+<p>1개월은 주중 및 주말일수로 구성되고,<br>
+주중 및 주말 여부에 따라 1일 단위면적당 냉방에너지요구량이 달라짐</br></p>
 <p>Open in current window ver. </p>
 <p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html">
 <span class="arithmatex">\(Q_{c,b.mth} = d_{op} (1 - \eta_{op}) Q_{source,op} + d_{we} (1 - \eta_{we}) Q_{source,we} \tag{2-7}\)</span>
 </a></p>
 <hr/>
 <p>where 
-<em>Q<sub>source</sub></em> : 열획득원<br/>
-η: 열획득 이용률(소진율) </p>
+<em>Q<sub>source</sub></em> : 열획득원<br>
+η: 열획득 이용률(소진율) </br></p>
 <h4 id="qsource-qc-b">🚩 열획득 이용률(η): 열획득원(<em>Q<sub>source</sub></em> )에 의한 냉방에너지요구량(<em>Q<sub>c, b</sub></em> )의 정도를 결정<a class="headerlink" href="#qsource-qc-b" title="Permanent link">¶</a></h4>
 <p>γ 및 <em>a </em>의 값에 따라 열획득 이용률(η)이 결정  </p>
 <div class="arithmatex">\[
@@ -899,7 +912,7 @@ $$ Q_{cooling} = (1 - \eta) \cdot Q_{source} $$
 <div><strong>Figure 1. Energy Flow Diagram</strong></div>
 </center>
 <hr/>
-<h2 id="_1">🔹 냉방기기 설정 항목 및 계산 로직<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<h2 id="_2">🔹 냉방기기 설정 항목 및 계산 로직<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <h3 id="1_1"><strong>1. [일반데이터]</strong><a class="headerlink" href="#1_1" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>냉동기 방식</strong> → 압축식 / 흡수식 선택</li>
@@ -960,16 +973,29 @@ $$ Q_{cooling} = (1 - \eta) \cdot Q_{source} $$
 Q = mc\Delta T
 \]</div>
 <p>Where:<br>
-- <strong>Q</strong> = Heat energy (Joules)<br/>
+- <strong>Q</strong> = Heat energy (Joules)<br>
 - <strong>m</strong> = Mass (kg)<br/>
 - <strong>c</strong> = Specific heat capacity (J/kg·K)<br/>
-- <strong>ΔT</strong> = Temperature change (K)</br></p>
+- <strong>ΔT</strong> = Temperature change (K)</br></br></p>
 <hr/>
 <h2 id="example-calculation">🔹 Example Calculation<a class="headerlink" href="#example-calculation" title="Permanent link">¶</a></h2>
 <p>Let's calculate the energy required to heat 2 kg of water from 20°C to 80°C. Assuming water's specific heat capacity is <span class="arithmatex">\( 4.18 \ \mathrm{J/g \cdot K} \)</span>.  </p>
 <div class="arithmatex">\[
 Q = (2 \times 1000) \times 4.18 \times (80 - 20) = 502,000 \ \text{J}
 \]</div>
+<h2 id="eco2-memo">ECO2 memo<a class="headerlink" href="#eco2-memo" title="Permanent link">¶</a></h2>
+<p>절대 온도 구간 기반 부하 판단
+기준 범위(Dead band)가 있다면, 그 범위 내에서는 부하가 존재하지 않음 (사람이 쾌적하게 느끼는 실내 온도 범위)
+부하라는 것은 에너지요구량을 의미하므로 에너지 단위를 가짐 (기본단위는 W, 와트)</p>
+<p>부하의 3종류
+1. 기준 범위보다 온도가 낮을 때: 난방부하(heating demand) 발생 🔥 <span class="arithmatex">\(Q_{h,b} &gt; 0\)</span> <br/>
+2. 기준 범위보다 온도가 높을 떄: 냉방부하(cooling demand) 발생 🧊 <span class="arithmatex">\(Q_{c,b} &gt; 0\)</span> <br/>
+3. 기준 범위 내 온도: 없음   </p>
+<p>🎨 Request to Hee ➡️ 적절히 도식화 요청</p>
+<p>주중 1일 단위면적당 냉방에너지요구량 × 주중 일수<br/>
+주말 1일 단위면적당 냉방에너지요구량 × 주말 일수
+▶ 1개월 단위면적당 냉방에너지요구량 
+1일(i?) 기준 1개 존 단위면적당 냉방에너지요구량 (<em>Q<sub>c, b</sub></em> )</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

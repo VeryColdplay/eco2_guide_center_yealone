@@ -47,6 +47,7 @@ code {
 .md-content p {
   font-size: 16px;
   line-height: 1.6;
+  margin-left: 2em;  /* ← 전체 문단을 오른쪽으로 2em 밀기 */
 }
 
 /* 제목 스타일 */
