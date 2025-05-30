@@ -1,32 +1,36 @@
-# Cooling Energy Demand (냉방에너지요구량)
+# 냉방에너지요구량 \(Q_{c,b}\) (Cooling energy demand)
 
-## ECO2 memo
-절대 온도 구간 기반 부하 판단
-기준 범위(Dead band)가 있다면, 그 범위 내에서는 부하가 존재하지 않음 (사람이 쾌적하게 느끼는 실내 온도 범위)
-부하라는 것은 에너지요구량을 의미하므로 에너지 단위를 가짐 (기본단위는 W, 와트)
-
-부하의 3종류
-1. 기준 범위보다 온도가 낮을 때: 난방부하(heating demand) 발생 🔥 \(Q_{h,b} > 0\)   
-2. 기준 범위보다 온도가 높을 떄: 냉방부하(cooling demand) 발생 🧊 \(Q_{c,b} > 0\)   
-3. 기준 범위 내 온도: 없음   
-
-## 🔹 Introduction
+## 🔹 개요
 공간은 1개 존 단위,  
 시간은 1개월 단위로 단위면적당 냉방에너지요구량을 계산 << 도식화 예정
 
-### 1개 존의 1개월 단위면적당 냉방에너지요구량 (<em>Q<sub>c, b</sub></em> )
-
-1개월은 주중 및 주말일수로 구성되고,  
-주중 및 주말 여부에 따라 1일 단위면적당 냉방에너지요구량이 달라짐
-
-🎨 Request to Hee ➡️ 적절히 도식화 요청
 
 {{ include_equations("2", 1, 1) }}
 
-주중 1일 단위면적당 냉방에너지요구량 × 주중 일수  
-주말 1일 단위면적당 냉방에너지요구량 × 주말 일수
-▶ 1개월 단위면적당 냉방에너지요구량 
-1일(i?) 기준 1개 존 단위면적당 냉방에너지요구량 (<em>Q<sub>c, b</sub></em> )
+
+
+### 📦 **연간** 단위면적당 냉방에너지요구량 \(Q_{c,b}\)
+
+<center>
+  <img src="../../images/adjusted_left_box_width_c.png" style="max-width: 80%;" alt="Annual & monthly cooling energy demand">
+  <div><strong>Annual cooling energy demand</strong></div>
+</center>
+
+&nbsp;<br>
+
+### 📦 **월간** 단위면적당 냉방에너지요구량 \(Q_{c,b}\)
+
+&nbsp;<br>
+
+<center>
+  <img src="../../images/Monthly cooling energy demand.png" style="max-width: 80%;" alt="Monthly cooling energy demand">
+  <div><strong>Monthly cooling energy demand</strong></div>
+</center>
+
+&nbsp;<br>
+
+1개월은 주중 및 주말일수로 구성되고,  
+주중 및 주말 여부에 따라 1일 단위면적당 냉방에너지요구량이 달라짐
 
 {{ include_equations("2", 7, 7) }}  
 
@@ -282,3 +286,21 @@ Let's calculate the energy required to heat 2 kg of water from 20°C to 80°C. A
 $$
 Q = (2 \times 1000) \times 4.18 \times (80 - 20) = 502,000 \ \text{J}
 $$
+## ECO2 memo
+절대 온도 구간 기반 부하 판단
+기준 범위(Dead band)가 있다면, 그 범위 내에서는 부하가 존재하지 않음 (사람이 쾌적하게 느끼는 실내 온도 범위)
+부하라는 것은 에너지요구량을 의미하므로 에너지 단위를 가짐 (기본단위는 W, 와트)
+
+부하의 3종류
+1. 기준 범위보다 온도가 낮을 때: 난방부하(heating demand) 발생 🔥 \(Q_{h,b} > 0\)   
+2. 기준 범위보다 온도가 높을 떄: 냉방부하(cooling demand) 발생 🧊 \(Q_{c,b} > 0\)   
+3. 기준 범위 내 온도: 없음   
+
+
+🎨 Request to Hee ➡️ 적절히 도식화 요청
+
+
+주중 1일 단위면적당 냉방에너지요구량 × 주중 일수  
+주말 1일 단위면적당 냉방에너지요구량 × 주말 일수
+▶ 1개월 단위면적당 냉방에너지요구량 
+1일(i?) 기준 1개 존 단위면적당 냉방에너지요구량 (<em>Q<sub>c, b</sub></em> )
