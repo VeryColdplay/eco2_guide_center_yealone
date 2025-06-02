@@ -28,7 +28,7 @@ code {
 .md-nav__link:hover {
   background-color: #6e83fe;
   color: #ffffff !important;
-  padding: 1px 3px; /* ← padding 확대로 시각적 덩어리감 증가 */
+  padding: 0px 3px; /* ← padding 확대로 시각적 덩어리감 증가 */
 }
 
 /* 검색창 Pretendard 적용 */
