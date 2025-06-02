@@ -14,6 +14,12 @@ code {
 }
 
 /* 로고 설정 */
+.md-header{
+  box-shadow: none !important;
+}
+
+
+/* 로고 설정 */
 .md-header__button.md-logo img {
   height: 60px;
   width: auto;
@@ -57,7 +63,15 @@ code {
   border-bottom: 2px solid #1E3A8A;
   padding-bottom: 10px;
   margin-bottom: 20px;
+  padding-top:20px;
+  /* 📌 sticky 고정 추가 */
+  position: sticky;
+  top: 89px;  /* 필요에 따라 64~84px 조정 가능 */
+  background-color: white;
+  z-index: 5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
 }
+
 .md-content h2 {
   font-size: 26px;
   font-weight: bold;
@@ -171,10 +185,48 @@ code {
 }
 
 
-<style>
 .equation-link {
   font-size: 1.4em;   /* 수식 크기 확대 */
   display: inline-block;
   line-height: 1.4;
 }
-</style>
+
+
+.breadcrumb-nav {
+  font-size: 0.6rem !important;
+  margin-bottom: 0.9rem;
+  color: #6b6d72;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.breadcrumb-nav a {
+  text-decoration: none;
+  color:#6b6d72;
+  font-weight: 500;
+}
+
+.breadcrumb-nav a:hover {
+  text-decoration: underline;
+  color: #4051B5;
+}
+
+.breadcrumb-nav span {
+  font-weight: 600;
+  color: #6b6d72;
+}
+
+/* › 화살표 스타일 */
+.breadcrumb-nav .breadcrumb-separator {
+  margin: 0 0.25rem;
+  color: #6b6d72;
+}
+
+.breadcrumb-nav .current-page {
+  font-weight: 500;
+  color: #6b6d72; /* 현재 페이지 이름 (표시되지만 링크 아님) */
+}
+
+

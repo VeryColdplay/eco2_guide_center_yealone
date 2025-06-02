@@ -68,14 +68,17 @@ theme:
   language: ko
   logo: assets/ECO2_icon.png
   features:
-    - navigation.instant
-    - navigation.instant.progress
-    - navigation.instant.prefetch
-    - navigation.instant.preview
+    #- navigation.instant
+    #- navigation.instant.progress
+    #- navigation.instant.prefetch
+    #- navigation.instant.preview 나중에 필요할 때 instant 꾸러미 사용하기
     - navigation.path
-    - navigation.top
+    #- navigation.top
+    - navigation.tabs.sticky
     # - navigation.expand # 다 펼치고 싶을 때
     - navigation.tracking
+    # - navigation.sections # 너무 트리가 좁으면 들여쓰기 안하고 섹션모드로
+
 
 extra_css:
   - assets/pretendard.css
@@ -89,16 +92,27 @@ extra:
 
 
 extra_javascript:
-#  - assets/mermaid-init.js  # mermaid 초기화 스크립트
-  - assets/mathjax-config.js
+  # 1. 폴리필 (최상단)
+  - assets/polyfill.min.js
+
+  # 2. 수식 및 그래픽 엔진
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - assets/mathjax-linker.js
-  - assets/polyfill.min.js  # 로컬 경로로 polyfill.js 파일
   - https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js
   - https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+
+  # 3. 수식 및 다이어그램 설정
+  - assets/mathjax-config.js
+  - assets/mathjax-linker.js
   - assets/mermaid-init.js
-  - assets/cache-buster.js    # 👈 추가
-  - https://unpkg.com/mermaid@10/dist/mermaid.min.js 
+
+  # 4. 사용자 기능 스크립트
+  - assets/cache-buster.js
+  - assets/breadcrumb.js
+  - assets/scroll-to-top.js
+  - assets/footer-feedback.js
+
+
   
 
 markdown_extensions:

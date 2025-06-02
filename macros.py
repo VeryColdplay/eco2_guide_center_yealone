@@ -34,3 +34,20 @@ def define_env(env):
                     content = content.replace("{{ auto_eq_number }}", f'<span class="eq-number">{eq_tag}</span>')
                     result += content + "\n\n"
         return result
+
+
+
+    @env.macro
+    def info_box(title, content, eq_prefix=None, eq_start=None, eq_end=None):
+        eq_block = ""
+        if eq_prefix and eq_start and eq_end:
+            # include_equations(prefix, start, end) 자동 호출
+            eq_block = include_equations(eq_prefix, int(eq_start), int(eq_end))
+
+        return f'''
+    <div class="info-box">
+    <strong>{title}</strong>
+    <p>{content}</p>
+    {eq_block}
+    </div>
+    '''

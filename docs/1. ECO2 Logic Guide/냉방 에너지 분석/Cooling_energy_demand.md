@@ -1,24 +1,62 @@
-# 냉방에너지요구량 \(Q_{c,b}\) (Cooling energy demand)
+# 단위면적당 냉방에너지요구량  \(Q_{c,b}\) (Cooling energy demand, per area) 
 
-## 🔹 개요
-공간은 1개 존 단위,  
-시간은 1개월 단위로 단위면적당 냉방에너지요구량을 계산 << 도식화 예정
+<div div style="
+  background-color: #F1F5F9;
+  border-left: 5px solid rgb(147, 160, 238);
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 16px;
+">
+        <strong>개요</strong><br>
+        단위면적당 냉방에너지요구량은 <strong>시스템이 제거해야 할 유효 열량</strong>으로, 다음 식에 의해 계산됩니다:
+        {{ include_equations("2", 1, 1) }}
+</div>
 
+## 🔹단위면적당 냉방에너지요구량 계산을 위한 📐공간 및 🗓️시간 구분
+- 한 건축물의 연간 단위면적당 냉방에너지요구량을 구하기 위해, 건축물을 공간적 및 시간적으로 분할하여 각 공간별 단위면적당 냉방에너지요구량을 구합니다.   
+- 📐 공간은 <strong>존(zone)</strong> 단위로 구분되며 <strong>모든 존별 단위면적당 냉방에너지요구량의 합</strong>이 비로소 건축물의 단위면적당 냉방에너지요구량이 됩니다.   
+- 🗓️ 한편 1개 존의 연간 단위면적당 냉방에너지요구량은 <strong>월별 단위면적당 냉방에너지요구량의 총합</strong>이 됩니다.
 
-{{ include_equations("2", 1, 1) }}
-
-
-
-### 📦 **연간** 단위면적당 냉방에너지요구량 \(Q_{c,b}\)
-
-<center>
-  <img src="../../images/adjusted_left_box_width_c.png" style="max-width: 80%;" alt="Annual & monthly cooling energy demand">
+<div style="display: flex; gap: 0.5em; align-items: stretch;">
+    <div style="
+    flex: 1;
+    background: #f0f8ff;
+    border: 1px solid #aad4ff;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  ">
+    <h3> ⭕ 건축물의 연간 단위면적당 냉방에너지요구량: 📐 존별 요구량의 합</h3>
+    <h4></h4>
+    <p>이곳은 왼쪽 단의 내용입니다.</p>
+  </div>
+    <div style="
+    flex: 1;
+    background: #f0f8ff;
+    border: 1px solid #aad4ff;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  ">
+    <h3> ⭕ 건축물의 연간 단위면적당 냉방에너지요구량: 🗓️ 월별 요구량의 합</h3>
+    <h4>연간 단위면적당 냉방에너지요구량 \(Q_{c,b}\)</h4>
+    <p><center>
+  <img src="../../images/adjusted_left_box_width_c.png" style="max-width: 100%;" alt="Annual & monthly cooling energy demand">
   <div><strong>Annual cooling energy demand</strong></div>
 </center>
+</p>
+  </div>
+</div>
+
+
 
 &nbsp;<br>
 
-### 📦 **월간** 단위면적당 냉방에너지요구량 \(Q_{c,b}\)
+## 🔹 **월간** 단위면적당 냉방에너지요구량 \(Q_{c,b}\)
 
 &nbsp;<br>
 
@@ -303,4 +341,4 @@ $$
 주중 1일 단위면적당 냉방에너지요구량 × 주중 일수  
 주말 1일 단위면적당 냉방에너지요구량 × 주말 일수
 ▶ 1개월 단위면적당 냉방에너지요구량 
-1일(i?) 기준 1개 존 단위면적당 냉방에너지요구량 (<em>Q<sub>c, b</sub></em> )
+1일(i?) 기준 1개 존 단위면적당 냉방에너지요구량 (<em>Q<sub>c, b</sub></em> )📍
