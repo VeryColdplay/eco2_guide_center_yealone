@@ -124,7 +124,6 @@ markdown_extensions:
   - tables                  # 마크다운 표
   - toc:                    # 목차 (우측 고정 네비게이션)
       permalink: true
-      toc_depth: 3
   - pymdownx.arithmatex:    # 수식 (MathJax/KaTeX)
       generic: true
   - pymdownx.superfences:   # 코드블럭 향상, Mermaid 등 삽입 가능
