@@ -48,6 +48,10 @@ code {
   font-weight: 600;
 }
 
+.md-typeset .headerlink {
+  display: none;
+}
+
 /* 본문 글자 스타일 */
 .md-content p {
   font-size: 16px;
@@ -77,7 +81,7 @@ code {
   position: sticky;
   top: 88px;  /* 필요에 따라 64~84px 조정 가능 */
   background-color: white;
-  z-index: 5;
+  z-index: 1;
   cursor: pointer;
 }
 
