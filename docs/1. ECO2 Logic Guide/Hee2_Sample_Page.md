@@ -22,6 +22,9 @@ slug: /ECO2_사용자_도움말/데이터_입력
 - **1차 부하 산정** · 냉·난방 시스템 외부에서 유입된 열에너지는 제외  
 - **2차 보정 분석** · 시스템에서 공급된 열에너지 반영하여 최종 부하 계산  
 - **난방 조건 분리** · 냉방과 전제조건(예: 실내온도)이 다르므로 개별 산정
+<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
+  \( Q_{sink} = Q_T + Q_V + Q_{I,sink} + Q_S \) <span class="eq-number">(2-11)</span>
+</a>
 
 ---
 
