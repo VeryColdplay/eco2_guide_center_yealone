@@ -699,6 +699,7 @@
    ); return false;">
 <span class="arithmatex">\( Q_{h,b,i} = Q_{sink,i} - \eta_i Q_{source,i} \)</span> <span class="eq-number">(2-1)</span>
 </a></p>
+<p>Q_{c,b} \tag<span class="eq-number">(2-2)</span></p>
 <!--Open in a New Tab ver. & Equation No. (manually)-->
 <p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
 <span class="arithmatex">\(Q_{h,b.mth} = d_{op} \left( Q_{sink,op} - \eta_{op} Q_{source,op} \right) + d_{we} \left( Q_{sink,we} - \eta_{we} Q_{source,we} \right) \)</span> <span class="eq-number">(2-6)</span>
@@ -712,18 +713,39 @@
 <div class="arithmatex">\[
 Q_{sink} = Q_T + Q_V + Q_{I,sink} + Q_S \tag{2-11}
 \]</div>
-<div class="arithmatex">\[
-Q_{source} = Q_S + Q_T + Q_V + Q_{I,source} \tag{2-16}
-\]</div>
-<div class="arithmatex">\[
-\gamma = \frac{Q_{source}}{Q_{sink}} \tag{2-21}
-\]</div>
-<div class="arithmatex">\[
-\tau = \frac{C_{wirk}}{H} = \frac{C_{wirk}}{\sum_j H_{T,j} + \sum_k H_{V,k} + H_{V,mech,\vartheta}} \tag{2-22, 129}
-\]</div>
-<div class="arithmatex">\[
-\eta = \frac{1 - \gamma^a}{1 - \gamma^{a+1}}, \quad \gamma \ne 1 \tag{2-23}
-\]</div>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_T = \sum_j H_{T,j} \cdot (\vartheta_i - \vartheta_j)t, \quad \vartheta_i &gt; \vartheta_j \)</span> <span class="eq-number">(2-12)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_V = \sum_k H_{V,k} (\vartheta_i - \vartheta_k)t, \quad \vartheta_i &gt; \vartheta_k \)</span> <span class="eq-number">(2-13)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{I,sink} = Q_{I,sink,c} + Q_{I,sink,fac} \)</span> <span class="eq-number">(2-15)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{source} = Q_S + Q_T + Q_V + Q_{I,source} \)</span> <span class="eq-number">(2-16)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_S = \sum Q_{S,tr} + \sum Q_{S,op} \)</span> <span class="eq-number">(2-17)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_T = \sum_j H_{T,j} \cdot (\vartheta_j - \vartheta_i)t, \quad \vartheta_i &lt; \vartheta_j \)</span> <span class="eq-number">(2-18)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_V = \sum_k H_{V,k} (\vartheta_k - \vartheta_i)t, \quad \vartheta_i &lt; \vartheta_k \)</span> <span class="eq-number">(2-19)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{I,source} = Q_{I,source,p} + Q_{I,source,L} + Q_{I,source,fac} + Q_{I,source,h} \)</span> <span class="eq-number">(2-20)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( \gamma = \frac{Q_{source}}{Q_{sink}} \)</span> <span class="eq-number">(2-21)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( \tau = \frac{C_{wirk}}{H} = \frac{C_{wirk}}{\sum_j H_{T,j} + \sum_k H_{V,k} + H_{V,mech,\vartheta}} \)</span> <span class="eq-number">(2-22, 129)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( \eta = \frac{1 - \gamma^a}{1 - \gamma^{a+1}}, \quad \gamma \ne 1 \)</span> <span class="eq-number">(2-23)</span>
+</a></p>
 <p><a class="equation-link" href="#" onclick="window.open(
      '/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Equation_diagram.html',
      'popupWindow',
@@ -731,57 +753,264 @@ Q_{source} = Q_S + Q_T + Q_V + Q_{I,source} \tag{2-16}
    ); return false;" style="font-size: 100%; line-height: 2em; display: block; width: fit-content; margin: 0 auto;">
 <span class="arithmatex">\( \displaystyle \eta = \frac{a}{a+1}, \quad \gamma = 1 \tag{2\text{-}24} \)</span> <span class="eq-number">(2-24)</span>
 </a></p>
-<div class="arithmatex">\[
-a = a_0 + \frac{\tau}{\tau_0}, \quad a_0 = 1, \quad \tau_0 = 16h \tag{2-25}
-\]</div>
-<div class="arithmatex">\[
-H_{T,D} = \sum (U_j A_j) + \Delta U_{WB} \sum A_j \tag{2-44}
-\]</div>
-<div class="arithmatex">\[
-H_{T,D} = \sum (U_j A_j) + \sum (l_j \Psi_j) \tag{2-45}
-\]</div>
-<div class="arithmatex">\[
-H_{T,iu} = \sum (U_j A_j) \tag{2-48}
-\]</div>
-<div class="arithmatex">\[
-H_{T,iz} = \sum (U_j A_j) \tag{2-52}
-\]</div>
-<div class="arithmatex">\[
-H_{V,inf} = n_{inf} \, V \, c_{p,a} \, \rho_a \tag{2-58}
-\]</div>
-<div class="arithmatex">\[
-H_{V,mech} = n_{mech} \, V \, c_{p,a} \, \rho_a \tag{2-83}
-\]</div>
-<div class="arithmatex">\[
-H_{V,ue} = n_{ue} \, V_u \, c_{p,a} \, \rho_a \tag{2-94}
-\]</div>
-<div class="arithmatex">\[
-H_{V,z} = \dot{V}_{z,d} \, c_{p,a} \, \rho_a \tag{2-99}
-\]</div>
-<div class="arithmatex">\[
-C_{wirk} = 50 \, \mathrm{Wh}/(\mathrm{m}^2 \cdot \mathrm{K}) \, A_B \tag{2-126}
-\]</div>
-<div class="arithmatex">\[
-C_{wirk} = 90 \, \mathrm{Wh}/(\mathrm{m}^2 \cdot \mathrm{K}) \, A_B \tag{2-127}
-\]</div>
-<div class="arithmatex">\[
-C_{wirk} = 130 \, \mathrm{Wh}/(\mathrm{m}^2 \cdot \mathrm{K}) \, A_B \tag{2-128}
-\]</div>
-<div class="arithmatex">\[
-\tau = \frac{C_{wirk}}{H} = \frac{C_{wirk}}{\sum_j H_{T,j} + \sum_k H_{V,k} + H_{V,mech,\vartheta}} \tag{2-22, 129}
-\]</div>
-<div class="arithmatex">\[
-H_{V,mech,\vartheta} = H_{V,mech} \cdot \frac{\vartheta_{i,h.soll} - \vartheta_{V,mech}}{6K} \tag{2-130}
-\]</div>
-<div class="arithmatex">\[
-1 - (\eta \gamma) &lt; 0.01 \rightarrow \eta = \frac{1}{\gamma}, \quad (Q_{h,b} = 0) \tag{2-137}
-\]</div>
-<div class="arithmatex">\[
-(1 - \eta) \gamma &lt; 0.01 \rightarrow \eta = 1, \quad (Q_{c,b} = 0) \tag{2-138}
-\]</div>
-<div class="arithmatex">\[
-\dot{V}_{mech} \geq \frac{\dot{Q}_{C,max}}{c_{p,a} \rho_a (\vartheta_i - \vartheta_{mech})} \rightarrow \eta = 1 \tag{2-139}
-\]</div>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( a = a_0 + \frac{\tau}{\tau_0}, \quad a_0 = 1, \quad \tau_0 = 16h \)</span> <span class="eq-number">(2-25)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( \vartheta_{i,h} = \vartheta_{i,h.soll} \)</span> <span class="eq-number">(2-26)</span> <span class="note">(기본 21°C)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( \vartheta_{i,h} = \max \left( \vartheta_{i,h.soll} - f_{NA,d} (\vartheta_{i,h.soll} - \vartheta_e), \ \vartheta_{i,h.soll} - \Delta \vartheta_{i,NA,d} \cdot \frac{t_{NA,d}}{24h} \right) \)</span> <span class="eq-number">(2-27)</span> <span class="note">(야간감소)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( f_{NA} = 0.13 \cdot \frac{t_{NA}}{24h} \left( - \frac{\tau}{250h} \right) \)</span> <span class="eq-number">(2-28)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( f_{NA} = 0.26 \cdot \frac{t_{NA}}{24h} \left( - \frac{\tau}{250h} \right) \)</span> <span class="eq-number">(2-29)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( \vartheta_{i,h} = \max \left( \vartheta_{i,h.soll} - f_{ue} (\vartheta_{i,h.soll} - \vartheta_e), \ \vartheta_{i,h.soll} - \Delta \vartheta_{i,NA,d} \right) \)</span> <span class="eq-number">(2-30)</span> <span class="note">(주말감소)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( f_{we} = 0.2 \left( 1 - 0.4 \cdot \frac{\tau}{250h} \right) \)</span> <span class="eq-number">(2-31)</span> <span class="note">(난방감소)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( f_{we} = 0.3 \left( 1 - 0.2 \cdot \frac{\tau}{250h} \right) \)</span> <span class="eq-number">(2-32)</span> <span class="note">(난방정지)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( \vartheta_{i,h} = \vartheta_{i,h.soll} - f_{tb} (\vartheta_{i,h.soll} - \vartheta_e) \)</span> <span class="eq-number">(2-33)</span> <span class="note">(공간적 제한)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( f_{tb} = 0.8 \left[ 1 - \exp \left( - \frac{\dot{Q}_{h,\mathrm{max}}}{A_B \cdot 35 \, \mathrm{W/m^2}} \right) \right] a_{tb}^2 \)</span> <span class="eq-number">(2-34)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( \vartheta_{i,h} = \vartheta_{i,NA} - f_{tb} (\vartheta_{i,NA} - \vartheta_e) \)</span> <span class="eq-number">(2-35)</span> <span class="note">(공간적 시간적 제한)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( \vartheta_{i,c} = \vartheta_{i,c.soll} - 2K \)</span> <span class="eq-number">(2-36)</span> <span class="note">예: <span class="arithmatex">\( 24^\circ \text{C} - 2K = 22^\circ \text{C} \)</span></span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{T,e} = H_{T,D} (\vartheta_i - \vartheta_e)t, \quad \vartheta_i &gt; \vartheta_e \)</span> <span class="eq-number">(2-42)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{T,e} = H_{T,D} (\vartheta_e - \vartheta_i)t, \quad \vartheta_i &lt; \vartheta_e \)</span> <span class="eq-number">(2-43)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( H_{T,D} = \sum (U_j A_j) + \Delta U_{WB} \sum A_j \)</span> <span class="eq-number">(2-44)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( H_{T,D} = \sum (U_j A_j) + \sum (l_j \Psi_j) \)</span> <span class="eq-number">(2-45)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{T,u} = H_{T,iu} (\vartheta_i - \vartheta_u)t, \quad \vartheta_i &gt; \vartheta_u \)</span> <span class="eq-number">(2-46)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{T,u} = H_{T,iu} (\vartheta_u - \vartheta_i)t, \quad \vartheta_i &lt; \vartheta_u \)</span> <span class="eq-number">(2-47)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( H_{T,iu} = \sum (U_j A_j) \)</span> <span class="eq-number">(2-48)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{T,z} = H_{T,iz} (\vartheta_i - \vartheta_z)t, \quad \vartheta_i &gt; \vartheta_z \)</span> <span class="eq-number">(2-50)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{T,z} = H_{T,iz} (\vartheta_z - \vartheta_i)t, \quad \vartheta_i &lt; \vartheta_z \)</span> <span class="eq-number">(2-51)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( H_{T,iz} = \sum (U_j A_j) \)</span> <span class="eq-number">(2-52)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{T,s} = H_{T,s} (\vartheta_i - \vartheta_s)t, \quad \vartheta_i &gt; \vartheta_s \)</span> <span class="eq-number">(2-53)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{T,s} = H_{T,s} (\vartheta_e - \vartheta_i)t, \quad \vartheta_i &lt; \vartheta_e \)</span> <span class="eq-number">(2-54)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{V,inf} = H_{V,inf} (\vartheta_i - \vartheta_e)t, \quad \vartheta_i &gt; \vartheta_e \)</span> <span class="eq-number">(2-56)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{V,inf} = H_{V,inf} (\vartheta_e - \vartheta_i)t, \quad \vartheta_i &lt; \vartheta_e \)</span> <span class="eq-number">(2-57)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( H_{V,inf} = n_{inf} \, V \, c_{p,a} \, \rho_a \)</span> <span class="eq-number">(2-58)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( n_{inf} = n_{50} \cdot e_{wind} \)</span> <span class="eq-number">(2-59)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( n_{inf} = n_{50} \cdot e_{wind} \left( 1 + f_{V,mech} \cdot \frac{t_{V,mech}}{24h} \right) \)</span> <span class="eq-number">(2-60)</span>
+<span class="note">- <span class="arithmatex">\( n_{50} \)</span>: 도표 2-4 참고 (50 Pa에서의 침기 회수)<br/>
+  - <span class="arithmatex">\( e_{wind} = 0.07 \)</span>: 바람 보정계수</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( f_{V,mech} = 0,\quad n_{ZUL} = n_{ABL} \)</span> <span class="eq-number">(2-61)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( f_{V,mech} = \frac{1}{1 + \dfrac{f_{wind}}{e_{wind}} \left( \dfrac{n_{ZUL} - n_{ABL}}{n_{50}} \right)^2} - 1, \quad n_{ZUL} &gt; n_{ABL} \)</span> <span class="eq-number">(2-62)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( f_{V,mech} = 1 - \frac{1}{1 + \dfrac{f_{wind}}{e_{wind}} \left( \dfrac{n_{ZUL} - n_{ABL}}{n_{50}} \right)^2}, \quad n_{ABL} &gt; n_{ZUL} \)</span> <span class="eq-number">(2-63)</span>
+<span class="note">- <span class="arithmatex">\( n_{mech,ABL} = n_{mech,ZUL} \)</span>: 모를 경우<br/>
+  - <span class="arithmatex">\( n_{mech,ABL} = n_{nutz} \)</span>: 순수배기</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{V,win} = H_{V,win} (\vartheta_i - \vartheta_e)t, \quad \vartheta_i &gt; \vartheta_e \)</span> <span class="eq-number">(2-64)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{V,win} = H_{V,win} (\vartheta_e - \vartheta_i)t, \quad \vartheta_i &lt; \vartheta_e \)</span> <span class="eq-number">(2-65)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( n_{nutz} = \frac{\dot{V}_A \cdot A_B}{V} \)</span> <span class="eq-number">(2-80)</span>
+<span class="note">- <span class="arithmatex">\( \dot{V}_A \)</span>: 최소 외기량 (용도 프로필 기준)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{V,mech} = H_{V,mech} (\vartheta_i - \vartheta_{V,mech})t, \quad \vartheta_i &gt; \vartheta_{V,mech} \)</span> <span class="eq-number">(2-81)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{V,mech} = H_{V,mech} (\vartheta_{V,mech} - \vartheta_i)t, \quad \vartheta_i &lt; \vartheta_{V,mech} \)</span> <span class="eq-number">(2-82)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( H_{V,mech} = n_{mech} \, V \, c_{p,a} \, \rho_a \)</span> <span class="eq-number">(2-83)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( n_{mech} = \max(n_{mech,ZUL},\; n_{nutz}) \cdot \frac{t_{V,mech}}{24h} \)</span> <span class="eq-number">(2-84)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( \dot{V}_{mech,b} = \frac{\dot{Q}_{c,\text{max}}}{c_{p,a} \rho_a (\vartheta_i - \vartheta_{V,mech})} \)</span> <span class="eq-number">(2-86)</span>
+<span class="note">냉방정풍량기기<br/>
+  - <span class="arithmatex">\( \dot{V}_{ABL} \)</span>: 계획 값 (부록 E 참고)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( n_{mech,ZUL} = \frac{\dot{V}_{mech,b}}{V} \)</span> <span class="eq-number">(2-87)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( n_{mech} = n_{mech,ZUL} = 0\; h^{-1},\quad \text{순수배기} \)</span> <span class="eq-number">(2-88)</span>
+<span class="note">- <span class="arithmatex">\( t_{V,mech} \)</span>: 기계 환기 작동 시간 (용도 프로필 기준)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( n_{mech,ABL} = \frac{\dot{V}_{ABL}}{V} \)</span> <span class="eq-number">(2-89)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( \vartheta_{V,mech} = \vartheta_e \)</span> <span class="eq-number">(2-90)</span> <span class="note">(공조처리 없는 경우)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( \vartheta_{V,mech} = \vartheta_e + \eta_{V,mech} \cdot (\vartheta_i - \vartheta_e) \)</span> <span class="eq-number">(2-91)</span> <span class="note">(비제어식 열교환)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( \vartheta_{V,mech} = \vartheta_{V,mech,RLT} \)</span> <span class="eq-number">(2-92)</span> <span class="note">(공조처리된 급기온도 — 도표 3-3, 3-4, 7-5)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( H_{V,ue} = n_{ue} \, V_u \, c_{p,a} \, \rho_a \)</span> <span class="eq-number">(2-94)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( n_{ue} = 0.6\; h^{-1} \)</span> <span class="eq-number">(2-96)</span> <span class="note">(표준값)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{V,z} = H_{V,z} (\vartheta_j - \vartheta_z)t, \quad \vartheta_j &gt; \vartheta_z \)</span> <span class="eq-number">(2-97)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{V,z} = H_{V,z} (\vartheta_z - \vartheta_i)t, \quad \vartheta_i &lt; \vartheta_z \)</span> <span class="eq-number">(2-98)</span>
+<span class="note">- 이하 열손실과 같음</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( H_{V,z} = \dot{V}_{z,d} \, c_{p,a} \, \rho_a \)</span> <span class="eq-number">(2-99)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( \dot{V}_{z,d} = \dot{V}_z \cdot \frac{t_{V,mech}}{24h} \)</span> <span class="eq-number">(2-100)</span>
+<span class="note">- <span class="arithmatex">\( t_{V,mech} \)</span>: 기계환기 가동 시간 (용도 프로필 기준)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( \dot{V}_z = n_{z,ZUL} \cdot V \)</span> <span class="eq-number">(2-101)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( n_{z,ZUL} = n_{mech,ABL} - n_{mech,ZUL} \)</span> <span class="eq-number">(2-102)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( \dot{V}_z = n_{z,ABL} \cdot V \)</span> <span class="eq-number">(2-103)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( n_{z,ABL} = \frac{\dot{V}_z}{V_i} = \left( n_{mech,ABL,j} - n_{mech,ZUL,j} \right) \cdot \frac{V_j}{V_i} \)</span> <span class="eq-number">(2-104)</span>
+<span class="note">- <span class="arithmatex">\( i \)</span>: 건물존<br/>- <span class="arithmatex">\( j \)</span>: 이웃존</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{S,tr} = F_F A \, g_{eff} \, I_S \, t \)</span> <span class="eq-number">(2-105)</span>
+<span class="note">- <span class="arithmatex">\( F_F \)</span>: 창틀비율 <span class="arithmatex">\( (= 0.7) \)</span><br/>- <span class="arithmatex">\( A \)</span>: 개구부 면적</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( g_{eff} = F_S F_W F_V g_\perp \)</span> <span class="eq-number">(2-106)</span> <span class="note">(비차양)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( g_{eff} = F_S F_W F_V g_{tot} \)</span> <span class="eq-number">(2-107)</span> <span class="note">(차양)<br/>자동차양 (2-108) 일단 유보:</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( F_S = \min(F_h, F_o, F_f) \)</span> <span class="eq-number">(2-109)</span>
+<span class="note">
+    - <span class="arithmatex">\( F_W = 0.9 \)</span><br/>
+    - <span class="arithmatex">\( F_V = 0.9 \)</span><br/>
+    - 투과율 (차양 유무에 따른 값): 도표 (2-5) 참고<br/>
+    - 부록 A 도표에서 관련 계수 확인 가능
+  </span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_S = Q_{S,op} = R_{se} \, UA \left( F_f h_r \Delta \vartheta_{er} - \alpha I_S \right)t, \quad \alpha I_S &lt; F_f h_r \Delta \vartheta_{er} \)</span> <span class="eq-number">(2-111)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{S,op} = R_{se} \, UA \left( \alpha I_S - F_f h_r \Delta \vartheta_{er} \right)t, \quad \text{if } \alpha I_S &gt; F_f h_r \Delta \vartheta_{er} \)</span> <span class="eq-number">(2-112)</span>
+<span class="note">
+    - <span class="arithmatex">\( F_f = 1 \quad \text{(45°까지)} \)</span><br/>
+    - <span class="arithmatex">\( F_f = 0.5 \quad \text{(45°~90°)} \)</span><br/>
+    - <span class="arithmatex">\( h_r = 5 \varepsilon \quad \text{(모를 경우 } \varepsilon = 0.9\text{)} \)</span><br/>
+    - <span class="arithmatex">\( \Delta \vartheta_{er} = 10K \quad \text{(천공온도차)} \)</span>
+</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{I,source,p} = q_{I,p} \cdot A_B \)</span> <span class="eq-number">(2-118)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{I,source,fac} = q_{I,fac} \cdot A_B \)</span> <span class="eq-number">(2-119)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{I,sink,fac} = q_{I,sink,fac} \cdot A_B \)</span> <span class="eq-number">(2-120)</span>
+</a></p>
+<p>Q_{I,sink,goods} = c m (\vartheta_{out} - \vartheta_{in}) t, \quad \vartheta_{in} &lt; \vartheta_{out} \tag{2-122}</p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{i,L} = \mu_L \cdot Q_{i,L,elektr} \)</span> <span class="eq-number">(2-123)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{I,source,h} = Q_{I,w} + Q_{I,h} + Q_{I,vh} + Q_{I,ch} \)</span> <span class="eq-number">(2-124)</span>
+<span class="note">
+    - <span class="arithmatex">\( q_{I,p} \)</span>: 도표 2-A.4 (사람에 의한 내부발생열)<br/>
+    - <span class="arithmatex">\( q_{I,fac} \)</span>: 도표 2-A.4 (설비기기에 의한 내부발생열)<br/>
+    - <span class="arithmatex">\( Q_{i,L,elektr} \)</span>: 조명에 의한 전기적 소비량
+  </span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{I,sink,c} = Q_{I,vh} + Q_{I,c} \)</span> <span class="eq-number">(2-125)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( C_{wirk} = 50 \, \mathrm{Wh}/(\mathrm{m}^2 \cdot \mathrm{K}) \, A_B \)</span> <span class="eq-number">(2-126)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( C_{wirk} = 90 \, \mathrm{Wh}/(\mathrm{m}^2 \cdot \mathrm{K}) \, A_B \)</span> <span class="eq-number">(2-127)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( C_{wirk} = 130 \, \mathrm{Wh}/(\mathrm{m}^2 \cdot \mathrm{K}) \, A_B \)</span> <span class="eq-number">(2-128)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( \tau = \frac{C_{wirk}}{H} = \frac{C_{wirk}}{\sum_j H_{T,j} + \sum_k H_{V,k} + H_{V,mech,\vartheta}} \)</span> <span class="eq-number">(2-22, 129)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( H_{V,mech,\vartheta} = H_{V,mech} \cdot \frac{\vartheta_{i,h.soll} - \vartheta_{V,mech}}{6K} \)</span> <span class="eq-number">(2-130)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( 1 - (\eta \gamma) &lt; 0.01 \rightarrow \eta = \frac{1}{\gamma}, \quad (Q_{h,b} = 0) \)</span> <span class="eq-number">(2-137)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( (1 - \eta) \gamma &lt; 0.01 \rightarrow \eta = 1, \quad (Q_{c,b} = 0) \)</span> <span class="eq-number">(2-138)</span>
+</a></p>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( \dot{V}_{mech} \geq \frac{\dot{Q}_{C,max}}{c_{p,a} \rho_a (\vartheta_i - \vartheta_{mech})} \rightarrow \eta = 1 \)</span> <span class="eq-number">(2-139)</span>
+</a></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
