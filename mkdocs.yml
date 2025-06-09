@@ -1,33 +1,23 @@
 site_name: "ECO2 Guide Center"
-site_url: https://verycoldplay.github.io/eco2_guide_center
+site_url: https://verycoldplay.github.io/eco2_test
 use_directory_urls: false
 
 nav:
 - Welcome to ECO2 Guide Center: index.md
 - 1. ECO2 Logic Guide:
-  - 프로그램 평가 프로세스(md v3): 1. ECO2 Logic Guide/ECO2_diagram.md
-  - 기상데이터: 1. ECO2 Logic Guide/weather.html
-  - Hee1 (Equation list): 1. ECO2 Logic Guide/Hee1_Equation_List.md
-  - Hee2 (Two type of sample pages): 1. ECO2 Logic Guide/Hee2_Sample_Page.md
+  #- 프로그램 평가 프로세스(md v3): 1. ECO2 Logic Guide/ECO2_diagram.md
+  #- 기상데이터: 1. ECO2 Logic Guide/weather.html
+  #- Hee1 (Equation list): 1. ECO2 Logic Guide/Hee1_Equation_List.md
+  #- Hee2 (Two type of sample pages): 1. ECO2 Logic Guide/Hee2_Sample_Page.md
   - Overview: 1. ECO2 Logic Guide/index.md
-  - ECO2 사용자 도움말:
-      - ECO2 소개: 1. ECO2 Logic Guide/ECO2 사용자 도움말/ECO2_소개.md
-      - 시작하기: 1. ECO2 Logic Guide/ECO2 사용자 도움말/시작하기.md
-      - 데이터 입력: 1. ECO2 Logic Guide/ECO2 사용자 도움말/데이터_입력.md
-      - 에너지 시뮬레이션: 1. ECO2 Logic Guide/ECO2 사용자 도움말/에너지_시뮬레이션.md
-  - Table: 1. ECO2 Logic Guide/table.md
-  - Table2: 1. ECO2 Logic Guide/table2.md
-  - Table3: 1. ECO2 Logic Guide/table3.md
-  - 외부조건: 1. ECO2 Logic Guide/External_conditions.md
-  - 내부조건: 1. ECO2 Logic Guide/Internal_conditions.md
-  - 냉방 에너지 분석:
-      - 개요: 1. ECO2 Logic Guide/냉방 에너지 분석/개요.md
-      - 냉방 부하 계산:
-          - ECO2 screenshot: '1. ECO2 Logic Guide/냉방 에너지 분석/ECO2_screenshot.md'
-          - Simple Method: 1. ECO2 Logic Guide/냉방 에너지 분석/Simple_Method.md
-          - 냉방에너지요구량: 1. ECO2 Logic Guide/냉방 에너지 분석/Cooling_energy_demand.md
-      - 냉방 시스템 구성 요소: 1. ECO2 Logic Guide/냉방 에너지 분석/냉방_시스템_구성_요소.md
-      - 결과 해석: 1. ECO2 Logic Guide/냉방 에너지 분석/결과_해석.md
+  #- Table: 1. ECO2 Logic Guide/table.md
+  #- Table2: 1. ECO2 Logic Guide/table2.md
+  #- Table3: 1. ECO2 Logic Guide/table3.md
+  #- 외부조건: 1. ECO2 Logic Guide/External_conditions.md
+  #- 내부조건: 1. ECO2 Logic Guide/Internal_conditions.md
+  - Sample Page: 1. ECO2 Logic Guide/Simple_Method.md
+  - ECO2 screenshot: '1. ECO2 Logic Guide/ECO2_screenshot.md'
+  - 냉방에너지요구량: 1. ECO2 Logic Guide/Cooling_energy_demand.md
   - 난방 에너지 분석: 1. ECO2 Logic Guide/난방_에너지_분석.md
   - 공조 시스템 분석: 1. ECO2 Logic Guide/공조_시스템_분석.md
   - 신재생에너지 시스템 분석:
@@ -105,6 +95,7 @@ extra_javascript:
   - assets/mathjax-config.js
   - assets/mathjax-linker.js
   - assets/mermaid-init.js
+  - assets/mermaid-font-fix.js
 
   # 4. 사용자 기능 스크립트
   - assets/cache-buster.js
@@ -138,7 +129,11 @@ plugins:
   - macros:
       module_name: macros
   - mermaid2:
-      javascript: https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
+      arguments:
+        theme: base
+        themeVariables:
+          fontFamily: "'Pretendard', Pretendard"
+          fontSize: 160px
 
-
+# javascript: https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
 
