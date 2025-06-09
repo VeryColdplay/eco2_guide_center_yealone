@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>프로그램 평가 프로세스</title>
+  <!-- Mermaid CDN -->
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 30px;
+    }
+    .mermaid a {
+      color: #1a73e8;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<h2>프로그램 평가 프로세스</h2>
+
+<div class="mermaid">
+    flowchart LR
+    subgraph Input["입력 정보"]
+        A["<a href='weather.html' target='_blank'>기상데이터</a>"]
+        B["<a href='profile.html' target='_blank'>존의 용도별 프로필<br>(사용시간, 운전시간,<br>외기도입량, 설정온도,<br>월간 사용일수 등)</a>"]
+    end
+
+    A --> C["<a href='energy.html' target='_blank'>존의 에너지요구량<br>난방, 냉방</a>"]
+    B --> C
+
+    C -->|공급손실| D1["<a href='hvac.html' target='_blank'>공조시설의 에너지요구량<br>난방, 냉방, 가습, 제습</a>"]
+    C -->|분배손실| D1
+
+    D1 -->|공기매체| E1["<a href='air.html' target='_blank'>급기 및 배기</a>"]
+    D1 --> F1["<a href='lighting.html' target='_blank'>조명</a>"]
+
+    D1 -->|물매체| G1["<a href='secondary.html' target='_blank'>2차 에너지<br>열, 냉열 증가</a>"]
+    G1 -->|보조에너지| H1["<a href='primary.html' target='_blank'>1차 에너지</a>"]
+    E1 --> H1
+    F1 --> H1
+
+    style A fill:#d5f4d4,stroke:#888,stroke-width:1px
+    style B fill:#f0f0f0,stroke:#888,stroke-width:1px
+    style C fill:#b8d7f9,stroke:#555,stroke-width:1px
+    style D1 fill:#ffe599,stroke:#555,stroke-width:1px
+    style E1 fill:#ccc,stroke:#555
+    style F1 fill:#ccc,stroke:#555
+    style G1 fill:#d9ead3,stroke:#555
+    style H1 fill:#a2c4c9,stroke:#444
+
+    linkStyle default stroke:#333,stroke-width:1px
+</div>
+
+</body>
+</html>

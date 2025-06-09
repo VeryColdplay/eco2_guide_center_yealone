@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>기상데이터 페이지</title>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  </script>
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+  <style>
+    .highlight {
+      stroke: #e91e63 !important;
+      stroke-width: 3px !important;
+      fill: #ffeef0 !important;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🌤️ 기상데이터 페이지</h1>
+<p>여기는 기상데이터에 대한 설명이 들어가는 페이지입니다.</p>
+
+<div class="mermaid">
+    flowchart LR
+        A["기상데이터"]
+        B["용도별 프로필"]
+        A:::highlight --> C["존의 에너지요구량"]
+        B --> C
+    
+        classDef highlight fill:#ffeef0,stroke:#e91e63,stroke-width:2px;
+        class A highlight;
+</div>
+
+</body>
+</html>
