@@ -19,6 +19,8 @@ nav:
   - ECO2 screenshot: '1. ECO2 Logic Guide/ECO2_screenshot.md'
   - 난방에너지요구량: 1. ECO2 Logic Guide/Heating_energy_demand.md
   - 냉방에너지요구량: 1. ECO2 Logic Guide/Cooling_energy_demand.md
+  - 열획득: 1. ECO2 Logic Guide/heat_gain.md
+  - 열손실: 1. ECO2 Logic Guide/heat_loss.md
   - 난방 에너지 분석: 1. ECO2 Logic Guide/난방_에너지_분석.md
   - 공조 시스템 분석: 1. ECO2 Logic Guide/공조_시스템_분석.md
   - 신재생에너지 시스템 분석:
@@ -37,7 +39,6 @@ nav:
 - 2. ECO2 User Guide:
   - Overview: '2. ECO2 User Guide/index.md'
   - Program Overview: '2. ECO2 User Guide/00_main_page.md'
-  - Heat Gain and Loss: '2. ECO2 User Guide/heat_gain.md'
   - Building Info: '2. ECO2 User Guide/01_building_info.md'
   - 입력존: '2. ECO2 User Guide/02_input_zone.md'
   - 입력면: '2. ECO2 User Guide/03_input_surface.md'
