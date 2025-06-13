@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://verycoldplay.github.io/eco2_test/index.html" rel="canonical"/>
+<link href="https://verycoldplay.github.io/eco2_guide_center/index.html" rel="canonical"/>
 <link href="1.%20ECO2%20Logic%20Guide/index.html" rel="next"/>
 <link href="assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.13" name="generator"/>
@@ -210,6 +210,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="1.%20ECO2%20Logic%20Guide/Heating_energy_demand.html">
+<span class="md-ellipsis">
+    난방에너지요구량
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="1.%20ECO2%20Logic%20Guide/Cooling_energy_demand.html">
 <span class="md-ellipsis">
     냉방에너지요구량
@@ -234,16 +242,16 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_7" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+<input class="md-nav__toggle md-toggle" id="__nav_2_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
 <span class="md-ellipsis">
     신재생에너지 시스템 분석
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_7_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_7">
+<nav aria-expanded="false" aria-labelledby="__nav_2_8_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_8">
 <span class="md-nav__icon md-icon"></span>
             신재생에너지 시스템 분석
           </label>
@@ -276,16 +284,16 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_8" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+<input class="md-nav__toggle md-toggle" id="__nav_2_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
 <span class="md-ellipsis">
     최종보고서
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_8_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_8">
+<nav aria-expanded="false" aria-labelledby="__nav_2_9_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_9">
 <span class="md-nav__icon md-icon"></span>
             최종보고서
           </label>
@@ -326,16 +334,16 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
+<input class="md-nav__toggle md-toggle" id="__nav_2_12" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_12" id="__nav_2_12_label" tabindex="0">
 <span class="md-ellipsis">
     고급 기능
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_11_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_11">
+<nav aria-expanded="false" aria-labelledby="__nav_2_12_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_12">
 <span class="md-nav__icon md-icon"></span>
             고급 기능
           </label>
@@ -358,6 +366,14 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="1.%20ECO2%20Logic%20Guide/Zoning.html">
+<span class="md-ellipsis">
+    건물의 조닝
+    
+  </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -394,7 +410,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="2.%20ECO2%20User%20Guide/heat_gain.html">
+<a class="md-nav__link" href="2. ECO2 User Guide/heat_gain.md">
 <span class="md-ellipsis">
     Heat Gain and Loss
     
@@ -677,19 +693,18 @@
 <p>난방, 냉방, 급탕, 조명, 환기에 대한 에너지소요량을 전반적으로계산하고 이를 바닥면적으로 나눈 값을 사용하여 에너지 성능에 따라 10개 등급(1+++ ~ 7)으로 평가합니다. 평가를 위한 분석 툴은 <strong>ECO2 프로그램</strong>을 사용합니다. </p>
 <details>
 <summary><strong>건축물 에너지효율등급 인증기준</strong></summary>
-
-$$
-\text{단위면적당 1차 에너지 소요량} =
-\frac{\text{난방에너지소요량}}{\text{난방이 요구되는 공간의 바닥면적}} +
-\frac{\text{냉방에너지소요량}}{\text{냉방이 요구되는 공간의 바닥면적}} +
-\frac{\text{급탕에너지소요량}}{\text{급탕이 요구되는 공간의 바닥면적}} +
-\frac{\text{조명에너지소요량}}{\text{조명이 요구되는 공간의 바닥면적}} +
-\frac{\text{환기에너지소요량}}{\text{환기가 요구되는 공간의 바닥면적}}
-$$
-
-&gt; ※ 냉방설비가 없는 주거용 건축물(단독주택 및 기숙사를 제외한 공동주택)의 경우 냉방 평가 항목 제외  
-&gt; ※ 단위면적당 1차에너지소요량 = 단위면적당 에너지소요량 $\times$ 1차에너지환산계수  
-
+<details>
+<summary><strong>건축물 에너지효율등급 인증기준</strong></summary>
+<center>
+<img alt="table_2.1.1_1.png" src="./table_2.1.1_1.png" style="max-width: 80%;"/>
+<div><strong></strong></div>
+</center>
+<br/>
+<ul style="font-size: 13px;">
+<li>※ 난방설비가 없는 주거용 건축물(단독주택 및 기숙사를 제외한 공동주택)의 경우 난방 평가 항목 제외</li>
+<li>※ 단위면적당 1차에너지소요량 = 단위면적당 에너지소요량 × 1차에너지환산계수</li>
+</ul>
+</details>
 </details>
 <hr/>
 <h2 id="eco2_1">ECO2 프로그램 개요<a class="headerlink" href="#eco2_1" title="Permanent link">¶</a></h2>
