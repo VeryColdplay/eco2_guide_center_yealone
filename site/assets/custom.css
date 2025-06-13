@@ -96,9 +96,15 @@ code {
 .md-content h2 {
   font-size: 21px;
   font-weight: bold;
+  color: #ffffff !important;
   border-bottom: none;
-  margin-bottom: 16px;
-  margin-top: 1em;
+  margin-top: 3em;
+  margin-bottom: 1em;
+  padding: 0.3em 1em; /* 안쪽 여백 */
+  background-color: #212121;
+  display: block;
+  width: 100%;
+  border-radius: 6px;
 }
 .md-content h3 { font-size: 20px; font-weight: 800; margin-top: 1em; margin-bottom: 1em;}
 .md-content h4 { font-size: 19px; margin-top: 1em; margin-bottom: 1em;}
@@ -341,4 +347,32 @@ code {
   display: block;
   font-weight: 600;
   margin-bottom: 0.5rem;
+}
+
+
+/* ✅ Mermaid SVG 폰트 강제 적용 (Pretendard + 색상 + 굵기) */
+svg[id^="mermaid-"] text,
+svg[id^="mermaid-"] tspan,
+svg[id^="mermaid-"] .nodeLabel,
+svg[id^="mermaid-"] .label {
+  font-family: 'Pretendard', sans-serif !important;
+  font-size: 15px !important;
+  fill: #1E3A8A !important;
+  font-weight: 600 !important;
+}
+
+/* ✅ 링크 텍스트: 밑줄 제거 및 상속 */
+svg[id^="mermaid-"] a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/* ✅ 화살표 위 라벨 (edge label) */
+svg[id^="mermaid-"] .edgeLabel tspan {
+  font-family: 'Pretendard', sans-serif !important;
+  font-size: 14px !important;
+  fill: #1E3A8A !important;
+  font-weight: 600 !important;
+  dominant-baseline: middle;
+  text-anchor: middle;
 }
