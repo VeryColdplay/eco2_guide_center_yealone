@@ -51,6 +51,11 @@
     </div>
 
     <strong>희에게 적절한 다이어그램 혹은 그림 추가 요청</strong>
+      <center>
+       <img src="./heat_gain_fig1.png" alt="Heat Gain" style="max-width: 80%;">
+       <div><strong></strong></div>
+      </center>
+      %% https://images.app.goo.gl/CRTJpWiKihadMg7t5
   </div>
 
   <!-- 오른쪽 단: 세부 전도 항목 (간격 축소 + 수식 렌더링) -->
@@ -124,6 +129,11 @@
       {{ include_equations("2", 11, 11) }}
     </div>
     <strong>희에게 적절한 다이어그램 혹은 그림 추가 요청</strong>
+     <center>
+       <img src="./heat_gain_fig2.jpg" alt="Heat Gain2" style="max-width: 80%;">
+       <div><strong></strong></div>
+      </center>
+    %% https://images.app.goo.gl/5EgpPD6C4xHu9z4y9
   </div>
 
   <!-- 오른쪽 단: 환기 항목별 세부 폴딩 설명 -->

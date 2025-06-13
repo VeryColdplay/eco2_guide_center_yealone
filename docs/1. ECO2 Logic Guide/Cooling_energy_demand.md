@@ -13,8 +13,8 @@
 </div>
 
 ## 🔹단위면적당 냉방에너지요구량 계산을 위한 📐공간 및 🗓️시간 구분
-- 한 건축물의 연간 단위면적당 냉방에너지요구량을 구하기 위해, 건축물을 공간적 및 시간적으로 분할하여 각 공간별 단위면적당 냉방에너지요구량을 구합니다.   
-- 📐 공간은 <strong>존(zone)</strong> 단위로 구분되며 <strong>모든 존별 단위면적당 냉방에너지요구량의 합</strong>이 비로소 건축물의 단위면적당 냉방에너지요구량이 됩니다.   
+- 한 건축물의 연간 단위면적당 냉방에너지요구량을 구하기 위해, 건축물을 공간적 및 시간적으로 분할하여 각 단위면적당 냉방에너지요구량을 구합니다.   
+- 📐 공간은 <strong>존(zone)</strong> 단위로 구분되며 <strong>모든 존별 단위면적당 냉방에너지요구량의 합</strong>이 비로소 건축물의 단위면적당 냉방에너지요구량이 됩니다. <span style="font-size: 0.9em; font-style: italic;">[&nbsp;&nbsp;&nbsp;&nbsp;🔍 조닝(zoning)에 대한 로직 바로가기](../1.%20ECO2%20Logic%20Guide/Zoning.md)</span>
 - 🗓️ 한편 1개 존의 연간 단위면적당 냉방에너지요구량은 <strong>월별 단위면적당 냉방에너지요구량의 총합</strong>이 됩니다.
 
 <div style="display: flex; gap: 0.5em; align-items: stretch;">
@@ -335,7 +335,79 @@ $$
 3. 기준 범위 내 온도: 없음   
 
 
+
 🎨 Request to Hee ➡️ 적절히 도식화 요청
+---
+```mermaid
+graph LR
+
+%% 중심
+M["<b>난방용으로의 열획득원의 이용효율</b><br/><br/>η = Q_{sink} / Q_{source}<br/>τ = Q_{source} / Q_{sink} (시간상수)"]
+
+%% 좌측 열손실원
+LS["<b>열손실원</b><br/>Q_{sink}"]
+LS -->|난방| M
+
+%% 우측 열획득원
+HS["<b>열획득원</b><br/>Q_{source}"]
+HS -->|냉방| M
+
+%% 좌하단 난방부하 공식
+H1["Q_{h,b} = Q_{sink} - η · Q_{source}<br/><i>건물존의 <b>난방</b>에너지요구량</i>"]
+M --> H1
+
+%% 우하단 냉방부하 공식
+C1["Q_{c,b} = (1 - η) · Q_{source}<br/><i>건물존의 <b>냉방</b>에너지요구량</i>"]
+M --> C1
+
+%% 무채색 스타일 정의
+classDef grayLight fill:#F2F2F2,stroke:#999,stroke-width:1.5px,color:#000;
+classDef grayMid fill:#E0E0E0,stroke:#666,stroke-width:1.5px,color:#000;
+classDef grayDark fill:#C0C0C0,stroke:#333,stroke-width:1.5px,color:#000;
+
+class LS grayLight
+class HS grayLight
+class M grayMid
+class H1,C1 grayDark
+
+linkStyle default stroke:#888,stroke-width:1.2px;
+```
+```mermaid
+graph LR
+
+%% 중심
+M["<b>난방용으로의 열획득원의 이용효율</b><br/><br/>η = Q_{sink} / Q_{source}<br/>τ = Q_{source} / Q_{sink} (시간상수)"]
+
+%% 좌측 열손실원
+LS["<b>열손실원</b><br/>Q_{sink}"]
+LS -->|난방| M
+LS --> H1
+
+%% 우측 열획득원
+HS["<b>열획득원</b><br/>Q_{source}"]
+HS -->|냉방| M
+HS --> C1
+
+%% 좌하단 난방부하 공식
+H1["Q_{h,b} = Q_{sink} - η · Q_{source}<br/><i>건물존의 <b>난방</b>에너지요구량</i>"]
+M --> H1
+
+%% 우하단 냉방부하 공식
+C1["Q_{c,b} = (1 - η) · Q_{source}<br/><i>건물존의 <b>냉방</b>에너지요구량</i>"]
+M --> C1
+
+%% 무채색 스타일 정의
+classDef grayLight fill:#F2F2F2,stroke:#999,stroke-width:1.5px,color:#000;
+classDef grayMid fill:#E0E0E0,stroke:#666,stroke-width:1.5px,color:#000;
+classDef grayDark fill:#C0C0C0,stroke:#333,stroke-width:1.5px,color:#000;
+
+class LS grayLight
+class HS grayLight
+class M grayMid
+class H1,C1 grayDark
+
+linkStyle default stroke:#888,stroke-width:1.2px;
+```
 
 
 주중 1일 단위면적당 냉방에너지요구량 × 주중 일수  

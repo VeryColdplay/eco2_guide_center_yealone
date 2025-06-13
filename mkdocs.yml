@@ -1,5 +1,5 @@
 site_name: "ECO2 Guide Center"
-site_url: https://verycoldplay.github.io/eco2_test
+site_url: https://verycoldplay.github.io/eco2_guide_center
 use_directory_urls: false
 
 nav:
@@ -17,6 +17,7 @@ nav:
   #- 내부조건: 1. ECO2 Logic Guide/Internal_conditions.md
   - Sample Page: 1. ECO2 Logic Guide/Simple_Method.md
   - ECO2 screenshot: '1. ECO2 Logic Guide/ECO2_screenshot.md'
+  - 난방에너지요구량: 1. ECO2 Logic Guide/Heating_energy_demand.md
   - 냉방에너지요구량: 1. ECO2 Logic Guide/Cooling_energy_demand.md
   - 난방 에너지 분석: 1. ECO2 Logic Guide/난방_에너지_분석.md
   - 공조 시스템 분석: 1. ECO2 Logic Guide/공조_시스템_분석.md
@@ -32,6 +33,7 @@ nav:
   - 고급 기능:
       - 외피전개도 프로그램 연동: 1. ECO2 Logic Guide/Advanced_Function/외피전개도_프로그램_연동.md
       - IFC 모델 연동: '1. ECO2 Logic Guide/Advanced_Function/IFC_Model_Linking.md'
+  - 건물의 조닝: 1. ECO2 Logic Guide/Zoning.md
 - 2. ECO2 User Guide:
   - Overview: '2. ECO2 User Guide/index.md'
   - Program Overview: '2. ECO2 User Guide/00_main_page.md'
