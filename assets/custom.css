@@ -41,6 +41,15 @@ code {
   font-family: 'Pretendard', sans-serif;
 }
 
+/* Mermaid 다이어그램을 가운데 정렬 */
+.mermaid {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+
 /* Mermaid 글꼴 적용 */
 .mermaid text {
   font-family: 'Pretendard', sans-serif !important;
@@ -107,7 +116,7 @@ code {
   border-radius: 6px;
 }
 .md-content h3 { font-size: 20px; font-weight: 800; margin-top: 1em; margin-bottom: 1em;}
-.md-content h4 { font-size: 19px; margin-top: 1em; margin-bottom: 1em;}
+.md-content h4 { font-size: 19px; margin-top: 0.2em; margin-bottom: 0.2em;}
 .md-content h5 { font-size: 18px; margin-top: 1em; margin-bottom: 1em;}
 .md-content h6 { font-size: 17px; margin-top: 1em; margin-bottom: 1em;}
 
