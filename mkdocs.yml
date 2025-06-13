@@ -17,6 +17,7 @@ nav:
   #- 내부조건: 1. ECO2 Logic Guide/Internal_conditions.md
   - Sample Page: 1. ECO2 Logic Guide/Simple_Method.md
   - ECO2 screenshot: '1. ECO2 Logic Guide/ECO2_screenshot.md'
+  - 월별 분석방식: 1. ECO2 Logic Guide/Monthly_method.md
   - 난방에너지요구량: 1. ECO2 Logic Guide/Heating_energy_demand.md
   - 냉방에너지요구량: 1. ECO2 Logic Guide/Cooling_energy_demand.md
   - 열획득: 1. ECO2 Logic Guide/heat_gain.md
@@ -27,9 +28,6 @@ nav:
       - 시뮬레이션 오류 해결 방법: 1. ECO2 Logic Guide/신재생에너지 시스템 분석/시뮬레이션_오류_해결_방법.md
       - 입력 데이터 오류 수정: 1. ECO2 Logic Guide/신재생에너지 시스템 분석/입력_데이터_오류_수정.md
       - 결과값 해석 관련 오류: 1. ECO2 Logic Guide/신재생에너지 시스템 분석/결과값_해석_관련_오류.md
-  - 최종보고서:
-      - 표 3.1.2-1: 1. ECO2 Logic Guide/최종보고서/표3.1.2-1.md
-      - 표 3.2.2-1: 1. ECO2 Logic Guide/최종보고서/표3.2.2-1.md
   - 오류 및 경고 메시지: 1. ECO2 Logic Guide/오류_및_경고_메시지.md
   - 자주 묻는 질문 (FAQ): 1. ECO2 Logic Guide/자주_묻는_질문.md
   - 고급 기능:
