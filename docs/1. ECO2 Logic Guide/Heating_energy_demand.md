@@ -13,7 +13,7 @@
         <h5> To 희: 난방으로 위 식 교체 요청드립니다</h5>
 </div>
 
-## 🔹단위면적당 난방에너지요구량 계산을 위한 📐공간 및 🗓️시간 구분
+## 단위면적당 난방에너지요구량 계산을 위한 📐공간 및 🗓️시간 구분
 - 한 건축물의 연간 단위면적당 난방에너지요구량을 구하기 위해, 건축물을 공간적 및 시간적으로 분할하여 각 단위면적당 난방에너지요구량을 계산합니다.   
 - 📐 공간은 <strong>존(zone)</strong> 단위로 구분되며 <strong>모든 존별 단위면적당 난방에너지요구량의 합</strong>이 비로소 건축물의 단위면적당 난방에너지요구량이 됩니다. <span style="font-size: 0.9em; font-style: italic;">[&nbsp;&nbsp;&nbsp;&nbsp;🔍 조닝(zoning)에 대한 로직 바로가기](../1.%20ECO2%20Logic%20Guide/Zoning.md)</span>
 - 🗓️ 한편 1개 존의 연간 단위면적당 난방에너지요구량은 <strong>월별 단위면적당 난방에너지요구량의 총합</strong>이 됩니다.
@@ -21,15 +21,15 @@
 <div style="display: flex; gap: 0.5em; align-items: stretch;">
     <div style="
     flex: 1;
-    background: #f0f8ff;
-    border: 1px solid #aad4ff;
-    border-radius: 8px;
+    background:rgb(255, 255, 255);
+    border: 1.5px solid rgb(225, 226, 228);
+    border-radius: 6px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   ">
-    <h3> ⭕ 건축물의 연간 단위면적당 난방에에너지요구량: 📐 존별 요구량의 합</h3>
+    <h3> 🔹 건축물의 연간 단위면적당 난방에너지요구량: 📐 존별 요구량의 합</h3>
     <h4></h4>
     <p>이곳은 왼쪽 단의 내용입니다.</p>
   </div>
@@ -43,7 +43,7 @@
     flex-direction: column;
     justify-content: space-between;
   ">
-    <h3> ⭕ 건축물의 연간 단위면적당 난방에너지요구량: 🗓️ 월별 요구량의 합</h3>
+    <h3> 🔹 건축물의 연간 단위면적당 난방에너지요구량: 🗓️ 월별 요구량의 합</h3>
     <h4>연간 단위면적당 난방에너지요구량 \(Q_{h,b}\)</h4>
     <p><center>
   <img src="../../images/adjusted_left_box_width_c.png" style="max-width: 100%;" alt="Annual & monthly cooling energy demand">
@@ -57,7 +57,7 @@
 
 &nbsp;<br>
 
-## 🔹 **월간** 단위면적당 난방에너지요구량 \(Q_{h,b}\)
+##  **월간** 단위면적당 난방에너지요구량 \(Q_{h,b}\)
 
 &nbsp;<br>
 
