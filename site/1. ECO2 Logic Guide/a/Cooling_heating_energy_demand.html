@@ -5,26 +5,26 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://verycoldplay.github.io/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Cooling_energy_demand.html" rel="canonical"/>
-<link href="Heating_energy_demand.html" rel="prev"/>
-<link href="heat_gain.html" rel="next"/>
-<link href="../assets/images/favicon.png" rel="icon"/>
+<link href="https://verycoldplay.github.io/eco2_guide_center/1.%20ECO2%20Logic%20Guide/a/Cooling_heating_energy_demand.html" rel="canonical"/>
+<link href="Zoning.html" rel="prev"/>
+<link href="Heat_gain_loss.html" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.13" name="generator"/>
-<title>냉방에너지요구량 - ECO2 Guide Center</title>
-<link href="../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
+<title>냉방 및 난방 에너지요구량 - ECO2 Guide Center</title>
+<link href="../../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<link href="../assets/pretendard.css" rel="stylesheet"/>
-<link href="../assets/custom.css" rel="stylesheet"/>
-<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/pretendard.css" rel="stylesheet"/>
+<link href="../../assets/custom.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
 <body dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#q_cb-cooling-energy-demand-per-area">
+<a class="md-skip" href="#_1">
           콘텐츠로 이동
         </a>
 </div>
@@ -32,8 +32,8 @@
 </div>
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
 <nav aria-label="상단/헤더" class="md-header__inner md-grid">
-<a aria-label="ECO2 Guide Center" class="md-header__button md-logo" data-md-component="logo" href="../index.html" title="ECO2 Guide Center">
-<img alt="logo" src="../assets/ECO2_icon.png"/>
+<a aria-label="ECO2 Guide Center" class="md-header__button md-logo" data-md-component="logo" href="../../index.html" title="ECO2 Guide Center">
+<img alt="logo" src="../../assets/ECO2_icon.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
@@ -48,7 +48,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              냉방에너지요구량
+              냉방 및 난방 에너지요구량
             
           </span>
 </div>
@@ -95,14 +95,14 @@
 <div class="md-sidebar__inner">
 <nav aria-label="네비게이션" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="ECO2 Guide Center" class="md-nav__button md-logo" data-md-component="logo" href="../index.html" title="ECO2 Guide Center">
-<img alt="logo" src="../assets/ECO2_icon.png"/>
+<a aria-label="ECO2 Guide Center" class="md-nav__button md-logo" data-md-component="logo" href="../../index.html" title="ECO2 Guide Center">
+<img alt="logo" src="../../assets/ECO2_icon.png"/>
 </a>
     ECO2 Guide Center
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../index.html">
+<a class="md-nav__link" href="../../index.html">
 <span class="md-ellipsis">
     Welcome to ECO2 Guide Center
     
@@ -125,7 +125,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="index.html">
+<a class="md-nav__link" href="../index.html">
 <span class="md-ellipsis">
     Overview
     
@@ -133,7 +133,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Simple_Method.html">
+<a class="md-nav__link" href="../Simple_Method.html">
 <span class="md-ellipsis">
     Sample Page
     
@@ -141,13 +141,28 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="ECO2_screenshot.html">
+<a class="md-nav__link" href="../ECO2_screenshot.html">
 <span class="md-ellipsis">
     ECO2 screenshot
     
   </span>
 </a>
 </li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+<span class="md-ellipsis">
+    개요 및 건물 모델링
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_4">
+<span class="md-nav__icon md-icon"></span>
+            개요 및 건물 모델링
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="Monthly_method.html">
 <span class="md-ellipsis">
@@ -157,9 +172,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Heating_energy_demand.html">
+<a class="md-nav__link" href="Zoning.html">
 <span class="md-ellipsis">
-    난방에너지요구량
+    건물의 조닝
     
   </span>
 </a>
@@ -168,14 +183,14 @@
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    냉방에너지요구량
+    냉방 및 난방 에너지요구량
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<a class="md-nav__link md-nav__link--active" href="Cooling_energy_demand.html">
+<a class="md-nav__link md-nav__link--active" href="Cooling_heating_energy_demand.html">
 <span class="md-ellipsis">
-    냉방에너지요구량
+    냉방 및 난방 에너지요구량
     
   </span>
 </a>
@@ -186,9 +201,17 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
+<a class="md-nav__link" href="#q_cb-cooling-energy-demand-per-area">
 <span class="md-ellipsis">
-      🔹단위면적당 냉방에너지요구량 계산을 위한 📐공간 및 🗓️시간 구분
+      단위면적당 냉방에너지요구량 \(Q_{c,b}\) (Cooling energy demand, per area)
+    </span>
+</a>
+<nav aria-label="단위면적당 냉방에너지요구량 \(Q_{c,b}\) (Cooling energy demand, per area)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      단위면적당 냉방에너지요구량 계산을 위한 📐공간 및 🗓️시간 구분
     </span>
 </a>
 </li>
@@ -228,8 +251,11 @@
 </ul>
 </nav>
 </li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
+<a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
       🔹 냉방기기 설정 항목 및 계산 로직
     </span>
@@ -289,13 +315,6 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#eco2-memo">
-<span class="md-ellipsis">
-      ECO2 memo
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#request-to-hee">
 <span class="md-ellipsis">
       🎨 Request to Hee ➡️ 적절히 도식화 요청
@@ -306,23 +325,18 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="heat_gain.html">
+<a class="md-nav__link" href="Heat_gain_loss.html">
 <span class="md-ellipsis">
-    열획득
+    열획득과 열손실
     
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="heat_loss.html">
-<span class="md-ellipsis">
-    열손실
-    
-  </span>
-</a>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../1. ECO2 Logic Guide/난방_에너지_분석.md">
+<a class="md-nav__link" href="../../1. ECO2 Logic Guide/난방_에너지_분석.md">
 <span class="md-ellipsis">
     난방 에너지 분석
     
@@ -330,7 +344,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../1. ECO2 Logic Guide/공조_시스템_분석.md">
+<a class="md-nav__link" href="../../1. ECO2 Logic Guide/공조_시스템_분석.md">
 <span class="md-ellipsis">
     공조 시스템 분석
     
@@ -338,22 +352,22 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
+<input class="md-nav__toggle md-toggle" id="__nav_2_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
 <span class="md-ellipsis">
     신재생에너지 시스템 분석
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_11_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_11">
+<nav aria-expanded="false" aria-labelledby="__nav_2_7_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_7">
 <span class="md-nav__icon md-icon"></span>
             신재생에너지 시스템 분석
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="%EC%8B%A0%EC%9E%AC%EC%83%9D%EC%97%90%EB%84%88%EC%A7%80%20%EC%8B%9C%EC%8A%A4%ED%85%9C%20%EB%B6%84%EC%84%9D/%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98_%EC%98%A4%EB%A5%98_%ED%95%B4%EA%B2%B0_%EB%B0%A9%EB%B2%95.html">
+<a class="md-nav__link" href="../%EC%8B%A0%EC%9E%AC%EC%83%9D%EC%97%90%EB%84%88%EC%A7%80%20%EC%8B%9C%EC%8A%A4%ED%85%9C%20%EB%B6%84%EC%84%9D/%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98_%EC%98%A4%EB%A5%98_%ED%95%B4%EA%B2%B0_%EB%B0%A9%EB%B2%95.html">
 <span class="md-ellipsis">
     시뮬레이션 오류 해결 방법
     
@@ -361,7 +375,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="%EC%8B%A0%EC%9E%AC%EC%83%9D%EC%97%90%EB%84%88%EC%A7%80%20%EC%8B%9C%EC%8A%A4%ED%85%9C%20%EB%B6%84%EC%84%9D/%EC%9E%85%EB%A0%A5_%EB%8D%B0%EC%9D%B4%ED%84%B0_%EC%98%A4%EB%A5%98_%EC%88%98%EC%A0%95.html">
+<a class="md-nav__link" href="../%EC%8B%A0%EC%9E%AC%EC%83%9D%EC%97%90%EB%84%88%EC%A7%80%20%EC%8B%9C%EC%8A%A4%ED%85%9C%20%EB%B6%84%EC%84%9D/%EC%9E%85%EB%A0%A5_%EB%8D%B0%EC%9D%B4%ED%84%B0_%EC%98%A4%EB%A5%98_%EC%88%98%EC%A0%95.html">
 <span class="md-ellipsis">
     입력 데이터 오류 수정
     
@@ -369,7 +383,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="%EC%8B%A0%EC%9E%AC%EC%83%9D%EC%97%90%EB%84%88%EC%A7%80%20%EC%8B%9C%EC%8A%A4%ED%85%9C%20%EB%B6%84%EC%84%9D/%EA%B2%B0%EA%B3%BC%EA%B0%92_%ED%95%B4%EC%84%9D_%EA%B4%80%EB%A0%A8_%EC%98%A4%EB%A5%98.html">
+<a class="md-nav__link" href="../%EC%8B%A0%EC%9E%AC%EC%83%9D%EC%97%90%EB%84%88%EC%A7%80%20%EC%8B%9C%EC%8A%A4%ED%85%9C%20%EB%B6%84%EC%84%9D/%EA%B2%B0%EA%B3%BC%EA%B0%92_%ED%95%B4%EC%84%9D_%EA%B4%80%EB%A0%A8_%EC%98%A4%EB%A5%98.html">
 <span class="md-ellipsis">
     결과값 해석 관련 오류
     
@@ -380,7 +394,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../1. ECO2 Logic Guide/오류_및_경고_메시지.md">
+<a class="md-nav__link" href="../../1. ECO2 Logic Guide/오류_및_경고_메시지.md">
 <span class="md-ellipsis">
     오류 및 경고 메시지
     
@@ -388,7 +402,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../1. ECO2 Logic Guide/자주_묻는_질문.md">
+<a class="md-nav__link" href="../../1. ECO2 Logic Guide/자주_묻는_질문.md">
 <span class="md-ellipsis">
     자주 묻는 질문 (FAQ)
     
@@ -396,22 +410,22 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_14" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_14" id="__nav_2_14_label" tabindex="0">
+<input class="md-nav__toggle md-toggle" id="__nav_2_10" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
 <span class="md-ellipsis">
     고급 기능
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_14_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_14">
+<nav aria-expanded="false" aria-labelledby="__nav_2_10_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_10">
 <span class="md-nav__icon md-icon"></span>
             고급 기능
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="Advanced_Function/%EC%99%B8%ED%94%BC%EC%A0%84%EA%B0%9C%EB%8F%84_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8_%EC%97%B0%EB%8F%99.html">
+<a class="md-nav__link" href="../Advanced_Function/%EC%99%B8%ED%94%BC%EC%A0%84%EA%B0%9C%EB%8F%84_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8_%EC%97%B0%EB%8F%99.html">
 <span class="md-ellipsis">
     외피전개도 프로그램 연동
     
@@ -419,7 +433,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Advanced_Function/IFC_Model_Linking.html">
+<a class="md-nav__link" href="../Advanced_Function/IFC_Model_Linking.html">
 <span class="md-ellipsis">
     IFC 모델 연동
     
@@ -430,7 +444,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Zoning.html">
+<a class="md-nav__link" href="../../1. ECO2 Logic Guide/Zoning.md">
 <span class="md-ellipsis">
     건물의 조닝
     
@@ -456,7 +470,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../2.%20ECO2%20User%20Guide/index.html">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/index.html">
 <span class="md-ellipsis">
     Overview
     
@@ -464,7 +478,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../2.%20ECO2%20User%20Guide/00_main_page.html">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/00_main_page.html">
 <span class="md-ellipsis">
     Program Overview
     
@@ -472,7 +486,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../2.%20ECO2%20User%20Guide/01_building_info.html">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/01_building_info.html">
 <span class="md-ellipsis">
     Building Info
     
@@ -480,7 +494,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../2.%20ECO2%20User%20Guide/02_input_zone.html">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/02_input_zone.html">
 <span class="md-ellipsis">
     입력존
     
@@ -488,7 +502,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../2.%20ECO2%20User%20Guide/03_input_surface.html">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/03_input_surface.html">
 <span class="md-ellipsis">
     입력면
     
@@ -496,7 +510,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../2.%20ECO2%20User%20Guide/04_hvac_processing.html">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/04_hvac_processing.html">
 <span class="md-ellipsis">
     공조처리
     
@@ -504,7 +518,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../2.%20ECO2%20User%20Guide/05_heating_equip.html">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/05_heating_equip.html">
 <span class="md-ellipsis">
     난방기기
     
@@ -512,7 +526,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../2.%20ECO2%20User%20Guide/06_heating_supply.html">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/06_heating_supply.html">
 <span class="md-ellipsis">
     난방공급시스템
     
@@ -520,7 +534,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../2.%20ECO2%20User%20Guide/07_heating_distribution.html">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/07_heating_distribution.html">
 <span class="md-ellipsis">
     난방분배시스템
     
@@ -528,7 +542,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../2.%20ECO2%20User%20Guide/08_cooling_equip.html">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/08_cooling_equip.html">
 <span class="md-ellipsis">
     Cooling Equipment
     
@@ -536,7 +550,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../2.%20ECO2%20User%20Guide/09_cooling_distribution.html">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/09_cooling_distribution.html">
 <span class="md-ellipsis">
     냉방분배시스템
     
@@ -544,7 +558,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../2.%20ECO2%20User%20Guide/10_renewable_chp.html">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/10_renewable_chp.html">
 <span class="md-ellipsis">
     신재생 및 열병합
     
@@ -552,7 +566,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../2.%20ECO2%20User%20Guide/11_thermal_transmittance.html">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/11_thermal_transmittance.html">
 <span class="md-ellipsis">
     열관류율
     
@@ -560,7 +574,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../2.%20ECO2%20User%20Guide/12_montly_energy_use.html">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/12_montly_energy_use.html">
 <span class="md-ellipsis">
     월별 에너지 사용량
     
@@ -586,7 +600,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../3.%20ECO2%20Assessment%20Guide/index.html">
+<a class="md-nav__link" href="../../3.%20ECO2%20Assessment%20Guide/index.html">
 <span class="md-ellipsis">
     Overview
     
@@ -612,7 +626,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../4.%20Reference/Logic_Equations.html">
+<a class="md-nav__link" href="../../4.%20Reference/Logic_Equations.html">
 <span class="md-ellipsis">
     Logic Equations (수식 모음)
     
@@ -637,9 +651,17 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
+<a class="md-nav__link" href="#q_cb-cooling-energy-demand-per-area">
 <span class="md-ellipsis">
-      🔹단위면적당 냉방에너지요구량 계산을 위한 📐공간 및 🗓️시간 구분
+      단위면적당 냉방에너지요구량 \(Q_{c,b}\) (Cooling energy demand, per area)
+    </span>
+</a>
+<nav aria-label="단위면적당 냉방에너지요구량 \(Q_{c,b}\) (Cooling energy demand, per area)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      단위면적당 냉방에너지요구량 계산을 위한 📐공간 및 🗓️시간 구분
     </span>
 </a>
 </li>
@@ -679,8 +701,11 @@
 </ul>
 </nav>
 </li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
+<a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
       🔹 냉방기기 설정 항목 및 계산 로직
     </span>
@@ -740,13 +765,6 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#eco2-memo">
-<span class="md-ellipsis">
-      ECO2 memo
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#request-to-hee">
 <span class="md-ellipsis">
       🎨 Request to Hee ➡️ 적절히 도식화 요청
@@ -760,29 +778,48 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="q_cb-cooling-energy-demand-per-area">단위면적당 냉방에너지요구량  <span class="arithmatex">\(Q_{c,b}\)</span> (Cooling energy demand, per area)<a class="headerlink" href="#q_cb-cooling-energy-demand-per-area" title="Permanent link">¶</a></h1>
-<div div="" style="
-  background-color: #F1F5F9;
-  border-left: 5px solid rgb(147, 160, 238);
-  padding: 10px 20px;
-  margin-top: 20px;
-  font-size: 16px;
-">
-<strong>개요</strong><br/>
-        단위면적당 냉방에너지요구량은 <strong>시스템이 제거해야 할 유효 열량</strong>으로, 다음 식에 의해 계산됩니다:
-        <!--Open in a New Window ver. & Equation No. Automation with span + macro -->
-<a class="equation-link" href="#" onclick="window.open(
-     '/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Equation_diagram.html',
-     'popupWindow',
-     'width=800,height=600,scrollbars=yes,resizable=yes'
-   ); return false;">
-  \( Q_{h,b,i} = Q_{sink,i} - \eta_i Q_{source,i} \) <span class="eq-number">(2-1)</span>
-</a>
+<h1 id="_1">냉방 및 난방 에너지요구량<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<p>어떤 존의 온도가 설정 범위 내에 있다면 추가적으로 냉방 또는 난방을 할 필요가 없을 것입니다. 그러나 설정 범위를 벗어난다면, 다음과 같이 냉방 또는 난방 에너지요구량이 발생하게 됩니다: <br/>
+<br/><br/>
+<pre class="mermaid"><code>graph LR
+    classDef pretendard font-family:'Pretendard';
+
+    A{현재 온도는 설정 범위 안에 있는가}
+    A -- 예 --&gt; B[냉난방 필요 없음]
+    A -- 아니오 --&gt; C{현재 온도가 높은가}
+    C -- 예 --&gt; D[냉방 에너지요구량 발생]
+    C -- 아니오 --&gt; E[난방 에너지요구량 발생]
+
+    class A pretendard
+    class B pretendard
+    class C pretendard
+    class D pretendard
+    class E pretendard
+</code></pre>
+<br/></p>
+<hr/>
+<h2 id="q_cb-cooling-energy-demand-per-area">단위면적당 냉방에너지요구량  <span class="arithmatex">\(Q_{c,b}\)</span> (Cooling energy demand, per area)<a class="headerlink" href="#q_cb-cooling-energy-demand-per-area" title="Permanent link">¶</a></h2>
+<p>설정 범위보다 온도가 <strong>높을 때</strong> 냉방 에너지요구량이 발생합니다. 즉 어떤 존의 단위면적당 냉방 에너지요구량, <span class="arithmatex">\(Q_{c,b}\)</span>은 <strong>시스템에 의해 제거되어야 할 유효 열량</strong>을 계산함으로써 구해집니다.<br>
+<br/>
+<span class="arithmatex">\(Q_{c,b}\)</span> 는 다음과 같이 계산됩니다:  </br></p>
+<div style="text-align: center; margin-top: 24px; margin-bottom: 24px;">
+<div style="
+    display: inline-block;
+    background-color: #F1F5F9;
+    border-radius: 10px;
+    padding: 16px 48px;
+    line-height: 1.8;
+    margin-top: 1em;
+    margin-bottom: 2em;
+  ">
+ \( Q_{c,b} = (1-\eta) Q_{source} \quad \text{(2–1)} \)
+  </div>
 </div>
-<h2 id="_1">🔹단위면적당 냉방에너지요구량 계산을 위한 📐공간 및 🗓️시간 구분<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<h6>       희야, 이 식이 수식 폴더에 없는 것 같아서 한번만 확인 부탁해! </h6>
+<h3 id="_2">단위면적당 냉방에너지요구량 계산을 위한 📐공간 및 🗓️시간 구분<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
 <ul>
 <li>한 건축물의 연간 단위면적당 냉방에너지요구량을 구하기 위해, 건축물을 공간적 및 시간적으로 분할하여 각 단위면적당 냉방에너지요구량을 구합니다.   </li>
-<li>📐 공간은 <strong>존(zone)</strong> 단위로 구분되며 <strong>모든 존별 단위면적당 냉방에너지요구량의 합</strong>이 비로소 건축물의 단위면적당 냉방에너지요구량이 됩니다. <span style="font-size: 0.9em; font-style: italic;"><a href="Zoning.html">    🔍 조닝(zoning)에 대한 로직 바로가기</a></span></li>
+<li>📐 공간은 <strong>존(zone)</strong> 단위로 구분되며 <strong>모든 존별 단위면적당 냉방에너지요구량의 합</strong>이 비로소 건축물의 단위면적당 냉방에너지요구량이 됩니다. <span style="font-size: 0.9em; font-style: italic;"><a href="../1.%20ECO2%20Logic%20Guide/Zoning.md">    🔍 조닝(zoning)에 대한 로직 바로가기</a></span></li>
 <li>🗓️ 한편 1개 존의 연간 단위면적당 냉방에너지요구량은 <strong>월별 단위면적당 냉방에너지요구량의 총합</strong>이 됩니다.</li>
 </ul>
 <div style="display: flex; gap: 0.5em; align-items: stretch;">
@@ -796,8 +833,8 @@
     flex-direction: column;
     justify-content: space-between;
   ">
-<h3> ⭕ 건축물의 연간 단위면적당 냉방에너지요구량: 📐 존별 요구량의 합</h3>
-<h4></h4>
+<h4> 🔹 건축물의 연간 단위면적당 냉방에너지요구량: 📐 존별 요구량의 합</h4>
+<h5></h5>
 <p>이곳은 왼쪽 단의 내용입니다.</p>
 </div>
 <div style="
@@ -810,8 +847,8 @@
     flex-direction: column;
     justify-content: space-between;
   ">
-<h3> ⭕ 건축물의 연간 단위면적당 냉방에너지요구량: 🗓️ 월별 요구량의 합</h3>
-<h4>연간 단위면적당 냉방에너지요구량 \(Q_{c,b}\)</h4>
+<h4> 🔹 건축물의 연간 단위면적당 냉방에너지요구량: 🗓️ 월별 요구량의 합</h4>
+<h5>연간 단위면적당 냉방에너지요구량 \(Q_{c,b}\)</h5>
 <p><center>
 <img alt="Annual &amp; monthly cooling energy demand" src="../../images/adjusted_left_box_width_c.png" style="max-width: 100%;"/>
 <div><strong>Annual cooling energy demand</strong></div>
@@ -819,8 +856,11 @@
 </p>
 </div>
 </div>
+<ol>
+<li>설정 범위보다 온도가 낮을 때: 난방 에너지요구량이 발생 🔥 <span class="arithmatex">\(Q_{h,b} &gt; 0\)</span> </li>
+</ol>
 <p> <br/></p>
-<h2 id="q_cb">🔹 <strong>월간</strong> 단위면적당 냉방에너지요구량 <span class="arithmatex">\(Q_{c,b}\)</span><a class="headerlink" href="#q_cb" title="Permanent link">¶</a></h2>
+<h3 id="q_cb">🔹 <strong>월간</strong> 단위면적당 냉방에너지요구량 <span class="arithmatex">\(Q_{c,b}\)</span><a class="headerlink" href="#q_cb" title="Permanent link">¶</a></h3>
 <p> <br/></p>
 <center>
 <img alt="Monthly cooling energy demand" src="../../images/Monthly cooling energy demand.png" style="max-width: 80%;"/>
@@ -837,7 +877,7 @@
 <p>where 
 <em>Q<sub>source</sub></em> : 열획득원<br>
 η: 열획득 이용률(소진율) </br></p>
-<h4 id="qsource-qc-b">🚩 열획득 이용률(η): 열획득원(<em>Q<sub>source</sub></em> )에 의한 냉방에너지요구량(<em>Q<sub>c, b</sub></em> )의 정도를 결정<a class="headerlink" href="#qsource-qc-b" title="Permanent link">¶</a></h4>
+<h5 id="qsource-qc-b">🚩 열획득 이용률(η): 열획득원(<em>Q<sub>source</sub></em> )에 의한 냉방에너지요구량(<em>Q<sub>c, b</sub></em> )의 정도를 결정<a class="headerlink" href="#qsource-qc-b" title="Permanent link">¶</a></h5>
 <p>γ 및 <em>a </em>의 값에 따라 열획득 이용률(η)이 결정  </p>
 <p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
 <span class="arithmatex">\( \eta = \frac{1 - \gamma^a}{1 - \gamma^{a+1}}, \quad \gamma \ne 1 \)</span> <span class="eq-number">(2-23)</span>
@@ -880,46 +920,8 @@
 </div>
 </div>
 </details>
-<h5 id="1-qc-b-0">열획득 이용률(η) ＝ 1이면 이 존의 냉방에너지요구량(<em>Q<sub>c, b</sub></em> ) = 0<a class="headerlink" href="#1-qc-b-0" title="Permanent link">¶</a></h5>
-<h3>표 3.1.2-13 제주 기상데이터</h3>
-<table border="1">
-<thead>
-<tr>
-<th rowspan="3">월</th>
-<th rowspan="3">평균 외기온도<br/>[°C]</th>
-<th colspan="10">평균 전일사량 [W/m²]</th>
-</tr>
-<tr>
-<th rowspan="2">수평면</th>
-<th colspan="9">수직면</th>
-</tr>
-<tr>
-<th>남</th>
-<th>남동</th>
-<th>남서</th>
-<th>동</th>
-<th>서</th>
-<th>북동</th>
-<th>북서</th>
-<th>북</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>1월</td><td>6.3</td><td>64.0</td><td>78.8</td><td>85.5</td><td>48.4</td><td>63.1</td><td>32.1</td><td>33.5</td><td>26.9</td><td>26.8</td></tr>
-<tr><td>2월</td><td>6.7</td><td>94.6</td><td>102.7</td><td>131.6</td><td>55.2</td><td>108.8</td><td>40.2</td><td>55.3</td><td>34.6</td><td>34.2</td></tr>
-<tr><td>3월</td><td>8.9</td><td>133.3</td><td>104.6</td><td>95.2</td><td>98.3</td><td>78.7</td><td>81.7</td><td>57.0</td><td>58.2</td><td>49.2</td></tr>
-<tr><td>4월</td><td>14.0</td><td>188.6</td><td>105.1</td><td>109.8</td><td>113.0</td><td>102.1</td><td>104.5</td><td>77.6</td><td>78.0</td><td>57.5</td></tr>
-<tr><td>5월</td><td>17.8</td><td>199.5</td><td>95.7</td><td>105.8</td><td>109.4</td><td>108.2</td><td>112.3</td><td>94.6</td><td>96.7</td><td>78.9</td></tr>
-<tr><td>6월</td><td>21.5</td><td>194.0</td><td>81.3</td><td>98.2</td><td>101.0</td><td>107.0</td><td>110.8</td><td>95.7</td><td>98.3</td><td>77.7</td></tr>
-<tr><td>7월</td><td>25.9</td><td>198.0</td><td>86.4</td><td>106.6</td><td>101.2</td><td>115.4</td><td>107.2</td><td>99.9</td><td>93.6</td><td>76.4</td></tr>
-<tr><td>8월</td><td>26.9</td><td>181.2</td><td>87.6</td><td>141.8</td><td>81.8</td><td>167.1</td><td>78.6</td><td>135.0</td><td>69.9</td><td>74.4</td></tr>
-<tr><td>9월</td><td>23.0</td><td>156.8</td><td>109.6</td><td>101.0</td><td>114.7</td><td>87.0</td><td>101.9</td><td>64.2</td><td>71.5</td><td>53.0</td></tr>
-<tr><td>10월</td><td>18.2</td><td>132.5</td><td>119.9</td><td>99.8</td><td>109.2</td><td>74.8</td><td>83.0</td><td>53.7</td><td>55.8</td><td>49.5</td></tr>
-<tr><td>11월</td><td>13.2</td><td>94.2</td><td>119.9</td><td>112.5</td><td>80.2</td><td>71.4</td><td>45.3</td><td>34.9</td><td>30.1</td><td>29.6</td></tr>
-<tr><td>12월</td><td>8.1</td><td>64.6</td><td>83.0</td><td>86.9</td><td>51.0</td><td>60.8</td><td>32.3</td><td>31.7</td><td>27.2</td><td>27.1</td></tr>
-</tbody>
-</table>
-<h5 id="1">열획득 이용률(η) ≠ 1<a class="headerlink" href="#1" title="Permanent link">¶</a></h5>
+<h6 id="1-qc-b-0">열획득 이용률(η) ＝ 1이면 이 존의 냉방에너지요구량(<em>Q<sub>c, b</sub></em> ) = 0<a class="headerlink" href="#1-qc-b-0" title="Permanent link">¶</a></h6>
+<h6 id="1">열획득 이용률(η) ≠ 1<a class="headerlink" href="#1" title="Permanent link">¶</a></h6>
 <div style="display: flex; gap: 2em;">
 <!-- 왼쪽 단 -->
 <div style="flex: 1;">
@@ -973,7 +975,7 @@ $$ Q_{cooling} = (1 - \eta) \cdot Q_{source} $$
 <div><strong>Figure 1. Energy Flow Diagram</strong></div>
 </center>
 <hr/>
-<h2 id="_2">🔹 냉방기기 설정 항목 및 계산 로직<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<h2 id="_3">🔹 냉방기기 설정 항목 및 계산 로직<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
 <h3 id="1_1"><strong>1. [일반데이터]</strong><a class="headerlink" href="#1_1" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>냉동기 방식</strong> → 압축식 / 흡수식 선택</li>
@@ -1036,22 +1038,14 @@ Q = mc\Delta T
 <p>Where:<br>
 - <strong>Q</strong> = Heat energy (Joules)<br>
 - <strong>m</strong> = Mass (kg)<br>
-- <strong>c</strong> = Specific heat capacity (J/kg·K)<br/>
-- <strong>ΔT</strong> = Temperature change (K)</br></br></br></p>
+- <strong>c</strong> = Specific heat capacity (J/kg·K)<br>
+- <strong>ΔT</strong> = Temperature change (K)</br></br></br></br></p>
 <hr/>
 <h2 id="example-calculation">🔹 Example Calculation<a class="headerlink" href="#example-calculation" title="Permanent link">¶</a></h2>
 <p>Let's calculate the energy required to heat 2 kg of water from 20°C to 80°C. Assuming water's specific heat capacity is <span class="arithmatex">\( 4.18 \ \mathrm{J/g \cdot K} \)</span>.  </p>
 <div class="arithmatex">\[
 Q = (2 \times 1000) \times 4.18 \times (80 - 20) = 502,000 \ \text{J}
 \]</div>
-<h2 id="eco2-memo">ECO2 memo<a class="headerlink" href="#eco2-memo" title="Permanent link">¶</a></h2>
-<p>절대 온도 구간 기반 부하 판단
-기준 범위(Dead band)가 있다면, 그 범위 내에서는 부하가 존재하지 않음 (사람이 쾌적하게 느끼는 실내 온도 범위)
-부하라는 것은 에너지요구량을 의미하므로 에너지 단위를 가짐 (기본단위는 W, 와트)</p>
-<p>부하의 3종류
-1. 기준 범위보다 온도가 낮을 때: 난방부하(heating demand) 발생 🔥 <span class="arithmatex">\(Q_{h,b} &gt; 0\)</span> <br/>
-2. 기준 범위보다 온도가 높을 떄: 냉방부하(cooling demand) 발생 🧊 <span class="arithmatex">\(Q_{c,b} &gt; 0\)</span> <br/>
-3. 기준 범위 내 온도: 없음   </p>
 <h2 id="request-to-hee">🎨 Request to Hee ➡️ 적절히 도식화 요청<a class="headerlink" href="#request-to-hee" title="Permanent link">¶</a></h2>
 <p><pre class="mermaid"><code>graph LR
 
@@ -1148,21 +1142,21 @@ linkStyle default stroke:#888,stroke-width:1.2px;
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.path", "navigation.tabs.sticky", "navigation.tracking"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
-<script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
-<script src="../assets/polyfill.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.tabs.sticky", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+<script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+<script src="../../assets/polyfill.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script>
 <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
-<script src="../assets/mathjax-config.js"></script>
-<script src="../assets/mathjax-linker.js"></script>
-<script src="../assets/mermaid-init.js"></script>
-<script src="../assets/mermaid-font-fix.js"></script>
-<script src="../assets/cache-buster.js"></script>
-<script src="../assets/breadcrumb.js"></script>
-<script src="../assets/scroll-to-top.js"></script>
-<script src="../assets/footer-feedback.js"></script>
+<script src="../../assets/mathjax-config.js"></script>
+<script src="../../assets/mathjax-linker.js"></script>
+<script src="../../assets/mermaid-init.js"></script>
+<script src="../../assets/mermaid-font-fix.js"></script>
+<script src="../../assets/cache-buster.js"></script>
+<script src="../../assets/breadcrumb.js"></script>
+<script src="../../assets/scroll-to-top.js"></script>
+<script src="../../assets/footer-feedback.js"></script>
 <script>window.mermaidConfig = {default: {
     theme: "base",
     themeVariables: {

@@ -69,7 +69,7 @@ theme:
     # - navigation.expand # 다 펼치고 싶을 때
     - navigation.tracking
     # - navigation.sections # 너무 트리가 좁으면 들여쓰기 안하고 섹션모드로
-
+  custom_dir: overrides
 
 extra_css:
   - assets/pretendard.css
@@ -80,7 +80,6 @@ extra:
   eco2_title_2: 'ECO2 계산 로직과 방법론 (Calculation Logic and Methodology)'
   eco2_title_3: 'ECO2 시뮬레이션 로직과 계산 원칙 (Simulation Logic and Calculation Principles)'
   eco2_title_4: 'ECO2 알고리즘 및 로직 가이드 (Algorithm and Logic Guide)'
-
 
 extra_javascript:
   # 1. 폴리필 (최상단)
@@ -104,8 +103,6 @@ extra_javascript:
   - assets/scroll-to-top.js
   - assets/footer-feedback.js
 
-
-  
 
 markdown_extensions:
   - admonition              # ⚠️ 경고, 주의, 참고 박스
@@ -135,6 +132,18 @@ plugins:
         themeVariables:
           fontFamily: "'Pretendard', Pretendard"
           fontSize: 160px
+  - table-reader
+  - glightbox
+  - awesome-pages
+  - git-revision-date-localized:
+      enabled: true         # 기본값 유지 (날짜 계산은 됨)
+      fallback_to_build_date: false
+      type: date
+      locale: ko
+      format: "%Y-%m-%d"
+      exclude:
+        - index.md          # 선택: 날짜 안 보여줄 페이지
+  - minify
 
 # javascript: https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
 
