@@ -137,7 +137,7 @@ plugins:
   - awesome-pages
   - git-revision-date-localized:
       enabled: true         # 기본값 유지 (날짜 계산은 됨)
-      fallback_to_build_date: false
+      fallback_to_build_date: true
       type: date
       locale: ko
       format: "%Y-%m-%d"

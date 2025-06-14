@@ -65,12 +65,16 @@ graph LR
   </tbody>
 </table>
 
+
+<div class="center-table">
+
 | Column A | Column B | Column C |
 |----------|----------|----------|
 | Apple    | 100      | Red      |
 | Banana   | 80       | Yellow   |
 | Cherry   | 120      | Dark Red |
 
+</div>
 
 
 ### 냉방에너지요구량 계산을 위한 📐공간 및 🗓️시간 구분
