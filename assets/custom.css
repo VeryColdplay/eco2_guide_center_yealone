@@ -116,7 +116,7 @@ code {
   border-radius: 6px;
 }
 .md-content h3 { font-size: 20px; font-weight: 800; margin-top: 1em; margin-bottom: 1em;}
-.md-content h4 { font-size: 19px; margin-top: 0.2em; margin-bottom: 0.2em;}
+.md-content h4 { font-size: 19px; margin-top: 0.2em; margin-bottom: 0.2em; margin-left: 2em;}
 .md-content h5 { font-size: 18px; margin-top: 1em; margin-bottom: 1em;}
 .md-content h6 { font-size: 17px; margin-top: 1em; margin-bottom: 1em;}
 
