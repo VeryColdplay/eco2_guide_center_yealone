@@ -102,6 +102,10 @@ extra_javascript:
   - assets/breadcrumb.js
   - assets/scroll-to-top.js
   - assets/footer-feedback.js
+  # 승연 추가
+  - assets/equation_search.js
+  - assets/equation_modal.js
+  - assets/equation_page_loader.js
 
 
   

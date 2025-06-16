@@ -1,4 +1,4 @@
-# 열손실 및 열획득 (Heat Loss and Heat Gain)
+# 열손실 및 열획득 (Heat Loss and Heat Gain) 
 
 존의 열손실/열획득은 서로 대차 대조된 후, 난방부하 또는 냉방부하가 계산됩니다. 다음과 같은 열손실 및 열획득이 부하 분석 시 고려됩니다:
 
@@ -53,7 +53,7 @@
     <strong>희에게 적절한 다이어그램 혹은 그림 추가 요청</strong>
   </div>
 
-  <!-- 오른쪽 단: 세부 전도 항목 (간격 축소 + 수식 렌더링) -->
+  <!-- 오른쪽 단: 세부 전도 항목 -->
   <div style="
     flex: 1;
     background: #fef9f1;
@@ -174,4 +174,22 @@
     </details>
   </div>
 </div>
+
+## 열획득
+
+태양열입사, 전도에 의한 열 유입, 자연환기와 기계환기에 의한 열 유입, 내부 발열 획득에 의해 존의 전체 열획득이 정해집니다.
+
+<div div style="
+  background-color: #f0f8ff;
+  border-left: 5px solid #2b6777;
+  padding: 10px 20px;
+  margin-top: 20px;
+">
+        <strong>열획득</strong><br>
+        열획득 계산식은 다음과 같습니다:
+        <span class="equation-link" data-equation-id="2-11-11">$$Q_{sink} = Q_T + Q_V + Q_{I,sink} + Q_S$$</span>
+</div>
+
+---
+
 
