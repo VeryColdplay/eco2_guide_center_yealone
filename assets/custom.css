@@ -388,15 +388,24 @@ svg[id^="mermaid-"] .edgeLabel tspan {
 
 /* 표 설정 */
 .md-typeset table {
+  display: table;
   border: 1px solid #ccc;
   font-size: 14px;
   text-align: center;
+  width: auto;
   margin-left: auto !important;
   margin-right: auto !important;
+  max-width: 100%;
 }
 
 /* 표 안 모든 텍스트 가운데 정렬 */
-table th, table td {
-  text-align: center;
-  vertical-align: middle; /* 세로 정렬도 중앙 */
+.md-typeset table th, .md-typeset table td {
+  text-align: center !important;
+  vertical-align: middle !important; /* 세로 정렬도 중앙 */
+}
+
+/* center-table test. 안되면 그냥 지워도 됨..*/
+.center-table table {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
