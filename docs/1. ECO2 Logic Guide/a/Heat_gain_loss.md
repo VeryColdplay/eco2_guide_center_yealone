@@ -12,6 +12,12 @@
 ## 열손실
 
 전도와 자연환기에 의한 열손실, 기계환기에 의한 냉열유입, 존 내부의 냉열원 그리고 복사손실에 의한 존의 총 열손실이 결정됩니다. 
+<center>
+  <img src="../../_images/Heat_gain_or_loss.png" alt="Heat Gain or Loss" style="max-width: 80%;">
+  <div><strong>Heat Gain or Loss Diagram</strong></div>
+</center>
+<!-- 참고 이미지: https://www.slideshare.net/slideshow/climo-heat-losspptx/251519576  -->
+
 
 <div div style="
   background-color: #f0f8ff;
@@ -46,16 +52,16 @@
 
     $$ Q_T = \sum_j H_{T,j} \cdot (\vartheta_i - \vartheta_j)t,\quad \vartheta_i > \vartheta_j $$
 
-    <div style="margin-top: 10px;">
-      {{ include_equations("2", 6, 6) }}
-    </div>
+  <div style="margin-top: 10px;">
+       {{ include_equations("2", 6, 6) }}
+  </div>
 
-    <strong>희에게 적절한 다이어그램 혹은 그림 추가 요청</strong>
-      <center>
-       <img src="./heat_gain_fig1.png" alt="Heat Gain" style="max-width: 80%;">
-       <div><strong></strong></div>
-      </center>
-      %% https://images.app.goo.gl/CRTJpWiKihadMg7t5
+   <center>
+    <img src="../../_images/heat_gain_fig1.png" alt="Heat Gain" style="max-width: 80%;">
+    <div><strong>Heat Gain Figure 1</strong></div>
+   </center>
+
+  <!-- 참고 이미지: https://images.app.goo.gl/CRTJpWiKihadMg7t5 -->
   </div>
 
   <!-- 오른쪽 단: 세부 전도 항목 (간격 축소 + 수식 렌더링) -->
@@ -128,12 +134,13 @@
     <div style="margin-top: 10px;">
       {{ include_equations("2", 11, 11) }}
     </div>
-    <strong>희에게 적절한 다이어그램 혹은 그림 추가 요청</strong>
+    
      <center>
-       <img src="./heat_gain_fig2.jpg" alt="Heat Gain2" style="max-width: 80%;">
-       <div><strong></strong></div>
-      </center>
-    %% https://images.app.goo.gl/5EgpPD6C4xHu9z4y9
+      <img src="../../_images/heat_gain_fig2.jpg" alt="Heat Gain2" style="max-width: 80%;">
+      <div><strong>Heat Gain Figure 2</strong></div>
+     </center>
+
+  <!-- 참고 이미지: https://images.app.goo.gl/5EgpPD6C4xHu9z4y9 --> 
   </div>
 
   <!-- 오른쪽 단: 환기 항목별 세부 폴딩 설명 -->

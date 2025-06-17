@@ -46,7 +46,7 @@
     <h3> 🔹 건축물의 연간 단위면적당 난방에너지요구량: 🗓️ 월별 요구량의 합</h3>
     <h4>연간 단위면적당 난방에너지요구량 \(Q_{h,b}\)</h4>
     <p><center>
-  <img src="../../images/adjusted_left_box_width_c.png" style="max-width: 100%;" alt="Annual & monthly cooling energy demand">
+  <img src="./../_images/adjusted_left_box_width_c.png" style="max-width: 100%;" alt="Annual & monthly cooling energy demand">
   <div><strong>Annual heaing energy demand</strong></div>
 </center>
 </p>
@@ -62,7 +62,7 @@
 &nbsp;<br>
 
 <center>
-  <img src="../../images/Monthly cooling energy demand.png" style="max-width: 80%;" alt="Monthly cooling energy demand">
+  <img src="./../_images/Monthly cooling energy demand.png" style="max-width: 80%;" alt="Monthly cooling energy demand">
   <div><strong>Monthly cooling energy demand</strong></div>
 </center>
 
@@ -235,6 +235,6 @@ $$ Q_{cooling} = (1 - \eta) \cdot Q_{source} $$
 
 
 <center>
-  <img src="../../images/fig1.jpg" width="600" alt="Energy Flow Diagram">
+  <img src="./../_images/fig1.jpg" width="600" alt="Energy Flow Diagram">
   <div><strong>Figure 1. Energy Flow Diagram</strong></div>
 </center>

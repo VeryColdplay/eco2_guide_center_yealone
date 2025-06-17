@@ -31,10 +31,12 @@
   ">
     <h4> 🔹 건축물의 연간 단위면적당 냉방에너지요구량: 🗓️ 월별 요구량의 합</h4>
     <h5>연간 단위면적당 냉방에너지요구량 \(Q_{c,b}\)</h5>
-    <p><center>
-  <img src="../../images/adjusted_left_box_width_c.png" style="max-width: 100%;" alt="Annual & monthly cooling energy demand">
-  <div><strong>Annual cooling energy demand</strong></div>
-</center>
+    <p>
+    <center>
+     <img src="../../_images/adjusted_left_box_width_c.png" style="max-width: 100%;" alt="Annual & monthly cooling energy demand">
+     <div><strong>Annual cooling energy demand</strong></div>
+    </center>
+
 </p>
   </div>
 </div>
