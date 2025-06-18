@@ -50,7 +50,7 @@ ECO2에서의 건물 에너지 분석은 **존**을 단위로 시행된다.
     <h4> 🔹 건축물의 연간 단위면적당 냉방에너지요구량: 🗓️ 월별 요구량의 합</h4>
     <h5>연간 단위면적당 냉방에너지요구량 \(Q_{c,b}\)</h5>
     <p><center>
-  <img src="../../images/adjusted_left_box_width_c.png" style="max-width: 80%;" alt="Annual & monthly cooling energy demand">
+  <img src="../../_images/adjusted_left_box_width_c.png" style="max-width: 80%;" alt="Annual & monthly cooling energy demand">
   <div><strong>Annual cooling energy demand</strong></div>
 </center>
 </p>
@@ -73,7 +73,7 @@ ECO2에서의 건물 에너지 분석은 **존**을 단위로 시행된다.
     - 내부 열원
 
 <figure style="text-align: center;">
-  <img src="../../_images/Heat gain or loss.png" style="max-width: 60%;" alt="Annual & monthly cooling energy demand">
+  <img src="../../_images/Heat_gain_or_loss.png" style="max-width: 60%;" alt="Heat_gain_or_loss">
   <figcaption><strong>Heat Gain or Loss</strong></figcaption>
 </figure>
 

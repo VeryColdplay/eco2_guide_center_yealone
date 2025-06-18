@@ -1,5 +1,10 @@
 # 열손실 및 열획득 (Heat Loss and Heat Gain)
 
+<center>
+  <img src="../../_images/Cooling_heating_energy_demand.png" style="max-width: 50%;" alt="Cooling and Heating Energy Demand">
+  <div><strong>Figure. Cooling & Heating Energy Demand</strong></div>
+</center>
+
 존의 열손실/열획득은 서로 대차 대조된 후, 난방부하 또는 냉방부하가 계산됩니다. 다음과 같은 열손실 및 열획득이 부하 분석 시 고려됩니다:
 
 - 관류에 의한 열손실/열획득

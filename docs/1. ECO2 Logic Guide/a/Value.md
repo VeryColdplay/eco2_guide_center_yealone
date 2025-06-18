@@ -1,5 +1,10 @@
 # 개별 값 설정
 
+<center>
+  <img src="../../_images/Cooling_heating_energy_demand.png" style="max-width: 50%;" alt="Cooling and Heating Energy Demand">
+  <div><strong>Figure. Cooling & Heating Energy Demand</strong></div>
+</center>
+
 ##### 🚩 열획득 이용률(&eta;): 열획득원(<em>Q<sub>source</sub></em> )에 의한 냉방에너지요구량(<em>Q<sub>c, b</sub></em> )의 정도를 결정 
 &gamma; 및 <em>a </em>의 값에 따라 열획득 이용률(&eta;)이 결정  
 
@@ -114,8 +119,9 @@ $$ Q_{cooling} = (1 - \eta) \cdot Q_{source} $$
 
 
 <center>
-  <img src="../../images/fig1.jpg" width="600" alt="Energy Flow Diagram">
+  <img src="../../_images/fig1.jpg" width="600" alt="Energy Flow Diagram">
   <div><strong>Figure 1. Energy Flow Diagram</strong></div>
 </center>
+
 
 ---

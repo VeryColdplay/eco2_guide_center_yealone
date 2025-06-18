@@ -61,6 +61,10 @@
 <details>
 <summary><strong>건축물 에너지효율등급 인증기준</strong></summary>
 
+<center>
+  <img src="./../_images/table_2.1.1_1.png" style="max-width: 40%;" alt="table_2.1.1_1">
+</center>
+
 $$
 \text{단위면적당 1차 에너지 소요량} =
 \frac{\text{난방에너지소요량}}{\text{난방이 요구되는 공간의 바닥면적}} +
