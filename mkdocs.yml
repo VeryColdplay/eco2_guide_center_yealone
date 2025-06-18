@@ -35,6 +35,7 @@ nav:
 - 2. ECO2 User Guide:
   - Overview: '2. ECO2 User Guide/index.md'
   - Program Overview: '2. ECO2 User Guide/00_main_page.md'
+  - Equation Overview: '2. ECO2 User Guide/equation_overview.md'
   - Heat Gain and Loss: '2. ECO2 User Guide/heat_gain.md'
   - Building Info: '2. ECO2 User Guide/01_building_info.md'
   - 입력존: '2. ECO2 User Guide/02_input_zone.md'
