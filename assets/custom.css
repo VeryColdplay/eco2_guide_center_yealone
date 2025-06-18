@@ -1,0 +1,378 @@
+/* 웹폰트 사용 가능 설정 */
+@import url('https://cdn.jsdelivr.net/npm/pretendard@1.3.8/dist/web/static/pretendard.css');
+/*@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');*/
+
+/* Pretendard 본문 기본 적용 */
+body {
+  font-family: 'Pretendard', sans-serif;
+}
+
+/* 코드 블록 Pretendard 적용 */
+code {
+  font-family: 'Pretendard', monospace;
+}
+
+/* 로고 설정 */
+.md-header{
+  box-shadow: none !important;
+}
+
+
+/* 로고 설정 */
+.md-header__button.md-logo img {
+  height: 60px;
+  width: auto;
+}
+
+/* 네비게이션 트리 배경색 */
+.md-nav__list {
+  background-color: #f5f7fa;
+}
+
+/* Hover 효과 */
+.md-nav__link:hover {
+  background-color: #6e83fe;
+  color: #ffffff !important;
+  padding: 0px 3px; /* ← padding 확대로 시각적 덩어리감 증가 */
+}
+
+/* 검색창 Pretendard 적용 */
+.md-search__input {
+  font-family: 'Pretendard', sans-serif;
+}
+
+/* Mermaid 글꼴 적용 */
+.mermaid text {
+  font-family: 'Pretendard', sans-serif !important;
+  fill: #1E3A8A;
+  font-weight: 600;
+}
+
+.md-typeset .headerlink {
+  display: none;
+}
+
+/* 본문 글자 스타일 */
+.md-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-left: 2em;  /* ← 전체 문단을 오른쪽으로 2em 밀기 */
+}
+
+/* 불릿 목록(li) 기본 글자 크기 및 스타일을 본문과 통일 */
+.md-content li {
+  font-size: 16px;          /* 본문과 동일한 크기로 맞춤 */
+  line-height: 1.6;         /* 본문 줄간격과 동일 */
+  font-weight: normal;      /* 굵기 조정 (원하면 '400' 또는 '500'도 가능) */
+  margin-bottom: 0.5em;   /* 항목 간 간격 */
+  margin-left: 2em !important;     
+}
+
+
+/* 제목 스타일 */
+.md-content h1 {
+  font-size: 24px;
+  color: #4354B2 !important;
+  font-weight: bold;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  padding-top:20px;
+  /* 📌 sticky 고정 추가 */
+  position: sticky;
+  top: 88px;  /* 필요에 따라 64~84px 조정 가능 */
+  background-color: white;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.md-content h1::after {
+  content: "";
+  display: block;
+  margin-top: 20px; /* 텍스트와 선 사이 간격 */
+  height: 1.5px;
+  background-color: #8e9095;
+}
+
+.md-content h2 {
+  font-size: 21px;
+  font-weight: bold;
+  color: #ffffff !important;
+  border-bottom: none;
+  margin-top: 3em;
+  margin-bottom: 1em;
+  padding: 0.3em 1em; /* 안쪽 여백 */
+  background-color: #212121;
+  display: block;
+  width: 100%;
+  border-radius: 6px;
+}
+.md-content h3 { font-size: 20px; font-weight: 800; margin-top: 1em; margin-bottom: 1em;}
+.md-content h4 { font-size: 19px; margin-top: 1em; margin-bottom: 1em;}
+.md-content h5 { font-size: 18px; margin-top: 1em; margin-bottom: 1em;}
+.md-content h6 { font-size: 17px; margin-top: 1em; margin-bottom: 1em;}
+
+/* 이미지 중앙정렬 및 확대 */
+.mdx-image {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+}
+.mdx-image.zoom {
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
+}
+.mdx-image.zoom:hover {
+  transform: scale(1.1);
+}
+
+/* 수식 링크 스타일 */
+.equation-link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin: 1em 0;
+}
+.equation-link:hover {
+  background-color: transparent;
+}
+.eq-number {
+  font-family: 'CMU Serif', serif;
+  font-style: normal;
+  margin-left: 20px;
+  font-size: 1em;
+  color: #4051B5;
+  font-weight: bold;
+}
+.equation-link:hover .eq-number {
+  color: inherit;
+}
+
+/* 전체 레이아웃 및 그리드 확장 */
+.md-grid {
+  max-width: 100% !important;
+}
+.md-sidebar--primary {
+  margin-left: 16px;
+}
+.md-sidebar--secondary {
+  margin-right: 16px;
+}
+
+/*Mermaid 설정*/
+.mermaid text,
+.mermaid div,
+.mermaid foreignObject,
+.mermaid span,
+.mermaid tspan {
+  font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif !important;
+  font-weight: 500;
+}
+
+/* Mermaid 내부 링크 밑줄 제거 */
+.mermaid a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/* Mermaid 노드 텍스트 정렬 및 여백 설정 */
+.mermaid .node text {
+  dominant-baseline: middle !important;
+  alignment-baseline: middle !important;
+  text-anchor: middle !important;
+  font-size: 15px !important;
+  line-height: 1.6;
+}
+
+/* Mermaid HTML 기반 노드 (foreignObject 사용 시) */
+.mermaid .node foreignObject > div {
+  width: auto;
+  height: auto;
+  padding: 12px 16px !important;  /* 여백 추가 */
+  text-align: center;
+  line-height: 1.4;
+  box-sizing: border-box;
+}
+
+/* Mermaid 클러스터 (subgraph) 전체 상자 스타일 조정 */
+.mermaid .cluster > rect {
+  rx: 0;
+  ry: 0;
+  transform: translate(-4px, -8px); /* 전체 박스 살짝 키우기 */
+  width: calc(100% + 8px);
+  height: calc(100% + 16px);
+}
+
+
+/* ❌ Hover 효과 제거: 그림자 및 배경 변화 없음 */
+.mermaid .node:hover rect {
+  /* 효과 없음: 의도적으로 비워둠 */
+}
+
+.mermaid .node:hover text {
+  /* 강조 없음 */
+}
+
+
+.equation-link {
+  font-size: 1em;   /* 수식 크기 확대 */
+  display: block;
+  text-align: center
+  line-height: 1.4;
+  color: #212121 !important; /* 기본: 짙은 회색 (거의 블랙) */
+}
+
+.equation-link:hover {
+  background-color: transparent;
+  color: #a19f9f !important; /* hover 시 살짝 밝은 회색 */
+}
+
+.eq-number {
+  display: inline-block;
+  font-style: normal;
+  margin-left: 16px;
+  font-size: 1em;
+  color: #212121 !important;
+  font-weight: bold;
+}
+
+
+.equation-link:hover .eq-number {
+  color: #a19f9f !important;
+}
+
+
+.breadcrumb-nav {
+  font-size: 0.7rem !important;
+  color: #6b6d72;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.breadcrumb-nav a {
+  text-decoration: none;
+  color:#6b6d72;
+  font-weight: 500;
+}
+
+.breadcrumb-nav a:hover {
+  text-decoration: underline;
+  color: #4051B5;
+}
+
+.breadcrumb-nav span {
+  font-weight: 600;
+  color: #6b6d72;
+}
+
+/* › 화살표 스타일 */
+.breadcrumb-nav .breadcrumb-separator {
+  margin: 0 0.25rem;
+  color: #6b6d72;
+}
+
+.breadcrumb-nav .current-page {
+  font-weight: 500;
+  color: #6b6d72; /* 현재 페이지 이름 (표시되지만 링크 아님) */
+}
+
+
+.footer-feedback {
+  margin-top: 2rem;
+  padding: 1.5rem 1rem;
+  background-color: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.feedback-box {
+  margin-top: 0.5rem;
+}
+
+.feedback-title {
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.feedback-btn {
+  background-color: #E5E7EB;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 14px;
+  margin: 0 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.feedback-btn:hover {
+  background-color: #D1D5DB;
+}
+
+
+
+
+.feedback-btn {
+  font-size: 1rem;
+  padding: 0.4em 1em;
+  background-color: #4051b5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.feedback-btn:hover {
+  background-color: #303f9f;
+}
+
+
+
+/* Info Box 공통 스타일 */
+.info-box {
+  background-color: #c7dbf8;
+  border-left: 5px solid #3e86f1;
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: #1f2937; /* gray-800 */
+}
+
+/* 제목 강조 */
+.info-box strong {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+
+/* ✅ Mermaid SVG 폰트 강제 적용 (Pretendard + 색상 + 굵기) */
+svg[id^="mermaid-"] text,
+svg[id^="mermaid-"] tspan,
+svg[id^="mermaid-"] .nodeLabel,
+svg[id^="mermaid-"] .label {
+  font-family: 'Pretendard', sans-serif !important;
+  font-size: 15px !important;
+  fill: #1E3A8A !important;
+  font-weight: 600 !important;
+}
+
+/* ✅ 링크 텍스트: 밑줄 제거 및 상속 */
+svg[id^="mermaid-"] a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/* ✅ 화살표 위 라벨 (edge label) */
+svg[id^="mermaid-"] .edgeLabel tspan {
+  font-family: 'Pretendard', sans-serif !important;
+  font-size: 14px !important;
+  fill: #1E3A8A !important;
+  font-weight: 600 !important;
+  dominant-baseline: middle;
+  text-anchor: middle;
+}
