@@ -168,7 +168,7 @@ graph TD
 - 주중 및 주말 여부에 따라 운영스케줄이 다르기 때문에 **일간** 냉방 에너지요구량 또한 달라집니다. 
 
 <figure style="text-align: center;">
-  <img src="../../_figs/Monthly cooling energy demand.png" style="max-width: 70%;" alt="Monthly & daily cooling energy demand">
+  <img src="../../_figs/Monthly cooling energy demand.PNG" style="max-width: 70%;" alt="Monthly & daily cooling energy demand">
   <figcaption><strong>Monthly cooling energy demand</strong></figcaption>
 </figure>
 
@@ -313,6 +313,6 @@ graph TD
 - 주중 및 주말 여부에 따라 운영스케줄이 다르기 때문에 **일간** 난방 에너지요구량 또한 달라집니다. 
 
 <figure style="text-align: center;">
-  <img src="../../_figs/Monthly cooling energy demand.png" style="max-width: 70%;" alt="Monthly & daily cooling energy demand">
+  <img src="../../_figs/Monthly cooling energy demand.PNG" style="max-width: 70%;" alt="Monthly & daily cooling energy demand">
   <figcaption><strong>Monthly cooling energy demand</strong></figcaption>
 </figure>
