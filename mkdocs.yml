@@ -1,5 +1,5 @@
 site_name: "ECO2 Guide Center"
-site_url: https://verycoldplay.github.io/eco2_guide_center
+site_url: https://verycoldplay.github.io/eco2_guide_center_yealone
 use_directory_urls: false
 
 nav:
@@ -23,6 +23,7 @@ nav:
     - 냉방 및 난방 에너지요구량: 1. ECO2 Logic Guide/a/Cooling_heating_energy_demand.md
     - 열획득과 열손실: 1. ECO2 Logic Guide/a/Heat_gain_loss.md
     - 개별 값 설정: 1. ECO2 Logic Guide/a/Value.md
+    - 조명 에너지요구량: 1. ECO2 Logic Guide/a/Lighting_energy_demand.md
   - 난방 에너지 분석: 1. ECO2 Logic Guide/난방_에너지_분석.md
   - 공조 시스템 분석: 1. ECO2 Logic Guide/공조_시스템_분석.md
   - 신재생에너지 시스템 분석:

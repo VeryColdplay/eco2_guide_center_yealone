@@ -1,42 +1,58 @@
-# 냉방 및 난방 에너지요구량
+# 조명 에너지요구량
+## 1. 조명 에너지요구량  \(Q_{l}\) (Lighting energy demand) 
+### 🔹 조명 에너지요구량 계산
 
-아래 그림은 열손실원과 열획득원을 바탕으로 난방 및 냉방 에너지 요구량을 계산하는 열에너지 흐름 관계를 도식화한 것입니다.
+아래 그림은 존의 전기적 조명 부하를 바탕으로 조명 에너지요구량을 산정하는 프로세스를 도식화한 것입니다.
 
-<center>
-  <img src="../../_images/Cooling_heating_energy_demand.png" style="max-width: 50%;" alt="Cooling and Heating Energy Demand">
-  <div><strong>Figure. Cooling & Heating Energy Demand</strong></div>
-</center>
+**박스 안에 글씨와 수식을 깔끔하게 함께 표현하는 방법이 좀 어렵네요. 가능하다면 희가 ppt로 작업해주면 좋을 것 같습니다!**
 
----
-
-어떤 존의 온도가 **설정 범위 내**에 있다면 추가적으로 냉방 또는 난방을 할 필요가 없을 것입니다.   
-그러나 설정 범위를 벗어난다면, 다음과 같이 **냉방** 또는 **난방 에너지요구량**이 발생하게 됩니다.  
 <br>
+
 ```mermaid
-graph TD
+graph TB
     classDef pretendard font-family:'Pretendard';
 
-    A{현재 온도는 설정 범위 안에 있는가}
-    A -- 예 --> B[냉난방 필요 없음]
-    A -- 아니오 --> C{현재 온도가 높은가}
-    C -- 예 --> D[냉방 에너지요구량 발생]
-    C -- 아니오 --> E[난방 에너지요구량 발생]
+    subgraph A["조명률"]
+      direction LR
+
+      U1["<div>$$실지수 계산 k = \frac{a_R \cdot b_R}{h_R \cdot (a_R + b_R)}$$</div>"]
+      U2["조명기기 방식"]
+      U3["<div>조명률 산정 $$U$$</div>"]
+
+      U1 --> U2 --> U3
+    end
+
+    P["<div>전기에너지 성능 계산 $$p_j = \frac{E}{U \cdot M \cdot \eta_e}$$</div>"]
+    E["<div>실내 요구 조도값 (용도별 프로필 기반) $$E$$</div>"]
+    M["<div>보수율 $$M$$</div>"]
+    ETA["<div>조명기기효율$$\eta_e$$</div>"]
+    Q["<div>최종 조명에너지 요구량 계산$$Q_l = p_j \times A \times t / 1000$$</div>"]
+
+    E --> P
+    A --> P
+    M --> P
+    ETA --> P
+
+    P --> Q
+
+    Q --- ETC["바닥면적 A, 조명가동시간 t"]
 
     class A pretendard
-    class B pretendard
-    class C pretendard
-    class D pretendard
+    class U1 pretendard
+    class U2 pretendard
+    class U3 pretendard
+    class P pretendard
     class E pretendard
+    class M pretendard
+    class ETA pretendard
+    class Q pretendard
+    class ETC pretendard
 ```
-<br>
 
+각 존 \(j\)의 조명에 사용되는 에너지요구량을 산정하기 위해서는 해당 존에 대한 **전기에너지 성능 (\(p_j\))**을 산출하여야 하며, 이를 위해 각 존의 **실내 요구 조도값 (\(E\)), 실지수 (\(k\)), 조명률 (\(U\)), 보수율 (\(M\)), 조명기기 효율 (\(\eta_e\))**이 파악되어야 합니다. 산출된 **전기에너지 성능**에 **바닥면적 (\(A_j\))**과 **전등의 가동시간 (\(t\))**을 곱하여 존 \(j\)에 대한 에너지요구량을 산정합니다. 
 
-## 1. 냉방 에너지요구량  \(Q_{c,b}\) (Cooling energy demand) 
-### 🔹 건축물의 냉방 에너지요구량 계산
-설정 범위보다 온도가 **높을 때** 냉방 에너지요구량이 발생합니다.   
-즉 어떤 존의 냉방 에너지요구량, \(Q_{c,b}\)은 시스템에 의해 **제거되어야 할 유효 열량**을 계산함으로써 구해집니다.  
 <br>
-\(Q_{c,b}\) 는 다음과 같이 계산됩니다:  
+다음은 \(Q_{l}\) 계산식입니다:  
 
 <div style="text-align: center; margin-top: 24px; margin-bottom: 8px;">
   <div style="
@@ -48,7 +64,7 @@ graph TD
     margin-top: 1em;
     margin-bottom: 2em;
   ">
- \( Q_{c,b} = (1-\eta) Q_{source} \quad \text{(2–1)} \)
+ \( Q_{l,j} = p_j \cdot A_j \cdot t / 1000 \)
   </div>
 </div>
 
@@ -77,41 +93,23 @@ graph TD
     </div>
 
     <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-    <span style="display: block;">\( Q_{c,b} \) : \(Zone\ i\)의 냉방 에너지요구량 </span>
-    <span style="display: block;">\( \eta_i \) : 열획득 이용률</span>
-    <span style="display: block;">\( Q_{source,i} \) : \(Zone\ i\)의 열획득</span>
+    <span style="display: block;">\( Q_{l,j} \) : \(Zone\ j\)의 조명 에너지요구량 (\( kWh \))</span>
+    <span style="display: block;">\( p_j \) : \(Zone\ j\)의 전기에너지 성능 (\( W/m^2 \))</span>
+    <span style="display: block;">\( A_j \) : \(Zone\ j\)의 바닥 면적 (\(/m^2 \))</span>
+    <span style="display: block;">\( t \) : \(Zone\ j\)의 조명시스템 가동시간 (\( h\))</span>
   </div>
 </div>
 
 <br>
 
-- 어떤 존(zone) \(i\)의 **연간** 냉방에너지요구량을 구하기 위해, 월별로 **월간**🗓️ 냉방 에너지요구량을 구하고 이를 합산합니다. 
-<span style="font-size: 0.8em; font-style: italic;">[&nbsp;&nbsp;&nbsp;&nbsp;🔍 건물의 조닝(zoning)에 대한 로직 바로가기](../a/Zoning.md)</span>
-- **월간** 냉방 에너지요구량은 **일간** 냉방 에너지요구량의 한달치 계산이 됩니다.
-- 연중 월간 열획득 및 이용률 값이 모두 다르므로, 월별 냉방 에너지요구량 값은 모두 상이합니다. 
-<span style="font-size: 0.8em; font-style: italic;">[&nbsp;&nbsp;&nbsp;&nbsp;🔍 열획득과 열손실에 대한 로직 바로가기](../a/Heat_gain_loss.md)</span>
-<span style="font-size: 0.8em; font-style: italic;">[&nbsp;&nbsp;&nbsp;&nbsp;🔍 (이용률 등) 개별 값 설정에 대한 로직 바로가기](../a/Value.md)</span>
-
 &nbsp;<br>
 
 ---
 
-### 🔹 건축물의 **연간** 냉방 에너지요구량: 🗓️ 월별 요구량의 합
-#### 🔘 연간 냉방 에너지요구량 \(Q_{c,b}\) = \( \sum \) 월간 냉방 에너지요구량</h4>
-<figure style="text-align: center;">
-  <img src="../../_figs/adjusted_left_box_width_c.png" style="max-width: 60%;" alt="Annual & monthly cooling energy demand">
-  <figcaption><strong>Annual cooling energy demand</strong></figcaption>
-</figure>
+### 🔹 전기에너지 성능 계산
 
-
-&nbsp;<br>
-
----
-
-### 🔹 **월간** 냉방에너지요구량 \(Q_{c,b}\)
-#### 🔘 월간 냉방 에너지요구량 \(Q_{c,b, mth}\) = \( \sum \) 일간 냉방 에너지요구량</h4>
-
-\(Q_{c,b, mth}\)는 다음과 같이 계산됩니다:      
+조명의 전기에너지 성능 (\(p_j\))은 실내 요구 조도, 조명률, 보수율, 조명기기 효율 등에서 구할 수 있습니다. 여기서, 실내 요구 조도는 용도별 프로필에서 해당 용도에 맞는 요구 조도를 사용하도록 합니다. 
+\(p_j\) 는 다음과 같이 계산됩니다:  
 
 <div style="text-align: center; margin-top: 24px; margin-bottom: 8px;">
   <div style="
@@ -121,9 +119,9 @@ graph TD
     padding: 16px 48px;
     line-height: 1.8;
     margin-top: 1em;
-    margin-bottom: 0px;
+    margin-bottom: 2em;
   ">
-    {{ include_equations("2", 7, 7) }}
+ \( p_j = \frac{E}{U \cdot M \cdot \eta_e } \)
   </div>
 </div>
 
@@ -152,36 +150,31 @@ graph TD
     </div>
 
     <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-    <span style="display: block;">\( Q_{c,b,mth} \) : 월간 냉방 에너지요구량</span>
-    <span style="display: block;">\( d_{op} \) : 주중 일수</span>
-    <span style="display: block;">\( \eta_op \) : 주중 열획득 이용률</span>
-    <span style="display: block;">\( Q_{source,op} \) : 주중 열획득</span>
-    <span style="display: block;">\( d_{we} \) : 주말 일수</span>
-    <span style="display: block;">\( \eta_we \) : 주말 열획득 이용률</span>  
-    <span style="display: block;">\( Q_{source,we} \) : 주말 열획득</span>
+    <span style="display: block;">\( p_j \) : 요구조도를 만족하기 위한 전기에너지 성능 (\( W/m^2 \))</span>
+    <span style="display: block;">\( U \) : 조명률 </span>
+    <span style="display: block;">\( E \) : 실내 요구 조도값 (\( lx \))</span>
+    <span style="display: block;">\( M \) : 보수율</span>
+    <span style="display: block;">\( \eta_e \) : 조명기기효율 (\( lm/W \))</span>
   </div>
 </div>
 
-<br>
-
-- 1개월은 **주중** 및 **주말**로 구성됩니다.   
-- 주중 및 주말 여부에 따라 운영스케줄이 다르기 때문에 **일간** 냉방 에너지요구량 또한 달라집니다. 
-
-<figure style="text-align: center;">
-  <img src="../../_figs/Monthly cooling energy demand.PNG" style="max-width: 70%;" alt="Monthly & daily cooling energy demand">
-  <figcaption><strong>Monthly cooling energy demand</strong></figcaption>
-</figure>
+전기에너지 성능 산정 시 필수 구성 요소는 아래 표와 같습니다: 
 
 
+| 주요 요소                   | 정의 및 영향 요인                 | 수식/참고                                             |
+| -------------------- | ------------------------ | ------------------------------------------------- |
+| **실내 요구 조도값 $E$** | 용도별 프로필에서 해당 용도에 맞는 요구 조도를 사용하도록 함 | 용도별 프로필 참고
+| **실지수 $k$**          | 공간의 형상(깊이, 너비, 조명고)에 따라 결정되며, 조명률 산정에 사용     | $k = \frac{a_R \cdot b_R}{h_R \cdot (a_R + b_R)}$ |
+| **조명률 $U$**          | 광원의 총광속 대비 작업면에 도달하는 유효광속의 비율. 조명기기 방식 및 반사율에 따라 달라짐 | 표 3.2.6-1 참고                                      |
+| **보수율 $M$**          | 초기 조도 대비 유지 조도 비율. 설비 노후, 오염 등 고려            | $M = E_t / E_i$                                   |
+| **조명기기 효율 $\eta_e$** | 단위 전력당 발산 광속. 광원 종류 및 성능에 따라 상이함           | 표 3.2.6-2 참고                                      |
 
 
+---
 
-## 난방 에너지요구량  \(Q_{h,b}\) (Heating energy demand) 
-### 🔹 건축물의 난방 에너지요구량 계산
+#### 실지수 \(k\)
 
-설정 범위보다 온도가 **낮을 때** 난방 에너지요구량이 발생합니다. 즉 어떤 존의 난방 에너지요구량, \(Q_{h,b}\)은 시스템에 의해 **보충되어야 할 유효 열량**을 계산함으로써 구해집니다.  
-<br>
-\(Q_{h,b}\) 는 다음과 같이 계산됩니다:  
+실지수는 실의 형상을 나타내는 지수로, 실 형상에 따라 광원에서 작업면에 직접 도달하는 빛과 천장, 벽, 바닥에서 반사되어 오는 빛이 달라집니다. 따라서 가로, 세로, 광원읜 높이의 관계를 고려하는 값이 실지수 \(k\) 입니다. \(k\) 는 다음과 같이 계산됩니다:  
 
 <div style="text-align: center; margin-top: 24px; margin-bottom: 8px;">
   <div style="
@@ -191,9 +184,9 @@ graph TD
     padding: 16px 48px;
     line-height: 1.8;
     margin-top: 1em;
-    margin-bottom: 0px;
+    margin-bottom: 2em;
   ">
-    {{ include_equations("2", 1, 1) }}
+ \( k = \frac{a_R \cdot b_R}{h_R \cdot (a_R + b_R)} \)
   </div>
 </div>
 
@@ -222,41 +215,73 @@ graph TD
     </div>
 
     <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-    <span style="display: block;">\( Q_{h,b,i} \) : \(Zone\ i\)의 난방 에너지요구량</span>
-    <span style="display: block;">\( Q_{sink,i} \) : \(Zone\ i\)의 열손실</span>
-    <span style="display: block;">\( \eta_i \) : 열획득 이용률</span>
-    <span style="display: block;">\( Q_{source,i} \) : \(Zone\ i\)의 열획득</span>
+    <span style="display: block;">\( a_R \) : 실내 공간 깊이 (m)</span>
+    <span style="display: block;">\( b_R \) : 실내 공간 너비 (m)</span>
+    <span style="display: block;">\( h_R \) : 전등이 위치한 곳과 작업면의 높이 차이 (m)</span>
   </div>
 </div>
 
-- 어떤 존(zone) \(i\)의 **연간** 난방에너지요구량을 구하기 위해, 월별로 **월간**🗓️ 난방 에너지요구량을 구하고 이를 합산합니다. 
-<span style="font-size: 0.8em; font-style: italic;">[&nbsp;&nbsp;&nbsp;&nbsp;🔍 건물의 조닝(zoning)에 대한 로직 바로가기](../a/Zoning.md)</span>
-- **월간** 난방 에너지요구량은 **일간** 난방 에너지요구량의 한달치 계산이 됩니다.
-- 연중 월간 열획득 및 이용률 값이 모두 다르므로, 월별 난방 에너지요구량 값은 모두 상이합니다. 
-<span style="font-size: 0.8em; font-style: italic;">[&nbsp;&nbsp;&nbsp;&nbsp;🔍 열획득과 열손실에 대한 로직 바로가기](../a/Heat_gain_loss.md)</span>
-<span style="font-size: 0.8em; font-style: italic;">[&nbsp;&nbsp;&nbsp;&nbsp;🔍 (이용률 등) 개별 값 설정에 대한 로직 바로가기](../a/Value.md)</span>
+#### 조명률 \(U\)
 
+조명률이란 광원에서 나온 총 빛에 대한 작업면에 도달하는 빛의 비율을 나타내며 일반적으로 1보다 작은 값으로 표시됩니다. 조명률 산출은 <표 3.2.6-1>에 해당하는 값을 적용합니다 (단, 실내 마감재의 반사율을 바닥 0.2, 벽 0.5, 천정 0.7로 설정한 경우에 해당). 
 
-&nbsp;<br>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>조명기기 방식 별 실지수 k</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 90%;
+      font-family: "Malgun Gothic", sans-serif;
+      font-size: 14px;
+      text-align: center;
+      margin: 0 auto;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 6px;
+    }
+    th[colspan] {
+      background-color: #f8f8f8;
+    }
+    td.left {
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <caption style="caption-side: top; text-align: left; font-size: 16px; font-weight: bold; margin-bottom: 12px;">
+      표 3.2.6-1. 조명기기 방식별 실지수(k)
+    </caption>
+    <tr>
+      <th rowspan="2">조명기기 방식</th>
+      <th colspan="11">실지수 <i>k</i></th>
+    </tr>
+    <tr>
+      <th>0.6</th><th>0.8</th><th>1</th><th>1.25</th><th>1.5</th><th>2</th><th>2.5</th><th>3</th><th>4</th><th>5</th>
+    </tr>
+    <tr>
+      <td class="left">직접(백열등)</td>
+      <td>0.48</td><td>0.53</td><td>0.56</td><td>0.59</td><td>0.62</td><td>0.65</td><td>0.67</td><td>0.69</td><td>0.71</td><td>0.72</td>
+    </tr>
+    <tr>
+      <td class="left">직접(형광등)</td>
+      <td>0.3</td><td>0.37</td><td>0.42</td><td>0.46</td><td>0.49</td><td>0.54</td><td>0.57</td><td>0.59</td><td>0.61</td><td>0.63</td>
+    </tr>
+    <tr>
+      <td class="left">간접/반간접</td>
+      <td>0.15</td><td>0.19</td><td>0.22</td><td>0.26</td><td>0.28</td><td>0.32</td><td>0.35</td><td>0.37</td><td>0.4</td><td>0.42</td>
+    </tr>
+  </table>
+</body>
+</html>
 
----
+#### 보수율 \(M\)
 
-### 🔹 건축물의 **연간** 난방 에너지요구량: 🗓️ 월별 요구량의 합
-#### 🔘 연간 난방 에너지요구량 \(Q_{h,b}\) = \( \sum \) 월간 난방 에너지요구량</h4>
-<figure style="text-align: center;">
-  <img src="../../_figs/adjusted_left_box_width_c.png" style="max-width: 60%;" alt="Annual & monthly cooling energy demand">
-  <figcaption><strong>Annual cooling energy demand</strong></figcaption>
-</figure>
-
-
-&nbsp;<br>
-
----
-
-### 🔹 **월간** 난방에너지요구량 \(Q_(h,b)\)
-#### 🔘 월간 난방 에너지요구량 \(Q_{h,b, mth}\) = \( \sum \) 일간 난방 에너지요구량</h4>
-
-\(Q_{h,b, mth}\)는 다음과 같이 계산됩니다:      
+보수율 (\(M\))이란 조명시설을 일정한 기간 사용한 후의 작업면 상의 평균 조도와 초기 조도와의 비를 의미합니다. 설비의 사용시간이 경과하면서 조명효율이 감소하기 때문에 이와 같은 조도 저하를 보완하기 위해 조도를 계산하는 과정에서 보정계수 (보수율)를 설정합니다. 보수율은 일반적으로 0.85~0.65의 값을 채택하게 됩니다. \(M\) 은 다음과 같이 계산됩니다:
 
 <div style="text-align: center; margin-top: 24px; margin-bottom: 8px;">
   <div style="
@@ -266,9 +291,9 @@ graph TD
     padding: 16px 48px;
     line-height: 1.8;
     margin-top: 1em;
-    margin-bottom: 0px;
+    margin-bottom: 2em;
   ">
-    {{ include_equations("2", 6, 6) }}
+ \( M = \frac{E_t}{E_i} \)
   </div>
 </div>
 
@@ -297,22 +322,69 @@ graph TD
     </div>
 
     <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-    <span style="display: block;">\( Q_{h,b,mth} \) : 월간 난방 에너지요구량</span>
-    <span style="display: block;">\( d_{op} \) : 주중 일수</span>
-    <span style="display: block;">\( \eta_op \) : 주중 열획득 이용률</span>
-    <span style="display: block;">\( Q_{source,op} \) : 주중 열획득</span>
-    <span style="display: block;">\( d_{we} \) : 주말 일수</span>
-    <span style="display: block;">\( \eta_we \) : 주말 열획득 이용률</span>  
-    <span style="display: block;">\( Q_{source,we} \) : 주말 열획득</span>
+    <span style="display: block;">\( E_t \) : 확보 조도 (조명기구의 청소, 오래된 전등의 교환 등을 행하기 이전 조도)</span>
+    <span style="display: block;">\( E_i \) : 초기 조도 (조명기구, 전등 등의 초기 설치 시 얻어지는 조도)</span>
   </div>
 </div>
 
-<br>
+#### 조명기기 효율 \(\eta_e\)
 
-- 1개월은 **주중** 및 **주말**로 구성됩니다.   
-- 주중 및 주말 여부에 따라 운영스케줄이 다르기 때문에 **일간** 난방 에너지요구량 또한 달라집니다. 
+조명기기 효율 (\(\eta_e\))는 단위에너지 당 발생되는 광속을 의미하며 광원의 종류 및 제품에 따라 성능에 차이가 있습니다. 제품의 성능 성적서가 주어지는 경우 제시된 값을 사용하도록 하고, 성적서가 없는 경우 다음 <표 3.2.6-2>에 주어진 표준값을 사용합니다. 
 
-<figure style="text-align: center;">
-  <img src="../../_figs/Monthly cooling energy demand.PNG" style="max-width: 70%;" alt="Monthly & daily cooling energy demand">
-  <figcaption><strong>Monthly cooling energy demand</strong></figcaption>
-</figure>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>램프종류별 조명기기효율</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 95%;
+      font-family: "Malgun Gothic", sans-serif;
+      font-size: 14px;
+      text-align: center;
+      margin: 0 auto;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 6px;
+    }
+    .slanted {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-size: 12px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <caption style="caption-side: top; text-align: left; font-size: 16px; font-weight: bold; margin-bottom: 12px;">
+      표 3.2.6-2. 램프 종류 별 조명기기 효율
+    </caption>
+    <tr>
+      <th rowspan="2">기기효율</th>
+      <th colspan="7">램프종류</th>
+    </tr>
+    <tr>
+      <th>백열등<br>100 W</th>
+      <th>할로겐등<br>500 W</th>
+      <th>형광등<br>40 W</th>
+      <th>형광등<br>100 W</th>
+      <th>고압수은등<br>400 W</th>
+      <th>메탈할라이드등<br>400 W</th>
+      <th>고압나트륨등<br>400 W</th>
+    </tr>
+    <tr>
+      <td>조명기기효율<br>(안정기손실 포함)<br>lm/W</td>
+      <td>15</td>
+      <td>21</td>
+      <td>65</td>
+      <td>79</td>
+      <td>52</td>
+      <td>72</td>
+      <td>108</td>
+    </tr>
+  </table>
+</body>
+</html>
