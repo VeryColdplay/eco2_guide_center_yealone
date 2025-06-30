@@ -569,7 +569,7 @@
 <span class="arithmatex">\( Q_V = \sum_k H_{V,k} (\vartheta_i - \vartheta_k)t, \quad \vartheta_i &gt; \vartheta_k \)</span> <span class="eq-number">(2-13)</span>
 </a></p>
 <p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
-<span class="arithmatex">\( Q_{I,sink} = Q_{I,sink,c} + Q_{I,sink,fac} \)</span> <span class="eq-number">(2-15)</span>
+<span class="arithmatex">\( Q_{I,sink} = Q_{I,sink,c} + Q_{I,sink,fac} + Q_{I,sink,goods}\)</span> <span class="eq-number">(2-15)</span>
 </a></p>
 <p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
 <span class="arithmatex">\( Q_{source} = Q_S + Q_T + Q_V + Q_{I,source} \)</span> <span class="eq-number">(2-16)</span>
@@ -790,7 +790,8 @@
 <span class="note">- <span class="arithmatex">\( i \)</span>: 건물존<br/>- <span class="arithmatex">\( j \)</span>: 이웃존</span>
 </a></p>
 <p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
-<span class="arithmatex">\( Q_{S,tr} = F_F A \, g_{eff} \, I_S \, t \)</span> <span class="eq-number">(2-105)</span>
+<span class="arithmatex">\( Q_{S,tr} = F_F A \, g_{eff} \, I_S \, t \)</span> <span class="eq-number">(2-105)</span><br/>
+<br/>
 <span class="note">- <span class="arithmatex">\( F_F \)</span>: 창틀비율 <span class="arithmatex">\( (= 0.7) \)</span><br/>- <span class="arithmatex">\( A \)</span>: 개구부 면적</span>
 </a></p>
 <p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
@@ -800,7 +801,8 @@
 <span class="arithmatex">\( g_{eff} = F_S F_W F_V g_{tot} \)</span> <span class="eq-number">(2-107)</span> <span class="note">(차양)<br/>자동차양 (2-108) 일단 유보:</span>
 </a></p>
 <p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
-<span class="arithmatex">\( F_S = \min(F_h, F_o, F_f) \)</span> <span class="eq-number">(2-109)</span>
+<span class="arithmatex">\( F_S = \min(F_h, F_o, F_f) \)</span> <span class="eq-number">(2-109)</span><br/>
+<br/>
 <span class="note">
     - <span class="arithmatex">\( F_W = 0.9 \)</span><br/>
     - <span class="arithmatex">\( F_V = 0.9 \)</span><br/>
@@ -812,7 +814,8 @@
 <span class="arithmatex">\( Q_S = Q_{S,op} = R_{se} \, UA \left( F_f h_r \Delta \vartheta_{er} - \alpha I_S \right)t, \quad \alpha I_S &lt; F_f h_r \Delta \vartheta_{er} \)</span> <span class="eq-number">(2-111)</span>
 </a></p>
 <p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
-<span class="arithmatex">\( Q_{S,op} = R_{se} \, UA \left( \alpha I_S - F_f h_r \Delta \vartheta_{er} \right)t, \quad \text{if } \alpha I_S &gt; F_f h_r \Delta \vartheta_{er} \)</span> <span class="eq-number">(2-112)</span>
+<span class="arithmatex">\( Q_{S,op} = R_{se} \, UA \left( \alpha I_S - F_f h_r \Delta \vartheta_{er} \right)t, \quad \text{if } \alpha I_S &gt; F_f h_r \Delta \vartheta_{er} \)</span> <span class="eq-number">(2-112)</span><br/>
+<br/>
 <span class="note">
     - <span class="arithmatex">\( F_f = 1 \quad \text{(45°까지)} \)</span><br/>
     - <span class="arithmatex">\( F_f = 0.5 \quad \text{(45°~90°)} \)</span><br/>
@@ -836,9 +839,10 @@
 <span class="arithmatex">\( Q_{i,L} = \mu_L \cdot Q_{i,L,elektr} \)</span> <span class="eq-number">(2-123)</span>
 </a></p>
 <p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
-<span class="arithmatex">\( Q_{I,source,h} = Q_{I,w} + Q_{I,h} + Q_{I,vh} + Q_{I,ch} \)</span> <span class="eq-number">(2-124)</span>
+<span class="arithmatex">\( Q_{I,source,h} = Q_{I,w} + Q_{I,h} + Q_{I,vh} + Q_{I,ch} \)</span> <span class="eq-number">(2-124)</span><br/>
+<br/>
 <span class="note">
-    - <span class="arithmatex">\( q_{I,p} \)</span>: 도표 2-A.4 (사람에 의한 내부발생열)<br/>
+    - <span class="arithmatex">\( q_{I,p} \)</span>: 도표 2-A.4 (사람에 의한 내부발생열)<br/>s
     - <span class="arithmatex">\( q_{I,fac} \)</span>: 도표 2-A.4 (설비기기에 의한 내부발생열)<br/>
     - <span class="arithmatex">\( Q_{i,L,elektr} \)</span>: 조명에 의한 전기적 소비량
   </span>
