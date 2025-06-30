@@ -5,13 +5,13 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://verycoldplay.github.io/eco2_guide_center/1.%20ECO2%20Logic%20Guide/a/Heat_gain_loss.html" rel="canonical"/>
+<link href="https://verycoldplay.github.io/eco2_guide_center_yealone/1.%20ECO2%20Logic%20Guide/a/Heat_gain_loss.html" rel="canonical"/>
 <link href="Cooling_heating_energy_demand.html" rel="prev"/>
 <link href="Value.html" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.12" name="generator"/>
 <title>열획득과 열손실 - ECO2 Guide Center</title>
-<link href="../../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.2afb09e1.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
@@ -210,24 +210,38 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
+<a class="md-nav__link" href="#q_sink-q_source">
 <span class="md-ellipsis">
-      열손실
+      열손실 \(Q_{sink}\)과 열획득 \(Q_{source}\)
     </span>
 </a>
-<nav aria-label="열손실" class="md-nav">
+<nav aria-label="열손실 \(Q_{sink}\)과 열획득 \(Q_{source}\)" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
+<a class="md-nav__link" href="#q_t">
 <span class="md-ellipsis">
-      전도 열손실
+      전도에 의한 열손실 및 열획득 \(Q_{T}\)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
+<a class="md-nav__link" href="#q_v">
 <span class="md-ellipsis">
-      환기에 의한 열손실
+      환기에 의한 열손실 및 열획득 \(Q_{V}\)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q_i-sink-q_i-source">
+<span class="md-ellipsis">
+      내부 열손실 \(Q_{I, sink}\) 및 내부 발열 획득 \(Q_{I, source}\)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q_s">
+<span class="md-ellipsis">
+      복사 열손실 및 태양열에 의한 열획득 \(Q_{S}\)
     </span>
 </a>
 </li>
@@ -249,6 +263,14 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../Lighting_energy_demand.html">
+<span class="md-ellipsis">
+    조명 에너지요구량
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../1. ECO2 Logic Guide/난방_에너지_분석.md">
 <span class="md-ellipsis">
     난방 에너지 분석
@@ -265,16 +287,16 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_6" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+<input class="md-nav__toggle md-toggle" id="__nav_2_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
 <span class="md-ellipsis">
     신재생에너지 시스템 분석
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_6_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_6">
+<nav aria-expanded="false" aria-labelledby="__nav_2_7_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_7">
 <span class="md-nav__icon md-icon"></span>
             신재생에너지 시스템 분석
           </label>
@@ -323,16 +345,16 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_9" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+<input class="md-nav__toggle md-toggle" id="__nav_2_10" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
 <span class="md-ellipsis">
     고급 기능
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_9_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_9">
+<nav aria-expanded="false" aria-labelledby="__nav_2_10_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_10">
 <span class="md-nav__icon md-icon"></span>
             고급 기능
           </label>
@@ -564,24 +586,38 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
+<a class="md-nav__link" href="#q_sink-q_source">
 <span class="md-ellipsis">
-      열손실
+      열손실 \(Q_{sink}\)과 열획득 \(Q_{source}\)
     </span>
 </a>
-<nav aria-label="열손실" class="md-nav">
+<nav aria-label="열손실 \(Q_{sink}\)과 열획득 \(Q_{source}\)" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
+<a class="md-nav__link" href="#q_t">
 <span class="md-ellipsis">
-      전도 열손실
+      전도에 의한 열손실 및 열획득 \(Q_{T}\)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
+<a class="md-nav__link" href="#q_v">
 <span class="md-ellipsis">
-      환기에 의한 열손실
+      환기에 의한 열손실 및 열획득 \(Q_{V}\)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q_i-sink-q_i-source">
+<span class="md-ellipsis">
+      내부 열손실 \(Q_{I, sink}\) 및 내부 발열 획득 \(Q_{I, source}\)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q_s">
+<span class="md-ellipsis">
+      복사 열손실 및 태양열에 의한 열획득 \(Q_{S}\)
     </span>
 </a>
 </li>
@@ -598,11 +634,10 @@
 <div style="text-align: right; font-size: 0.9em; color: #666; margin-bottom: -1em;">
 </div>
 <h1 id="heat-loss-and-heat-gain">열손실 및 열획득 (Heat Loss and Heat Gain)<a class="headerlink" href="#heat-loss-and-heat-gain" title="Permanent link">¶</a></h1>
-<p><center>
+<center>
 <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../_images/Cooling_heating_energy_demand.png"><img alt="Cooling and Heating Energy Demand" src="../../_images/Cooling_heating_energy_demand.png" style="max-width: 50%;"/></a>
-<br/>
-<div><strong>Figure. Cooling &amp; Heating Energy Demand</strong></div></center></p>
-<p></p>
+<div><strong>Figure. Cooling &amp; Heating Energy Demand</strong></div>
+</center>
 <p>존의 열손실/열획득은 서로 대차 대조된 후, 난방부하 또는 냉방부하가 계산됩니다. 다음과 같은 열손실 및 열획득이 부하 분석 시 고려됩니다:</p>
 <ul>
 <li>관류에 의한 열손실/열획득</li>
@@ -612,52 +647,58 @@
 <li>불투명한 벽체의 외피에서 태양열흡수와 열방사에 의한 열손실/열획득</li>
 <li>전자기기, 인공조명, 인체발열(사람, 동물), 건물 존으로 온기나 냉기를 가진 물건 유입/반출, 존 내부에 열/냉열 배관이 지나가 발생하는 내부 열손실/열획득</li>
 </ul>
-<h2 id="_1">열손실<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p>전도와 자연환기에 의한 열손실, 기계환기에 의한 냉열유입, 존 내부의 냉열원 그리고 복사손실에 의한 존의 총 열손실이 결정됩니다. 
+<h2 id="q_sink-q_source">열손실 <span class="arithmatex">\(Q_{sink}\)</span>과 열획득 <span class="arithmatex">\(Q_{source}\)</span><a class="headerlink" href="#q_sink-q_source" title="Permanent link">¶</a></h2>
+<p>전도와 자연환기에 의한 열 획득 및 손실, 기계환기에 의한 냉열유입, 존 내부의 냉열원, 태양열입사 그리고 복사손실에 의한 존의 전체 열손실 및 열획득이 결정됩니다. </p>
 <center>
 <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../_images/Heat_gain_or_loss.png"><img alt="Heat Gain or Loss" src="../../_images/Heat_gain_or_loss.png" style="max-width: 80%;"/></a>
-<br/>
-<div><strong>Heat Gain or Loss Diagram</strong></div></center></p>
-<p></p>
+<div><strong>Heat Gain or Loss Diagram</strong></div>
+</center>
 <!-- 참고 이미지: https://www.slideshare.net/slideshow/climo-heat-losspptx/251519576  -->
-<div div="" style="
-  background-color: #f0f8ff;
-  border-left: 5px solid #2b6777;
-  padding: 10px 20px;
-  margin-top: 20px;
-">
-<strong>열손실</strong><br/>
-        열손실 계산식은 다음과 같습니다:
-        <a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<p>열손실 <span class="arithmatex">\(Q_{sink}\)</span> 과 열획득 <span class="arithmatex">\(Q_{source}\)</span> 계산식은 다음과 같습니다:</p>
+<div style="text-align: center; margin-top: 24px; margin-bottom: 8px;">
+<div style="
+    display: inline-block;
+    background-color: #F1F5F9;
+    border-radius: 10px;
+    padding: 16px 48px;
+    line-height: 1.8;
+    margin-top: 1em;
+    margin-bottom: 2em;
+  ">
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
   \( Q_{sink} = Q_T + Q_V + Q_{I,sink} + Q_S \) <span class="eq-number">(2-11)</span>
 </a>
-</div>
-<hr/>
-<h3 id="_2">전도 열손실<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
-<div style="display: flex; gap: 2em; align-items: stretch;">
-<!-- 왼쪽 단: 설명 -->
-<div style="
-    flex: 1;
-    background: #f0f8ff;
-    border: 1px solid #aad4ff;
-    border-radius: 8px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  ">
-<h3 style="margin-top: 0;"><strong>전도 열손실</strong></h3>
-    전도 열손실은 벽체, 지붕, 바닥 등 외피를 통해 발생하는 열의 손실을 의미합니다.  
-    아래 수식은 전체 전도 손실을 계산하는 식입니다.
-
-    $$ Q_T = \sum_j H_{T,j} \cdot (\vartheta_i - \vartheta_j)t,\quad \vartheta_i &gt; \vartheta_j $$
-
-  <div style="margin-top: 10px;">
-<!--Open in a New Tab ver. & Equation No. (manually)-->
 <a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
-  \(Q_{h,b.mth} = d_{op} \left( Q_{sink,op} - \eta_{op} Q_{source,op} \right) + d_{we} \left( Q_{sink,we} - \eta_{we} Q_{source,we} \right) \) <span class="eq-number">(2-6)</span>
+  \( Q_{source} = Q_S + Q_T + Q_V + Q_{I,source} \) <span class="eq-number">(2-16)</span>
 </a>
 </div>
+</div>
+<hr/>
+<h3 id="q_t">전도에 의한 열손실 및 열획득 <span class="arithmatex">\(Q_{T}\)</span><a class="headerlink" href="#q_t" title="Permanent link">¶</a></h3>
+<div style="
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+">
+<!-- 왼쪽 열 -->
+<div style="
+    flex: 1;
+    background-color:rgb(255, 255, 255); 
+    border-left: 5px solid #2b6777;
+    padding: 10px 20px;
+  ">
+<strong>전도 열손실/열획득</strong><br/>
+
+    전도에 의한 열손실과 열획득은 벽체, 지붕, 바닥 등 외피를 통해 발생하는 열의 손실과 획득을 의미합니다. <br/>
+
+    아래 수식은 전체 전도 손실 및 획득을 계산하는 식입니다:<br/>
+<br/>
+<strong>열손실</strong> <a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_T = \sum_j H_{T,j} \cdot (\vartheta_i - \vartheta_j)t, \quad \vartheta_i &gt; \vartheta_j \) <span class="eq-number">(2-12)</span>
+</a>
+<strong>열획득</strong> <a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_T = \sum_j H_{T,j} \cdot (\vartheta_j - \vartheta_i)t, \quad \vartheta_i &lt; \vartheta_j \) <span class="eq-number">(2-18)</span>
+</a>
 <center>
 <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../_images/heat_gain_fig1.png"><img alt="Heat Gain" src="../../_images/heat_gain_fig1.png" style="max-width: 80%;"/></a>
 <div><strong>Heat Gain Figure 1</strong></div>
@@ -667,131 +708,623 @@
 <!-- 오른쪽 단: 세부 전도 항목 (간격 축소 + 수식 렌더링) -->
 <div style="
     flex: 1;
-    background: #fef9f1;
-    border: 1px solid #f5d7a6;
-    border-radius: 8px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 0.05em;
+    background-color: #f0f8ff;
+    border-left: 5px solid #2b6777;
+    padding: 10px 20px;
   ">
-<details>
+<details open="">
 <summary><strong>외기에 의한 벽체를 통한 전도</strong></summary>
-      $$ Q_{T,e} = H_{T,D} (\vartheta_i - \vartheta_e)t $$
-    </details>
-<details>
-<strong>열관류율 합산 (외기)</strong>
-      $$ H_{T,D} = \sum(U_j A_j) + \Delta U_{WB} \sum A_j $$
-      $$ \Delta U_{WB}: \text{외단열 } 0.1, \quad \text{내단열 } 0.15 $$
-    </details>
-<details>
+<strong>열손실</strong><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_{T,e} = H_{T,D} (\vartheta_i - \vartheta_e)t, \quad \vartheta_i &gt; \vartheta_e \) <span class="eq-number">(2-42)</span>
+</a>
+<strong>열획득</strong><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_{T,e} = H_{T,D} (\vartheta_e - \vartheta_i)t, \quad \vartheta_i &lt; \vartheta_e \) <span class="eq-number">(2-43)</span>
+</a>
+<div style="
+          background-color:#eaf2f5;
+          padding: 12px 16px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          border-radius: 6px;
+          font-size: 14px;
+          line-height: 1.5;
+        ">
+<strong>열관류율 합산</strong>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( H_{T,D} = \sum (U_j A_j) + \Delta U_{WB} \sum A_j \) <span class="eq-number">(2-44)</span>
+</a>
+</div>
+</details>
+<details open="">
 <summary><strong>비난방존의 벽체를 통한 전도</strong></summary>
-      $$ Q_{T,u} = H_{T,iu} (\vartheta_i - \vartheta_u)t $$
-    </details>
-<details>
-<strong>열관류율 합산 (비난방존)</strong>
-      $$ H_{T,iu} = \sum(U_j A_j) $$
-    </details>
-<details>
+<strong>열손실</strong>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_{T,u} = H_{T,iu} (\vartheta_i - \vartheta_u)t, \quad \vartheta_i &gt; \vartheta_u \) <span class="eq-number">(2-46)</span>
+</a>
+<strong>열획득</strong>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_{T,u} = H_{T,iu} (\vartheta_u - \vartheta_i)t, \quad \vartheta_i &lt; \vartheta_u \) <span class="eq-number">(2-47)</span>
+</a>
+<div style="
+          background-color:#eaf2f5;
+          padding: 12px 16px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          border-radius: 6px;
+          font-size: 14px;
+          line-height: 1.5;
+        ">
+<strong>열관류율 합산</strong>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( H_{T,iu} = \sum (U_j A_j) \) <span class="eq-number">(2-48)</span>
+</a>
+</div>
+</details>
+<details open="">
 <summary><strong>이웃 난방/냉방 존의 벽체를 통한 전도</strong></summary>
-      $$ Q_{T,z} = H_{T,iz} (\vartheta_i - \vartheta_z)t $$
-    </details>
-<details>
-<strong>열관류율 합산 (이웃 존)</strong>
-      $$ H_{T,iz} = \sum(U_j A_j) $$
-    </details>
-<details>
+<strong>열손실</strong><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_{T,z} = H_{T,iz} (\vartheta_i - \vartheta_z)t, \quad \vartheta_i &gt; \vartheta_z \) <span class="eq-number">(2-50)</span>
+</a>
+<strong>열획득</strong><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_{T,z} = H_{T,iz} (\vartheta_z - \vartheta_i)t, \quad \vartheta_i &lt; \vartheta_z \) <span class="eq-number">(2-51)</span>
+</a>
+<div style="
+          background-color:#eaf2f5;
+          padding: 12px 16px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          border-radius: 6px;
+          font-size: 14px;
+          line-height: 1.5;
+        ">
+<strong>열관류율 합산</strong>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( H_{T,iz} = \sum (U_j A_j) \) <span class="eq-number">(2-52)</span>
+</a>
+</div>
+</details>
+<details open="">
 <summary><strong>땅으로의 전도</strong></summary>
-      $$ Q_{T,s} = H_{T,s} (\vartheta_i - \vartheta_e)t $$
-    </details>
-<details>
+<strong>열손실</strong><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_{T,s} = H_{T,s} (\vartheta_i - \vartheta_s)t, \quad \vartheta_i &gt; \vartheta_s \) <span class="eq-number">(2-53)</span>
+</a>
+<strong>열획득</strong><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_{T,s} = H_{T,s} (\vartheta_e - \vartheta_i)t, \quad \vartheta_i &lt; \vartheta_e \) <span class="eq-number">(2-54)</span>
+</a>
+<div style="
+          background-color:#eaf2f5;
+          padding: 12px 16px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          border-radius: 6px;
+          font-size: 14px;
+          line-height: 1.5;
+        ">
 <strong>열관류율 (지면)</strong>
       $$ H_{T,s}: \text{DIN EN ISO 13370 에 따라 산정} $$
-    </details>
+      </div>
+</details>
 </div>
 </div>
 <hr/>
-<h3 id="_3">환기에 의한 열손실<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
-<div style="display: flex; gap: 2em; align-items: stretch;">
-<!-- 왼쪽 단: 메인 환기 열손실 설명 -->
+<h3 id="q_v">환기에 의한 열손실 및 열획득 <span class="arithmatex">\(Q_{V}\)</span><a class="headerlink" href="#q_v" title="Permanent link">¶</a></h3>
+<div style="
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+">
+<!-- 왼쪽 열 -->
 <div style="
     flex: 1;
-    background: #f0f8ff;
-    border: 1px solid #aad4ff;
-    border-radius: 8px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    background-color:rgb(255, 255, 255); 
+    border-left: 5px solid #2b6777;
+    padding: 10px 20px;
   ">
-<h3 style="margin-top: 0;"><strong>환기에 의한 열손실</strong></h3>
-    환기에 의한 열손실은 자연 침기, 창 개방, 기계 환기, 인접 공간을 통한 공기 흐름으로 인해 발생하는 에너지 손실입니다.
-      $$ Q_V = \sum_k H_{V,k} (\vartheta_i - \vartheta_k)t,\quad \vartheta_i &gt; \vartheta_k $$
-    <div style="margin-top: 10px;">
-<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
-  \( Q_{sink} = Q_T + Q_V + Q_{I,sink} + Q_S \) <span class="eq-number">(2-11)</span>
+<strong>환기 열손실/열획득</strong><br/>
+
+    환기에 의한 열손실 및 열획득은 자연 침기, 창 개방, 기계 환기, 인접 공간을 통한 공기 흐름으로 인해 발생하는 에너지 손실 및 획득입니다. <br/>
+
+    아래 수식은 전체 환기 손실 및 획득을 계산하는 식입니다:<br/>
+<br/>
+<strong>열손실</strong> <a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_V = \sum_k H_{V,k} (\vartheta_i - \vartheta_k)t, \quad \vartheta_i &gt; \vartheta_k \) <span class="eq-number">(2-13)</span>
 </a>
-</div>
+<strong>열획득</strong> <a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_V = \sum_k H_{V,k} (\vartheta_k - \vartheta_i)t, \quad \vartheta_i &lt; \vartheta_k \) <span class="eq-number">(2-19)</span>
+</a>
 <center>
 <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../_images/heat_gain_fig2.jpg"><img alt="Heat Gain2" src="../../_images/heat_gain_fig2.jpg" style="max-width: 80%;"/></a>
 <div><strong>Heat Gain Figure 2</strong></div>
 </center>
-<!-- 참고 이미지: https://images.app.goo.gl/5EgpPD6C4xHu9z4y9 -->
 </div>
-<!-- 오른쪽 단: 환기 항목별 세부 폴딩 설명 -->
+<!-- 오른쪽 열 -->
 <div style="
     flex: 1;
-    background: #fef9f1;
-    border: 1px solid #f5d7a6;
-    border-radius: 8px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 0.05em;
+    background-color: #f0f8ff;
+    border-left: 5px solid #2b6777;
+    padding: 10px 20px;
   ">
-<details>
-<summary><strong>외기 침기에 의한 열손실</strong></summary>
-      $$ Q_{V,inf} = H_{V,inf} (\vartheta_i - \vartheta_e)t,\quad \vartheta_i &gt; \vartheta_e  $$
-    </details>
-<details>
-<p><strong>실내온도 설정 식</strong></p>
-      $$\vartheta_i = \vartheta_{i,h} \; \text{oder} \; \vartheta_{i,c} \quad \text{(난방 또는 냉방 분석–실내온도)}$$
-      $$\vartheta_{i,h} = \vartheta_{i,h,soll} \quad \text{기본 21°C}$$
-      <p><strong>야간감소 및 주말감소 (난방 시)</strong></p>
-      $$\vartheta_{i,h} = \vartheta_{i,h,soll} - f_{tb} (\vartheta_{i,h,soll} - \vartheta_e)$$
-      $$\vartheta_{i} = \vartheta_{i,NA} - f_{tb} (\vartheta_{i,NA} - \vartheta_e)$$
-      <p><strong>공간적 제한 및 시각적 제한</strong></p>
-      $$\vartheta_{i,h} = \vartheta_{i,h,soll} - f_{tb} (\vartheta_{i,h,soll} - \vartheta_e)$$
-      $$\vartheta_{i} = \vartheta_{i,NA} - f_{tb} (\vartheta_{i,NA} - \vartheta_e)$$
-      <p><strong>냉방 시 실내온도</strong></p>
-      $$\vartheta_{i,c} = \vartheta_{i,c,soll} - 2K \quad \text{24°C - 2K = 22°C}$$
-    </details>
-<details>
-<summary><strong>창문환기에 의한 열손실</strong></summary>
-      $$ Q_{V,win} = H_{V,win} (\vartheta_i - \vartheta_e)t,\quad \vartheta_i &gt; \vartheta_e $$
-    </details>
-<details>
-<summary><strong>기계환기에 의한 냉열유입</strong></summary>
-      $$ Q_{V,mech} = H_{V,mech} (\vartheta_i - \vartheta_{V,mech})t,\quad \vartheta_i &gt; \vartheta_{V,mech} $$
-    </details>
-<details>
-<p><strong>기계환기 조건</strong></p>
-      $$\vartheta_{V,mech} = \vartheta_e \quad \text{공조처리 없는 경우}$$
-      $$\vartheta_{V,mech} = \vartheta_e + \eta_{V,mech} \cdot (\vartheta_i - \vartheta_e) \quad \text{비제어적 열교환}$$
-      $$\vartheta_{V,mech} = \vartheta_{V,mech,RLT} \quad \text{공조처리된 급기온도}$$
-    </details>
-<details>
-<summary><strong>다른 존으로부터 유입된 공기에 의한 열손실</strong></summary>
-      $$ Q_{V,z} = H_{V,z} (\vartheta_i - \vartheta_z)t,\quad \vartheta_i &gt; \vartheta_z $$
-    </details>
+<details open="">
+<summary><strong>외기 침기</strong></summary>
+<strong>열손실</strong><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_{V,inf} = H_{V,inf} (\vartheta_i - \vartheta_e)t, \quad \vartheta_i &gt; \vartheta_e \) <span class="eq-number">(2-56)</span>
+</a>
+<strong>열획득</strong><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_{V,inf} = H_{V,inf} (\vartheta_e - \vartheta_i)t, \quad \vartheta_i &lt; \vartheta_e \) <span class="eq-number">(2-57)</span>
+</a>
+<div style="
+          background-color:#eaf2f5;
+          padding: 12px 16px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          border-radius: 6px;
+          font-size: 14px;
+          line-height: 1.5;
+        ">
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( H_{V,inf} = n_{inf} \, V \, c_{p,a} \, \rho_a \) <span class="eq-number">(2-58)</span>
+</a>
+<strong>실내온도 설정 식</strong>
+        $$
+        \vartheta_i = \vartheta_{i,h} \ \text{oder} \ \vartheta_{i,c} \quad \text{(난방 또는 냉방 분석 – 실내온도)}
+        $$
+        <strong>야간감소 및 주말감소 (난방 시)</strong>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( \vartheta_{i,h} = \vartheta_{i,h.soll} \) <span class="eq-number">(2-26)</span> <span class="note">(기본 21°C)</span>
+</a>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( \vartheta_{i,h} = \max \left( \vartheta_{i,h.soll} - f_{ue} (\vartheta_{i,h.soll} - \vartheta_e), \ \vartheta_{i,h.soll} - \Delta \vartheta_{i,NA,d} \right) \) <span class="eq-number">(2-30)</span> <span class="note">(주말감소)</span>
+</a>
+<strong>공간적 제한 및 시각적 제한</strong>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( \vartheta_{i,h} = \vartheta_{i,h.soll} - f_{tb} (\vartheta_{i,h.soll} - \vartheta_e) \) <span class="eq-number">(2-33)</span> <span class="note">(공간적 제한)</span>
+</a>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( \vartheta_{i,h} = \vartheta_{i,NA} - f_{tb} (\vartheta_{i,NA} - \vartheta_e) \) <span class="eq-number">(2-35)</span> <span class="note">(공간적 시간적 제한)</span>
+</a>
+<strong>냉방 시 실내온도</strong>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( \vartheta_{i,c} = \vartheta_{i,c.soll} - 2K \) <span class="eq-number">(2-36)</span> <span class="note">예: \( 24^\circ \text{C} - 2K = 22^\circ \text{C} \)</span>
+</a>
 </div>
+</details>
+<details open="">
+<summary><strong>창문환기</strong></summary>
+<strong>열손실</strong><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_{V,win} = H_{V,win} (\vartheta_i - \vartheta_e)t, \quad \vartheta_i &gt; \vartheta_e \) <span class="eq-number">(2-64)</span>
+</a>
+<strong>열획득</strong><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_{V,win} = H_{V,win} (\vartheta_e - \vartheta_i)t, \quad \vartheta_i &lt; \vartheta_e \) <span class="eq-number">(2-65)</span>
+</a>
+</details>
+<details open="">
+<summary><strong>기계환기</strong></summary>
+<strong>열손실</strong><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_{V,mech} = H_{V,mech} (\vartheta_i - \vartheta_{V,mech})t, \quad \vartheta_i &gt; \vartheta_{V,mech} \) <span class="eq-number">(2-81)</span>
+</a>
+<strong>열획득</strong><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_{V,mech} = H_{V,mech} (\vartheta_{V,mech} - \vartheta_i)t, \quad \vartheta_i &lt; \vartheta_{V,mech} \) <span class="eq-number">(2-82)</span>
+</a>
+<div style="
+          background-color:#eaf2f5;
+          padding: 12px 16px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          border-radius: 6px;
+          font-size: 14px;
+          line-height: 1.5;
+        ">
+<strong>기계환기 조건</strong>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( \vartheta_{V,mech} = \vartheta_e \) <span class="eq-number">(2-90)</span> <span class="note">(공조처리 없는 경우)</span>
+</a>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( \vartheta_{V,mech} = \vartheta_e + \eta_{V,mech} \cdot (\vartheta_i - \vartheta_e) \) <span class="eq-number">(2-91)</span> <span class="note">(비제어식 열교환)</span>
+</a>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( \vartheta_{V,mech} = \vartheta_{V,mech,RLT} \) <span class="eq-number">(2-92)</span> <span class="note">(공조처리된 급기온도 — 도표 3-3, 3-4, 7-5)</span>
+</a>
+</div>
+</details>
+<details open="">
+<summary><strong>다른 존으로부터 유입된 공기</strong></summary>
+<strong>열손실</strong><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_{V,z} = H_{V,z} (\vartheta_j - \vartheta_z)t, \quad \vartheta_j &gt; \vartheta_z \) <span class="eq-number">(2-97)</span>
+</a>
+<strong>열획득</strong><a class="equation-link" href="#" onclick="window.open(
+     '/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Equation_diagram.html',
+     'popupWindow',
+     'width=800,height=600,scrollbars=yes,resizable=yes'
+   ); return false;">
+  \( Q_{V,z} = H_{V,z} (\vartheta_z - \vartheta_i)t, \quad \vartheta_i &lt; \vartheta_z \) <span class="eq-number">(2-98)</span>
+<span class="note">- 이하 열손실과 같음</span>
+</a>
+</details>
+</div>
+</div>
+<hr/>
+<h3 id="q_i-sink-q_i-source">내부 열손실 <span class="arithmatex">\(Q_{I, sink}\)</span> 및 내부 발열 획득 <span class="arithmatex">\(Q_{I, source}\)</span><a class="headerlink" href="#q_i-sink-q_i-source" title="Permanent link">¶</a></h3>
+<div style="
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+">
+<!-- 왼쪽 열 -->
+<div style="
+    flex: 1;
+    background-color:rgb(255, 255, 255); 
+    border-left: 5px solid #2b6777;
+    padding: 10px 20px;
+  ">
+<strong>내부 열손실/내부 발열 획득</strong><br/>
+
+    분석 존을 통과하는 냉매/냉수 분배관, 차가운 공기가 지나가는 덕트 또는 기기 (ex. 냉열이 생산되는 냉장 진열대, 빙쇄기 등), 규칙적으로 존으로 유입되는 차가운 물질 또는 물건 (ex. 생산에서의 물품)으로 인해 내부 열손실이 발생합니다.<br/>
+
+    내부 발열 획득은 사람, 동물, 기기, 인공조명 등에서 발열되는 열과 존 내부에 설치되는 난방분배배관, 온수배관, 덕트, 축열탱크, 보일러, 냉동기, 규칙적으로 존으로 유입되는 고온의 물체로부터 획득되는 열을 고려합니다.<br/>
+
+    아래 수식은 내부 열손실 및 내부 발열 획득을 계산하는 식입니다:<br/>
+<br/>
+<strong>내부 열손실</strong> <a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_{I,sink} = Q_{I,sink,c} + Q_{I,sink,fac} + Q_{I,sink,goods}\) <span class="eq-number">(2-15)</span>
+</a>
+<strong>내부 발열 획득</strong> <a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_{I,source} = Q_{I,source,p} + Q_{I,source,L} + Q_{I,source,fac} + Q_{I,source,h} \) <span class="eq-number">(2-20)</span>
+</a>
+<strong> To. 희, 적절한 다이어그램 추가 필요해요!! </strong>
+</div>
+<!-- 오른쪽 열 -->
+<div style="
+    flex: 1;
+    background-color: #f0f8ff;
+    border-left: 5px solid #2b6777;
+    padding: 10px 20px;
+  ">
+<details open="">
+<summary><strong>내부 열손실</strong></summary>
+<strong>난방,냉방, 급탕 및 공조시스템에 의한 비제어적 열손실원</strong>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_{I,sink,c} = Q_{I,vh} + Q_{I,c} \) <span class="eq-number">(2-125)</span>
+</a>
+<strong>기기에 의한 열손실원</strong>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_{I,sink,fac} = q_{I,sink,fac} \cdot A_B \) <span class="eq-number">(2-120)</span>
+</a>
+<strong>물품이나 재료반입에 의한 열손실원</strong>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_{I,sink,goods} = c m (\vartheta_{out} - \vartheta_{in}) t, \quad \vartheta_{in} &lt; \vartheta_{out} \) <span class="eq-number">(2-122)</span>
+</a>
+</details>
+<details open="">
+<summary><strong>내부 발열 획득</strong></summary>
+<strong>인체에 의한 열획득원</strong>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_{I,source,p} = q_{I,p} \cdot A_B \) <span class="eq-number">(2-118)</span>
+</a>
+<strong>기기에 의한 열획득원</strong>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_{I,source,fac} = q_{I,fac} \cdot A_B \) <span class="eq-number">(2-119)</span>
+</a>
+<strong>인공조명에 의한 열획득원</strong>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_{i,L} = \mu_L \cdot Q_{i,L,elektr} \) <span class="eq-number">(2-123)</span>
+</a>
+<strong>난방,냉방, 급탕 및 공조시스템에 의한 비제어적 열획득원</strong>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_{I,source,h} = Q_{I,w} + Q_{I,h} + Q_{I,vh} + Q_{I,ch} \) <span class="eq-number">(2-124)</span><br/>
+<br/>
+<span class="note">
+    - \( q_{I,p} \): 도표 2-A.4 (사람에 의한 내부발생열)<br/>s
+    - \( q_{I,fac} \): 도표 2-A.4 (설비기기에 의한 내부발생열)<br/>
+    - \( Q_{i,L,elektr} \): 조명에 의한 전기적 소비량
+  </span>
+</a>
+</details>
+</div>
+</div>
+<hr/>
+<h3 id="q_s">복사 열손실 및 태양열에 의한 열획득 <span class="arithmatex">\(Q_{S}\)</span><a class="headerlink" href="#q_s" title="Permanent link">¶</a></h3>
+<div style="
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+">
+<!-- 왼쪽 열 -->
+<div style="
+    flex: 1;
+    background-color:rgb(255, 255, 255); 
+    border-left: 5px solid #2b6777;
+    padding: 10px 20px;
+  ">
+<strong>복사 열손실/태양열에 의한 열획득</strong><br/>
+
+    열손실의 경우, 불투명한 표면에 입사된 태양열은 장파장 복사에 의해 손실 차감되기 때문에 입사 태양열보다 복사에 의한 방사가 크면 열손실이 발생합니다.<br/>
+
+    열획득의 경우, 투명한 창을 통해 직접 존으로 유입되거나 불투명한 외벽에 흡수되어 전도에 의해 존으로 유입되는 열을 고려합니다.<br/>
+
+    아래 수식은 복사 열손실 및 태양열에 의한 열획득을 계산하는 식입니다:<br/>
+<br/>
+<strong>복사 열손실</strong> <a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_S = Q_{S,op} = R_{se} \, UA \left( F_f h_r \Delta \vartheta_{er} - \alpha I_S \right)t, \quad \alpha I_S &lt; F_f h_r \Delta \vartheta_{er} \) <span class="eq-number">(2-111)</span>
+</a>
+<strong>태양열에 의한 열획득</strong> <a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_S = \sum Q_{S,tr} + \sum Q_{S,op} \) <span class="eq-number">(2-17)</span>
+</a>
+<strong> To. 희, 적절한 다이어그램 추가 필요해요!! </strong>
+</div>
+<!-- 오른쪽 열 -->
+<div style="
+    flex: 1;
+    background-color: #f0f8ff;
+    border-left: 5px solid #2b6777;
+    padding: 10px 20px;
+  ">
+<details open="">
+<summary><strong>불투명 구조체를 통한 태양열 유입</strong></summary>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_S = Q_{S,op} = R_{se} \, UA \left( F_f h_r \Delta \vartheta_{er} - \alpha I_S \right)t, \quad \alpha I_S &lt; F_f h_r \Delta \vartheta_{er} \) <span class="eq-number">(2-111)</span>
+</a>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_{S,op} = R_{se} \, UA \left( \alpha I_S - F_f h_r \Delta \vartheta_{er} \right)t, \quad \text{if } \alpha I_S &gt; F_f h_r \Delta \vartheta_{er} \) <span class="eq-number">(2-112)</span><br/>
+<br/>
+<span class="note">
+    - \( F_f = 1 \quad \text{(45°까지)} \)<br/>
+    - \( F_f = 0.5 \quad \text{(45°~90°)} \)<br/>
+    - \( h_r = 5 \varepsilon \quad \text{(모를 경우 } \varepsilon = 0.9\text{)} \)<br/>
+    - \( \Delta \vartheta_{er} = 10K \quad \text{(천공온도차)} \)
+  </span>
+</a>
+<details>
+<summary>표면 흡수율 \(\alpha\)</summary>
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<title>표면 흡수율</title>
+<style>
+          table {
+            border-collapse: collapse;
+            width: 60%;
+            font-family: "Malgun Gothic", sans-serif;
+            font-size: 14px;
+          }
+          th, td {
+            border: 1px solid black;
+            padding: 6px;
+            text-align: left;
+          }
+          th {
+            background-color: #f9f9f9;
+            text-align: center;
+          }
+          td.value {
+            text-align: center;
+          }
+        </style>
+ <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body>
+<table>
+<caption style="caption-side: top; text-align: left; font-size: 16px; font-weight: bold; margin-bottom: 12px;">
+          표 3.2.4-6. 표면 흡수율
+        </caption>
+<tr>
+<th>표면</th>
+<th>흡수율 α</th>
+</tr>
+<tr>
+<td>벽표면<br/>– 밝은 칠<br/>– 중간 칠<br/>– 어두운 칠</td>
+<td class="value"><br/>0.4<br/>0.6<br/>0.8</td>
+</tr>
+<tr>
+<td>경질벽돌 벽</td>
+<td class="value">0.8</td>
+</tr>
+<tr>
+<td>밝은 층 벽</td>
+<td class="value">0.6</td>
+</tr>
+<tr>
+<td>지붕<br/>– 붉은벽돌<br/>– 어두운 표면<br/>– 금속(광택)<br/>– 콜타르 지붕층(모래가 첨부된)</td>
+<td class="value"><br/>0.6<br/>0.8<br/>0.2<br/>0.6</td>
+</tr>
+</table>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
+</details>
+</details>
+<details open="">
+<summary><strong>투명체를 통한 태양입사광에 의한 열획득</strong></summary>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( Q_{S,tr} = F_F A \, g_{eff} \, I_S \, t \) <span class="eq-number">(2-105)</span><br/>
+<br/>
+<span class="note">- \( F_F \): 창틀비율 \( (= 0.7) \)<br/>- \( A \): 개구부 면적</span>
+</a>
+<div style="
+          background-color:#eaf2f5; 
+          padding: 12px 16px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          border-radius: 6px;
+          font-size: 14px;
+          line-height: 1.5;
+        ">
+<strong>차양 및 음영을 고려한 총에너지 투과율</strong>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( g_{eff} = F_S F_W F_V g_\perp \) <span class="eq-number">(2-106)</span> <span class="note">(비차양)</span>
+</a>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( g_{eff} = F_S F_W F_V g_{tot} \) <span class="eq-number">(2-107)</span> <span class="note">(차양)<br/>자동차양 (2-108) 일단 유보:</span>
+</a>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( F_S = \min(F_h, F_o, F_f) \) <span class="eq-number">(2-109)</span><br/>
+<br/>
+<span class="note">
+    - \( F_W = 0.9 \)<br/>
+    - \( F_V = 0.9 \)<br/>
+    - 투과율 (차양 유무에 따른 값): 도표 (2-5) 참고<br/>
+    - 부록 A 도표에서 관련 계수 확인 가능
+  </span>
+</a>
+</div>
+<details>
+<summary>창유리 및 자양장치에 대한 표준값</summary>
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<title>창유리 형식별 차양장치 영향</title>
+<style>
+          table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 13px;
+            font-family: "Malgun Gothic", sans-serif;
+          }
+          th, td {
+            border: 1px solid black;
+            padding: 4px;
+            text-align: center;
+          }
+          th {
+            background-color: #f8f8f8;
+          }
+        </style>
+ <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body>
+<table>
+<caption style="caption-side: top; text-align: left; font-size: 16px; font-weight: bold; margin-bottom: 12px;">
+          표 3.2.4-5. 창유리 및 자양장치에 대한 표준값
+        </caption>
+<tr>
+<th rowspan="4">창유리 형식</th>
+<th ;="" colspan="4" rowspan="3" th="">차양장치 없음</th>
+<th colspan="6">외부 차양장치</th>
+<th colspan="7">내부 차양장치</th>
+</tr>
+<tr>
+<th colspan="2">외부 블라인드 설정각 10°</th>
+<th colspan="2">외부 블라인드 설정각 45°</th>
+<th colspan="2">버티칼</th>
+<th colspan="2">내부 블라인드 설정각 10°</th>
+<th colspan="2">내부 블라인드 설정각 45°</th>
+<th colspan="2">텍스틸 롤러</th>
+<th colspan="1">폴리</th>
+</tr>
+<tr>
+<th colspan="1">흰색</th>
+<th colspan="1">진회색</th>
+<th colspan="1">흰색</th>
+<th colspan="1">진회색</th>
+<th colspan="1">흰색</th>
+<th colspan="1">회색</th>
+<th colspan="1">흰색</th>
+<th colspan="1">밝은 회색</th>
+<th colspan="1">흰색</th>
+<th colspan="1">밝은 회색</th>
+<th colspan="1">흰색</th>
+<th colspan="1">밝은 회색</th>
+<th colspan="1">흰색</th>
+</tr>
+<tr>
+<th>U<sub>g</sub></th><th>g<sub>⊥</sub></th><th>τ<sub>e</sub></th><th>τ<sub>D65</sub></th>
+<th>g<sub>tot</sub></th><th>g<sub>tot</sub></th>
+<th>g<sub>tot</sub></th><th>g<sub>tot</sub></th>
+<th>g<sub>tot</sub></th><th>g<sub>tot</sub></th>
+<th>g<sub>tot</sub></th><th>g<sub>tot</sub></th>
+<th>g<sub>tot</sub></th><th>g<sub>tot</sub></th>
+<th>g<sub>tot</sub></th><th>g<sub>tot</sub></th>
+<th>g<sub>tot</sub></th>
+</tr>
+<tr>
+<td>단층</td><td>5.8</td><td>0.87</td><td>0.85</td><td>0.9</td>
+<td>0.07</td><td>0.13</td><td>0.15</td><td>0.14</td><td>0.22</td><td>0.18</td>
+<td>0.3</td><td>0.4</td><td>0.38</td><td>0.46</td><td>0.25</td><td>0.52</td><td>0.26</td>
+</tr>
+<tr>
+<td>복층</td><td>2.9</td><td>0.78</td><td>0.73</td><td>0.82</td>
+<td>0.06</td><td>0.1</td><td>0.12</td><td>0.1</td><td>0.2</td><td>0.14</td>
+<td>0.34</td><td>0.43</td><td>0.4</td><td>0.47</td><td>0.29</td><td>0.51</td><td>0.3</td>
+</tr>
+<tr>
+<td>삼층</td><td>2.0</td><td>0.7</td><td>0.63</td><td>0.75</td>
+<td>0.05</td><td>0.07</td><td>0.11</td><td>0.08</td><td>0.18</td><td>0.11</td>
+<td>0.35</td><td>0.43</td><td>0.4</td><td>0.47</td><td>0.31</td><td>0.5</td><td>0.32</td>
+</tr>
+<tr>
+<td>복층 진공유리</td><td>1.7</td><td>0.72</td><td>0.6</td><td>0.74</td>
+<td>0.05</td><td>0.07</td><td>0.11</td><td>0.07</td><td>0.18</td><td>0.11</td>
+<td>0.35</td><td>0.44</td><td>0.41</td><td>0.48</td><td>0.3</td><td>0.51</td><td>0.32</td>
+</tr>
+<tr>
+<td>복층 진공유리</td><td>1.4</td><td>0.67</td><td>0.58</td><td>0.78</td>
+<td>0.04</td><td>0.06</td><td>0.1</td><td>0.06</td><td>0.17</td><td>0.1</td>
+<td>0.35</td><td>0.43</td><td>0.4</td><td>0.47</td><td>0.31</td><td>0.49</td><td>0.32</td>
+</tr>
+<tr>
+<td>복층 진공유리</td><td>1.2</td><td>0.65</td><td>0.54</td><td>0.78</td>
+<td>0.04</td><td>0.05</td><td>0.1</td><td>0.06</td><td>0.16</td><td>0.09</td>
+<td>0.35</td><td>0.43</td><td>0.4</td><td>0.46</td><td>0.31</td><td>0.48</td><td>0.32</td>
+</tr>
+<tr>
+<td>복층 진공유리</td><td>0.8</td><td>0.5</td><td>0.39</td><td>0.69</td>
+<td>0.03</td><td>0.04</td><td>0.07</td><td>0.04</td><td>0.13</td><td>0.07</td>
+<td>0.32</td><td>0.37</td><td>0.35</td><td>0.39</td><td>0.3</td><td>0.4</td><td>0.31</td>
+</tr>
+<tr>
+<td>삼층 진공유리</td><td>0.6</td><td>0.5</td><td>0.39</td><td>0.69</td>
+<td>0.03</td><td>0.03</td><td>0.07</td><td>0.03</td><td>0.12</td><td>0.06</td>
+<td>0.33</td><td>0.37</td><td>0.36</td><td>0.39</td><td>0.3</td><td>0.4</td><td>0.31</td>
+</tr>
+<tr>
+<td>복층 차양유리</td><td>1.3</td><td>0.48</td><td>0.44</td><td>0.59</td>
+<td>0.02</td><td>0.06</td><td>0.06</td><td>0.02</td><td>0.11</td><td>0.05</td>
+<td>0.32</td><td>0.37</td><td>0.35</td><td>0.39</td><td>0.3</td><td>0.39</td><td>0.31</td>
+</tr>
+<tr>
+<td>복층 차양유리</td><td>1.2</td><td>0.37</td><td>0.34</td><td>0.67</td>
+<td>0.03</td><td>0.05</td><td>0.07</td><td>0.05</td><td>0.11</td><td>0.07</td>
+<td>0.27</td><td>0.29</td><td>0.29</td><td>0.3</td><td>0.26</td><td>0.31</td><td>0.26</td>
+</tr>
+<tr>
+<td>복층 차양유리</td><td>1.2</td><td>0.25</td><td>0.21</td><td>0.4</td>
+<td>0.03</td><td>0.05</td><td>0.06</td><td>0.05</td><td>0.09</td><td>0.07</td>
+<td>0.2</td><td>0.21</td><td>0.21</td><td>0.22</td><td>0.2</td><td>0.22</td><td>0.2</td>
+</tr>
+</table>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
+</details>
+</details></div>
 </div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="마지막 업데이트">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 6월 18일 04:54:45 UTC">2025년 6월 18일</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 6월 30일 00:31:24 UTC">2025년 6월 30일</span>
 </span>
 </aside>
 </article>
@@ -817,7 +1350,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.tabs.sticky", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}}</script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.tabs.sticky", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
 <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
 <script src="../../assets/polyfill.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -832,7 +1365,5 @@
 <script src="../../assets/breadcrumb.js"></script>
 <script src="../../assets/scroll-to-top.js"></script>
 <script src="../../assets/footer-feedback.js"></script>
-<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
+</body>
 </html>
